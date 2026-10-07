@@ -1,0 +1,40 @@
+{
+ "stations": [
+  {
+   "stationNameFa": "تهران",
+   "stationCode": 1,
+   "enterTime": "07:35:00",
+   "exitTime": "07:25:00"
+  },
+  {
+   "stationNameFa": "سمنان",
+   "stationCode": 116,
+   "enterTime": "09:35:00",
+   "exitTime": "09:15:00"
+  },
+  {
+   "stationNameFa": "دامغان",
+   "stationCode": 75,
+   "enterTime": "10:46:00",
+   "exitTime": "10:26:00"
+  },
+  {
+   "stationNameFa": "شاهرود",
+   "stationCode": 130,
+   "enterTime": "11:31:00",
+   "exitTime": "11:11:00"
+  },
+  {
+   "stationNameFa": "نيشابور",
+   "stationCode": 206,
+   "enterTime": "14:56:00",
+   "exitTime": "14:36:00"
+  },
+  {
+   "stationNameFa": "مشهد",
+   "stationCode": 191,
+   "enterTime": "16:10:00",
+   "exitTime": "07:25:00"
+  }
+ ]
+}

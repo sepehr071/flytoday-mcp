@@ -1,0 +1,292 @@
+{
+ "items": [
+  {
+   "value": 80,
+   "label": "توریستی 1 ماهه",
+   "hasAdult": true,
+   "hasChild": true,
+   "hasInfant": true
+  },
+  {
+   "value": 104,
+   "label": "تجاری 1 ماهه",
+   "hasAdult": true,
+   "hasChild": true,
+   "hasInfant": true
+  }
+ ],
+ "tables": [
+  {
+   "tableTitle": null,
+   "headers": [
+    "نوع ویزا",
+    "1 ماهه"
+   ],
+   "rows": [
+    {
+     "type": {
+      "id": 68,
+      "name": null,
+      "nameFa": "توریستی"
+     },
+     "prices": [
+      {
+       "tag": null,
+       "condition": "پس از اقدام ویزا ، امکان مصاحبه از سمت کنسولگری می باشد .",
+       "hasStar": true,
+       "price": "90 دلار",
+       "itemId": 80,
+       "priceDetail": {
+        "exchangeRate": 2759500,
+        "adultPrice": 90,
+        "childPrice": 90,
+        "infantPrice": 90,
+        "adultPriceIRR": 248355000,
+        "childPriceIRR": 248355000,
+        "infantPriceIRR": 248355000
+       }
+      }
+     ]
+    },
+    {
+     "type": {
+      "id": 55,
+      "name": null,
+      "nameFa": "تجاری"
+     },
+     "prices": [
+      {
+       "tag": null,
+       "condition": "پس از اقدام ویزا، امکان مصاحبه از سمت کنسولگری می باشد .",
+       "hasStar": true,
+       "price": "200 دلار",
+       "itemId": 104,
+       "priceDetail": {
+        "exchangeRate": 2759500,
+        "adultPrice": 200,
+        "childPrice": 200,
+        "infantPrice": 200,
+        "adultPriceIRR": 551900000,
+        "childPriceIRR": 551900000,
+        "infantPriceIRR": 551900000
+       }
+      }
+     ]
+    }
+   ],
+   "conditions": [
+    "پس از اقدام ویزا ، امکان مصاحبه از سمت کنسولگری می باشد .",
+    "پس از اقدام ویزا، امکان مصاحبه از سمت کنسولگری می باشد ."
+   ]
+  }
+ ],
+ "currency": "دلار",
+ "documents": [
+  {
+   "category": "Passport",
+   "categoryFa": "پاسپورت",
+   "icon": "passport",
+   "items": [
+    {
+     "visaDocumentType": "PassportFirstPage",
+     "visaDocumentTypeFa": "صفحه اول گذرنامه",
+     "size": 5,
+     "fileExtensions": [
+      "Jpg",
+      "Pdf"
+     ],
+     "fileExtensionsStr": [
+      ".jpg",
+      ".pdf"
+     ],
+     "description": "اسکن گذرنامه با حداقل 6 ماه اعتبار از تاریخ سفر",
+     "visaDocumentReceivedType": "Online",
+     "visaDocumentReceivedTypeFa": "آنلاین",
+     "imagePath": null,
+     "imageExtension": null,
+     "note": null,
+     "validDate": null,
+     "status": "Pending",
+     "statusFa": "Pending"
+    }
+   ],
+   "description": "اسکن گذرنامه با حداقل 6 ماه اعتبار از تاریخ سفر"
+  },
+  {
+   "category": "BirthCertificate",
+   "categoryFa": "شناسنامه",
+   "icon": "Birth-certificate",
+   "items": [
+    {
+     "visaDocumentType": "BirthCertificateFirstPage",
+     "visaDocumentTypeFa": "صفحه اول شناسنامه",
+     "size": 20,
+     "fileExtensions": [
+      "Jpg",
+      "Pdf"
+     ],
+     "fileExtensionsStr": [
+      ".jpg",
+      ".pdf"
+     ],
+     "description": "اسکن تمام صفحات شناسنامه",
+     "visaDocumentReceivedType": "Online",
+     "visaDocumentReceivedTypeFa": "آنلاین",
+     "imagePath": null,
+     "imageExtension": null,
+     "note": null,
+     "validDate": null,
+     "status": "Pending",
+     "statusFa": "Pending"
+    }
+   ],
+   "description": "اسکن تمام صفحات شناسنامه"
+  },
+  {
+   "category": "NationalCart",
+   "categoryFa": "کارت ملی",
+   "icon": "badge",
+   "items": [
+    {
+     "visaDocumentType": "NationalCodeFrontPhoto",
+     "visaDocumentTypeFa": "تصویر جلوی کارت‌ ملی",
+     "size": 5,
+     "fileExtensions": [
+      "Jpg",
+      "Pdf"
+     ],
+     "fileExtensionsStr": [
+      ".jpg",
+      ".pdf"
+     ],
+     "description": "اسکن کارت ملی",
+     "visaDocumentReceivedType": "Online",
+     "visaDocumentReceivedTypeFa": "آنلاین",
+     "imagePath": null,
+     "imageExtension": null,
+     "note": null,
+     "validDate": null,
+     "status": "Pending",
+     "statusFa": "Pending"
+    }
+   ],
+   "description": "اسکن کارت ملی"
+  },
+  {
+   "category": "PersonalPhoto",
+   "categoryFa": "عکس پرسنلی",
+   "icon": "personal-photo",
+   "items": [
+    {
+     "visaDocumentType": "PersonalPhoto",
+     "visaDocumentTypeFa": "عکس پرسنلی",
+     "size": 5,
+     "fileExtensions": [
+      "Jpg",
+      "Pdf"
+     ],
+     "fileExtensionsStr": [
+      ".jpg",
+      ".pdf"
+     ],
+     "description": "اسکن عکس جدید",
+     "visaDocumentReceivedType": "Online",
+     "visaDocumentReceivedTypeFa": "آنلاین",
+     "imagePath": null,
+     "imageExtension": null,
+     "note": null,
+     "validDate": null,
+     "status": "Pending",
+     "statusFa": "Pending"
+    }
+   ],
+   "description": "اسکن عکس جدید"
+  },
+  {
+   "category": "Hotel",
+   "categoryFa": "واچر هتل",
+   "icon": "hotel",
+   "items": [
+    {
+     "visaDocumentType": "Hotel",
+     "visaDocumentTypeFa": "واچر هتل",
+     "size": 5,
+     "fileExtensions": [
+      "Png",
+      "Jpg",
+      "Pdf"
+     ],
+     "fileExtensionsStr": [
+      ".png",
+      ".jpg",
+      ".pdf"
+     ],
+     "description": null,
+     "visaDocumentReceivedType": "Original",
+     "visaDocumentReceivedTypeFa": "اصل",
+     "imagePath": null,
+     "imageExtension": null,
+     "note": null,
+     "validDate": null,
+     "status": "Pending",
+     "statusFa": "Pending"
+    }
+   ],
+   "description": null
+  },
+  {
+   "category": "Form",
+   "categoryFa": "فرم",
+   "icon": "form",
+   "items": [
+    {
+     "visaDocumentType": "Form",
+     "visaDocumentTypeFa": "فرم",
+     "size": 5,
+     "fileExtensions": [
+      "Pdf"
+     ],
+     "fileExtensionsStr": [
+      ".pdf"
+     ],
+     "description": "لطفا فرم خوانا و همه سوال ها کامل پاسخ داده شود .",
+     "visaDocumentReceivedType": "Online",
+     "visaDocumentReceivedTypeFa": "آنلاین",
+     "imagePath": null,
+     "imageExtension": null,
+     "note": null,
+     "validDate": null,
+     "status": "Pending",
+     "statusFa": "Pending"
+    }
+   ],
+   "description": "لطفا فرم خوانا و همه سوال ها کامل پاسخ داده شود ."
+  }
+ ],
+ "content": {
+  "id": 0,
+  "introductionText": "<p class=\"c-desc\"><span>سفر به پاکستان، همسایه شرقی کشورمان، نیازمند اخذ ویزاست. کسانی که با هدف گردشگری یا کاری به این کشور سفر می‌کنند، باید پیش از هر کاری برای اخذ ویزا اقدام کنند. متقاضیان ویزای پاکستان می‌توانند به راحتی از طریق فلای‌تودی ویزای خود را دریافت کنند. در ادامه مطلب فرآیند دریافت ویزا پاکستان را بیشتر توضیح خواهیم داد.<br><br><strong>توجه : مبالغ قید شده در جدول برای مسافرینی است که هتل یا پرواز خود را از فلای تودی تهیه کرده باشند، در غیر این صورت جهت اطلاع از قیمت ها با کارشناسان ویزا تماس حاصل بفرمایید.</strong><br></span></p>",
+  "visaText": "<div>\r\n<h2 class=\"fs-6 fs-md-5 fw-bold tw-mb-4 c-title\">انواع ویزای پاکستان</h2>\r\n<p class=\"text-justify\">ورود شهروندان کشورهای ایران، عراق، لیبی، مراکش، بنگلادش، آفریقای جنوبی، تایلند، نپال، میانمار، نامیبیا، اکوادور، اندونزی، گواتمالا، مکزیک و تونس به پاکستان ممنوع است. از این رو شهروندان این کشورها برای ورود به پاکستان، به مجوز یا ویزا نیاز دارند. برای کسانی که با هدف گشت و گذار به پاکستان سفر می‌کنند، ویزای توریستی برای یک بار ورود، با 3 ماه اعتبار صادر می‌شود. یعنی گردشگر می‌تواند تا 3 ماه در پاکستان بماند.</p>\r\n</div>\r\n<div>\r\n<h3 class=\"fs-6 fw-bold tw-mb-2 c-title\">ویزای تجاری پاکستان</h3>\r\n<p class=\"text-justify\">کسانی که با قصد تجارت و سرمایه گذاری می‌خواهند به پاکستان سفر کنند، باید ویزای تجاری دریافت نمایند. مدت اعتبار این نوع ویزا 3 ماهه طبق تاریخ بلیط یا دعوتنامه است.</p>\r\n</div>\r\n<div>\r\n<h2 class=\"fs-6 fw-bold tw-mb-2 c-title\">تمدید ویزای پاکستان</h2>\r\n<p class=\"text-justify\">در صورتی که قصد داشته باشید برای مدت زمانی بیش از 3 ماه در پاکستان اقامت داشته باشید، باید بدانید پس از پایان اعتبار ویزا پاکستان، امکان تمدید آن وجود ندارد و باید جهت صدور مجدد ویزا اقدام کنید.</p>\r\n</div>\r\n<div>\r\n<h2 class=\"fs-6 fw-bold tw-mb-2 c-title\">شرایط ویزا پاکستان</h2>\r\n<p class=\"text-justify\">چنانچه قصد داشته باشید هر یک از انواع ویزاهای معرفی شده را دریافت نمایید، ابتدا باید درخواست اخذ ویزای الکترونیکی پاکستان را ثبت کنید. با ارائه مدارک موردنیاز، می‌توانید ویزا پاکستان را برای مدت زمانی که مدنظر دارید، درخواست دهید.</p>\r\n<p class=\"text-justify\">علاوه بر تکمیل فرم درخواست ویزا و پرداخت هزینه دریافت ویزا پاکستان، لازم است با قوانین ویزا پاکستان نیز آشنایی داشته باشید. طبق قوانین، قاچاقچیان و افرادی که دارای سابقه کیفری هستند، نمی‌توانند ویزای پاکستان را دریافت کنند.</p>\r\n</div>\r\n<div>\r\n<h2 class=\"fs-6 fw-bold tw-mb-2 c-title\">مراحل اخذ ویزای پاکستان</h2>\r\n<p class=\"c-desc text-justify\">متقاضیان دریافت ویزا پاکستان، بایستی ابتدا درخواست ویزا را به صورت آنلاین در سایت یا اپلیکیشن فلای‌تودی ثبت کنند. پس از بارگذاری مدارک موردنیاز و پرداخت هزینه، اقدامات لازم از سوی کارشناسان فلای‌تودی انجام خواهد گرفت. چنانچه مدارک بدون نقص باشد و درخواست ویزا توسط سفارت پاکستان تایید شود، ویزا صادر خواهد شد و نتیجه آن از طریق ایمیل و پیامک اطلاع‌رسانی می‌شود. برای دریافت فایل ویزا به حساب کاربری خود در فلای‌تودی مراجعه کنید.</p>\r\n</div>\r\n<div>\r\n<h2 class=\"fs-6 fw-bold tw-mb-2 c-title\">دلایل ریجکت شدن ویزای پاکستان</h2>\r\n<p class=\"text-justify\">همانطور که گفته شد، قاچاقچیان و افراد دارای سابقه کیفری نمی‌توانند ویزای پاکستان دریافت کنند. همچنین کسانی که قبلا ویزای آنها ریجکت شده است، نمی‌توانند ویزای پاکستان دریافت کنند و ویزای آنها ریجکت خواهد شد</p>\r\n</div>",
+  "banner": {
+   "desktopImage": "https://cdn-a.cdnfl2.ir/upload/flytoday/upload/visa/content/638537048765008906desktop.webp",
+   "tabletImage": "https://cdn-a.cdnfl2.ir/upload/flytoday/upload/visa/content/638535430765708411tablet.webp",
+   "mobileImage": "https://cdn-a.cdnfl2.ir/upload/flytoday/upload/visa/content/638535430757739562mobile.webp",
+   "cardImage": "https://cdn-a.cdnfl2.ir/upload/flytoday/upload/visa/content/638535430743364191thumbnail.png"
+  },
+  "countryCode": "PK"
+ },
+ "validityAfterIssuance": "تا 3 ماه",
+ "country": {
+  "code": "PK",
+  "name": "Pakistan",
+  "nameFa": "پاکستان",
+  "title": "پاکستان",
+  "slug": "Pakistan",
+  "hasSchengen": false,
+  "metaTitle": "ویزای پاکستان با ارزانترین قیمت و آنلاین+ شرایط 2026 | فلای‌تودی",
+  "metaDescription": "ویزای توریستی پاکستان برای سفر به کشوری با طبیعت بکر و فرهنگ غنی؛ شامل مدارک مورد نیاز مانند پاسپورت معتبر، عکس و فرم درخواست، به‌همراه جزئیات هزینه‌ها و زمان صدور"
+ },
+ "process": "از 2 روز تا 14 روز",
+ "searchId": 279078,
+ "formPath": null
+}

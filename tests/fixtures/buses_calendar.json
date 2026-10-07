@@ -1,0 +1,52 @@
+{
+ "data": [
+  {
+   "departureDate": "2026-10-07",
+   "cheapestPrice": 5360000
+  },
+  {
+   "departureDate": "2026-10-07",
+   "cheapestPrice": 3930000
+  },
+  {
+   "departureDate": "2026-10-07",
+   "cheapestPrice": 5300000
+  },
+  {
+   "departureDate": "2026-10-07",
+   "cheapestPrice": 4050000
+  },
+  {
+   "departureDate": "2026-10-08",
+   "cheapestPrice": 5520000
+  },
+  {
+   "departureDate": "2026-10-08",
+   "cheapestPrice": 5360000
+  },
+  {
+   "departureDate": "2026-10-08",
+   "cheapestPrice": 5360000
+  },
+  {
+   "departureDate": "2026-10-08",
+   "cheapestPrice": 3930000
+  },
+  {
+   "departureDate": "2026-10-09",
+   "cheapestPrice": 5520000
+  },
+  {
+   "departureDate": "2026-10-09",
+   "cheapestPrice": 5360000
+  },
+  {
+   "departureDate": "2026-10-09",
+   "cheapestPrice": 5300000
+  },
+  {
+   "departureDate": "2026-10-10",
+   "cheapestPrice": 5520000
+  }
+ ]
+}

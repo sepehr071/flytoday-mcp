@@ -1,0 +1,66 @@
+{
+ "typeSearch": "match",
+ "total": 14,
+ "locations": [
+  {
+   "id": "0002",
+   "name": "Isfahan",
+   "nameFa": "اصفهان",
+   "locationType": 1,
+   "cityId": "0002",
+   "cityName": "Isfahan",
+   "cityNameFa": "اصفهان",
+   "terminalCount": 8,
+   "isDomestic": true,
+   "popularity": 31500
+  },
+  {
+   "id": "0580",
+   "name": "Varzaneh",
+   "nameFa": "ورزنه  (اصفهان )",
+   "locationType": 1,
+   "cityId": "0580",
+   "cityName": "Varzaneh",
+   "cityNameFa": "ورزنه  (اصفهان )",
+   "terminalCount": 0,
+   "isDomestic": true,
+   "popularity": 10500
+  },
+  {
+   "id": "0581",
+   "name": "Kuhpayeh",
+   "nameFa": "کوهپایه  (اصفهان )",
+   "locationType": 1,
+   "cityId": "0581",
+   "cityName": "Kuhpayeh",
+   "cityNameFa": "کوهپایه  (اصفهان )",
+   "terminalCount": 0,
+   "isDomestic": true,
+   "popularity": 10500
+  },
+  {
+   "id": "0604",
+   "name": "MimeeIsfahan",
+   "nameFa": "میمه  (اصفهان )",
+   "locationType": 1,
+   "cityId": "0604",
+   "cityName": "MimeeIsfahan",
+   "cityNameFa": "میمه  (اصفهان )",
+   "terminalCount": 0,
+   "isDomestic": true,
+   "popularity": 10500
+  },
+  {
+   "id": "0651",
+   "name": "TarqIsfahan",
+   "nameFa": "طرق  (اصفهان )",
+   "locationType": 1,
+   "cityId": "0651",
+   "cityName": "TarqIsfahan",
+   "cityNameFa": "طرق  (اصفهان )",
+   "terminalCount": 2,
+   "isDomestic": true,
+   "popularity": 10500
+  }
+ ]
+}

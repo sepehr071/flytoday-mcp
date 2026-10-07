@@ -1,0 +1,90 @@
+{
+ "typeSearch": "match",
+ "total": 7,
+ "locations": [
+  {
+   "id": "0001",
+   "name": "Tehran",
+   "nameFa": "تهران",
+   "locationType": 1,
+   "cityId": "0001",
+   "cityName": "Tehran",
+   "cityNameFa": "تهران",
+   "terminalCount": 16,
+   "isDomestic": true,
+   "popularity": 31500
+  },
+  {
+   "id": "0002",
+   "name": "Isfahan",
+   "nameFa": "اصفهان",
+   "locationType": 1,
+   "cityId": "0002",
+   "cityName": "Isfahan",
+   "cityNameFa": "اصفهان",
+   "terminalCount": 8,
+   "isDomestic": true,
+   "popularity": 31500
+  },
+  {
+   "id": "0003",
+   "name": "Rasht",
+   "nameFa": "رشت",
+   "locationType": 1,
+   "cityId": "0003",
+   "cityName": "Rasht",
+   "cityNameFa": "رشت",
+   "terminalCount": 0,
+   "isDomestic": true,
+   "popularity": 31500
+  },
+  {
+   "id": "0004",
+   "name": "Shiraz",
+   "nameFa": "شیراز",
+   "locationType": 1,
+   "cityId": "0004",
+   "cityName": "Shiraz",
+   "cityNameFa": "شیراز",
+   "terminalCount": 4,
+   "isDomestic": true,
+   "popularity": 31500
+  },
+  {
+   "id": "0006",
+   "name": "Mashhad",
+   "nameFa": "مشهد",
+   "locationType": 1,
+   "cityId": "0006",
+   "cityName": "Mashhad",
+   "cityNameFa": "مشهد",
+   "terminalCount": 0,
+   "isDomestic": true,
+   "popularity": 31500
+  },
+  {
+   "id": "0009",
+   "name": "Istanbul",
+   "nameFa": "استانبول",
+   "locationType": 1,
+   "cityId": "0009",
+   "cityName": "Istanbul",
+   "cityNameFa": "استانبول",
+   "terminalCount": 0,
+   "isDomestic": false,
+   "popularity": 31500
+  },
+  {
+   "id": "0525",
+   "name": "Yerevan",
+   "nameFa": "ایروان",
+   "locationType": 1,
+   "cityId": "0525",
+   "cityName": "Yerevan",
+   "cityNameFa": "ایروان",
+   "terminalCount": 0,
+   "isDomestic": false,
+   "popularity": 31500
+  }
+ ]
+}

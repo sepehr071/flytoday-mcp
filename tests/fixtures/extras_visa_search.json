@@ -1,0 +1,300 @@
+{
+ "categories": [
+  {
+   "id": 16,
+   "name": null,
+   "nameFa": "توریستی"
+  },
+  {
+   "id": 22,
+   "name": null,
+   "nameFa": "تحصیلی"
+  },
+  {
+   "id": 17,
+   "name": null,
+   "nameFa": "تجاری"
+  }
+ ],
+ "items": [
+  {
+   "country": {
+    "code": "PK",
+    "name": "Pakistan",
+    "nameFa": "پاکستان",
+    "title": null,
+    "slug": "Pakistan",
+    "hasSchengen": false,
+    "metaTitle": "ویزای پاکستان با ارزانترین قیمت و آنلاین+ شرایط 2026 | فلای‌تودی",
+    "metaDescription": "ویزای توریستی پاکستان برای سفر به کشوری با طبیعت بکر و فرهنگ غنی؛ شامل مدارک مورد نیاز مانند پاسپورت معتبر، عکس و فرم درخواست، به‌همراه جزئیات هزینه‌ها و زمان صدور"
+   },
+   "thumbnail": "https://cdn-a.cdnfl2.ir/upload/flytoday/upload/visa/content/638535430743364191thumbnail.png",
+   "price": "90",
+   "currency": "دلار",
+   "category": {
+    "id": 16,
+    "name": null,
+    "nameFa": "توریستی"
+   },
+   "duration": "از 2 روز تا 14 روز",
+   "visaId": 33,
+   "filterCategories": [
+    {
+     "id": 16,
+     "name": null,
+     "nameFa": "توریستی"
+    },
+    {
+     "id": 17,
+     "name": null,
+     "nameFa": "تجاری"
+    }
+   ]
+  },
+  {
+   "country": {
+    "code": "IN",
+    "name": "India",
+    "nameFa": "هند",
+    "title": null,
+    "slug": "India",
+    "hasSchengen": false,
+    "metaTitle": "ویزای هند - اخذ آنلاین ویزای توریستی و تجاری هند 2026 | فلای‌تودی",
+    "metaDescription": "اطلاعات و خدمات مربوط به اخذ ویزای هند شامل آماده‌سازی مدارک مانند پاسپورت معتبر، عکس، فرم تکمیل‌شده آنلاین، جزئیات هزینه‌ها و مدت زمان صدور برای سفر به هند."
+   },
+   "thumbnail": "https://cdn-a.cdnfl2.ir/upload/flytoday/upload/visa/content/638493795414178026thumbnailهند.webp",
+   "price": "155",
+   "currency": "دلار",
+   "category": {
+    "id": 16,
+    "name": null,
+    "nameFa": "توریستی"
+   },
+   "duration": "از 7 روز",
+   "visaId": 23,
+   "filterCategories": []
+  },
+  {
+   "country": {
+    "code": "TH",
+    "name": "Thailand",
+    "nameFa": "تایلند",
+    "title": null,
+    "slug": "Thailand",
+    "hasSchengen": false,
+    "metaTitle": "ویزای تایلند 2026؛ هزینه، مدارک و شرایط ویزا تایلند - فلای تودی",
+    "metaDescription": "اخذ آنلاین ویزای توریستی تایلند در فلای تودی با اعتبار 90 روز از زمان صدور و امکان اقامت 58 روز در تمامی شهرهای این کشور؛ شامل مدارک مورد نیاز به‌ همراه جزئیات هزینه‌ها و زمان صدور"
+   },
+   "thumbnail": "https://cdn-a.cdnfl2.ir/upload/flytoday/upload/visa/content/638535401688772845thumbnail.webp",
+   "price": "50",
+   "currency": "یورو",
+   "category": {
+    "id": 16,
+    "name": null,
+    "nameFa": "توریستی"
+   },
+   "duration": "از 18 روز تا 25 روز",
+   "visaId": 32,
+   "filterCategories": [
+    {
+     "id": 16,
+     "name": null,
+     "nameFa": "توریستی"
+    }
+   ]
+  },
+  {
+   "country": {
+    "code": "OM",
+    "name": "Oman",
+    "nameFa": "عمان",
+    "title": null,
+    "slug": "Oman",
+    "hasSchengen": false,
+    "metaTitle": "ویزای عمان 2026 - اخذ آنلاین ویزای توریستی عمان | فلای‌تودی",
+    "metaDescription": "ویزای توریستی عمان برای افرادی که قصد اقامت بیش از دو هفته در این کشور را دارند، شامل مدارک لازم مانند پاسپورت معتبر، جزئیات هزینه‌ها و مدت زمان صدور برای برنامه‌ریزی سفری آسان به عمان."
+   },
+   "thumbnail": "https://cdn-a.cdnfl2.ir/upload/flytoday/upload/visa/content/638535274471596853thumbnail.webp",
+   "price": "28",
+   "currency": "ریال عمان",
+   "category": {
+    "id": 16,
+    "name": null,
+    "nameFa": "توریستی"
+   },
+   "duration": "از 3 روز",
+   "visaId": 25,
+   "filterCategories": [
+    {
+     "id": 16,
+     "name": null,
+     "nameFa": "توریستی"
+    }
+   ]
+  },
+  {
+   "country": {
+    "code": "GB",
+    "name": "UK",
+    "nameFa": "انگلیس (انگلستان)",
+    "title": null,
+    "slug": "UK",
+    "hasSchengen": false,
+    "metaTitle": "ویزای انگلیس 2026 - اخذ آنلاین ویزای توریستی انگلیس با ارزانترین قیمت | فلای‌تودی",
+    "metaDescription": "برای دریافت ویزای انگلیس به صورت آنلاین و در سریع‌ترین زمان، خدمات ما شامل ویزای توریستی، راهنمای کامل مدارک لازم، هزینه‌ها و مراحل صدور است تا سفر شما به انگلستان آسان و مطمئن باشد."
+   },
+   "thumbnail": "https://cdn-a.cdnfl2.ir/upload/flytoday/upload/visa/content/638493816017455227thumbnailانگلیس.webp",
+   "price": "390",
+   "currency": "دلار",
+   "category": {
+    "id": 22,
+    "name": null,
+    "nameFa": "تحصیلی"
+   },
+   "duration": "از 3 روز تا 10 روز",
+   "visaId": 20,
+   "filterCategories": []
+  },
+  {
+   "country": {
+    "code": "IR",
+    "name": "Iran",
+    "nameFa": "ایران",
+    "title": null,
+    "slug": "Iran",
+    "hasSchengen": false,
+    "metaTitle": "ویزای ایران - اخذ آنلاین ویزای توریستی ایران | فلای‌تودی",
+    "metaDescription": "ویزای توریستی ایران برای گردشگران علاقه‌مند به تاریخ و فرهنگ این کشور؛ شامل اطلاعات مدارک لازم مانند پاسپورت معتبر، عکس، فرم درخواست تکمیل‌شده و جزئیات هزینه‌ها و مدت زمان صدور"
+   },
+   "thumbnail": "https://cdn-a.cdnfl2.ir/upload/flytoday/upload/visa/content/638534425536052841thumbnail.webp",
+   "price": "10,000,000",
+   "currency": "ریال",
+   "category": {
+    "id": 16,
+    "name": null,
+    "nameFa": "توریستی"
+   },
+   "duration": "5 روز",
+   "visaId": 17,
+   "filterCategories": [
+    {
+     "id": 16,
+     "name": null,
+     "nameFa": "توریستی"
+    }
+   ]
+  },
+  {
+   "country": {
+    "code": "EU",
+    "name": "schengen",
+    "nameFa": "شینگن",
+    "title": null,
+    "slug": "schengen",
+    "hasSchengen": false,
+    "metaTitle": "اخذ آنلاین ویزای توریستی شینگن با شرایط 2026 | فلای‌تودی",
+    "metaDescription": "ویزای شینگن با امکان سفر به کشورهای اروپایی عضو شنگن و مدت اعتبار متناسب با برنامه سفر؛ شامل اطلاعات مدارک مورد نیاز مانند پاسپورت، عکس، فرم درخواست، گواهی تمکن مالی و بیمه مسافرتی، به‌همراه جزئیات هزینه‌ها و زمان صدور"
+   },
+   "thumbnail": "https://cdn-a.cdnfl2.ir/upload/flytoday/upload/visa/content/638534588725993586thumbnail.png",
+   "price": "95",
+   "currency": "یورو",
+   "category": {
+    "id": 16,
+    "name": null,
+    "nameFa": "توریستی"
+   },
+   "duration": "از 14 روز",
+   "visaId": 18,
+   "filterCategories": []
+  },
+  {
+   "country": {
+    "code": "AE",
+    "name": "Dubai",
+    "nameFa": "دبی (امارات متحده عربی)",
+    "title": null,
+    "slug": "Dubai",
+    "hasSchengen": false,
+    "metaTitle": "ویزای دبی و امارات متحده عربی با ارزانترین قیمت در سال 2026 | فلای‌تودی",
+    "metaDescription": "اخذ ویزای توریستی و تجاری دبی آنلاین به همراه اطلاعات جامع درباره مدارک لازم، هزینه‌ها، مدت زمان صدور، و مراحل دریافت ویزای امارات برای سفری آسان در فلای تودی"
+   },
+   "thumbnail": "https://cdn-a.cdnfl2.ir/upload/flytoday/upload/visa/content/638493820868193588thumbnailدبی.webp",
+   "price": "_",
+   "currency": "درهم",
+   "category": {
+    "id": 16,
+    "name": null,
+    "nameFa": "توریستی"
+   },
+   "duration": "از 2 روز تا 7 روز",
+   "visaId": 15,
+   "filterCategories": []
+  },
+  {
+   "country": {
+    "code": "VN",
+    "name": "Vietnam",
+    "nameFa": "ویتنام",
+    "title": null,
+    "slug": "Vietnam",
+    "hasSchengen": false,
+    "metaTitle": "ویزای ویتنام با ارزانترین قیمت و آنلاین + شرایط 2026 | فلای‌تودی",
+    "metaDescription": "اخذ ویزای توریستی ویتنام از فلای‌تودی؛ راهی سریع و مطمئن برای سفر به سرزمین شگفتی‌های طبیعی و فرهنگی. با ارائه مدارک موردنیاز همچون پاسپورت معتبر و فرم درخواست، به همراه جزئیات کامل هزینه‌ها و زمان صدور"
+   },
+   "thumbnail": "https://cdn-a.cdnfl2.ir/upload/flytoday/upload/visa/content/638631377603721532card.jpg",
+   "price": "_",
+   "currency": "دلار",
+   "category": {
+    "id": 16,
+    "name": null,
+    "nameFa": "توریستی"
+   },
+   "duration": "از 7 روز تا 30 روز",
+   "visaId": 69,
+   "filterCategories": [
+    {
+     "id": 16,
+     "name": null,
+     "nameFa": "توریستی"
+    }
+   ]
+  },
+  {
+   "country": {
+    "code": "DE",
+    "name": "Germany",
+    "nameFa": "آلمان",
+    "title": null,
+    "slug": "Germany",
+    "hasSchengen": true,
+    "metaTitle": "ویزای آلمان - اخذ آنلاین ویزای توریستی آلمان با ارزانترین قیمت 2026 | فلای‌تودی",
+    "metaDescription": "اخذ ویزای توریستی آلمان نیازمند مدارکی از جمله پاسپورت معتبر، عکس، فرم درخواست، تمکن مالی و گردش حساب بانکی، به‌همراه جزئیات هزینه‌ها و زمان صدور"
+   },
+   "thumbnail": "https://cdn-a.cdnfl2.ir/upload/flytoday/upload/visa/content/638554378515270949card.jpg",
+   "price": "95",
+   "currency": "یورو",
+   "category": {
+    "id": 16,
+    "name": null,
+    "nameFa": "توریستی"
+   },
+   "duration": "از 14 روز",
+   "visaId": 56,
+   "filterCategories": []
+  }
+ ],
+ "filters": {
+  "categories": [
+   {
+    "id": 16,
+    "nameEn": null,
+    "nameFa": "توریستی"
+   },
+   {
+    "id": 17,
+    "nameEn": null,
+    "nameFa": "تجاری"
+   }
+  ]
+ }
+}

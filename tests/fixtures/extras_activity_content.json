@@ -1,0 +1,460 @@
+{
+ "content": {
+  "id": 13049,
+  "summary": [
+   "هیجان یک ترن هوایی را در حالی که با 4x4 از صحرا عبور می کنید و غروب مسحورکننده خورشید را بر فراز تپه های شنی تماشا می کنید و یک کمپ سنتی بادیه نشینان را در این تور باورنکردنی و فراموش نشدنی تجربه کنید."
+  ],
+  "name": {
+   "En": "Desert Safari, Dune Bashing and BBQ Dinner",
+   "Fa": "سافاری کویر، تپه‌نوردی و شام باربیکیو"
+  },
+  "factSheetType": {
+   "En": "ACTIVITIES",
+   "Fa": "ActivityFactSheetType.Activities"
+  },
+  "highlights": [
+   "غروب خورشید بر فراز صحرای عربستان را تماشا کنید",
+   "هجوم آدرنالین را هنگام کاوش در تپه های شنی با خودروی 4x4 احساس کنید",
+   "یک شام خوشمزه باربیکیو را جشن بگیرید و شب را تماشا کنید"
+  ],
+  "media": {
+   "medias": [
+    {
+     "type": "Image",
+     "order": 1,
+     "link": "https://cdn-a-ac.flytoday.ir/upload/activityimages/13049/Dune Bashing (12).jpg",
+     "caption": "",
+     "group": ""
+    },
+    {
+     "type": "Image",
+     "order": 2,
+     "link": "https://cdn-a-ac.flytoday.ir/upload/activityimages/13049/Dune Bashing (9).jpg",
+     "caption": "",
+     "group": ""
+    },
+    {
+     "type": "Image",
+     "order": 3,
+     "link": "https://cdn-a-ac.flytoday.ir/upload/activityimages/13049/Dune Bashing (1).jpg",
+     "caption": "",
+     "group": ""
+    },
+    {
+     "type": "Image",
+     "order": 4,
+     "link": "https://cdn-a-ac.flytoday.ir/upload/activityimages/13049/Dune Bashing (3).jpg",
+     "caption": "",
+     "group": ""
+    },
+    {
+     "type": "Image",
+     "order": 5,
+     "link": "https://cdn-a-ac.flytoday.ir/upload/activityimages/13049/IMG_0574.JPG",
+     "caption": "",
+     "group": ""
+    },
+    {
+     "type": "Image",
+     "order": 6,
+     "link": "https://cdn-a-ac.flytoday.ir/upload/activityimages/13049/IMG_0611.JPG",
+     "caption": "",
+     "group": ""
+    },
+    {
+     "type": "Image",
+     "order": 7,
+     "link": "https://cdn-a-ac.flytoday.ir/upload/activityimages/13049/IMG_1126.JPG",
+     "caption": "",
+     "group": ""
+    },
+    {
+     "type": "Image",
+     "order": 8,
+     "link": "https://cdn-a-ac.flytoday.ir/upload/activityimages/13049/13-cropped.jpg",
+     "caption": "",
+     "group": ""
+    },
+    {
+     "type": "Image",
+     "order": 10,
+     "link": "https://cdn-a-ac.flytoday.ir/upload/activityimages/13049/IMG_1200.JPG",
+     "caption": "",
+     "group": ""
+    },
+    {
+     "type": "Image",
+     "order": 11,
+     "link": "https://cdn-a-ac.flytoday.ir/upload/activityimages/13049/46421-9.png",
+     "caption": "",
+     "group": ""
+    },
+    {
+     "type": "Image",
+     "order": 12,
+     "link": "https://cdn-a-ac.flytoday.ir/upload/activityimages/13049/IMG_1139.JPG",
+     "caption": "",
+     "group": ""
+    },
+    {
+     "type": "Image",
+     "order": 13,
+     "link": "https://cdn-a-ac.flytoday.ir/upload/activityimages/13049/01.jpg",
+     "caption": "",
+     "group": ""
+    },
+    {
+     "type": "Image",
+     "order": 14,
+     "link": "https://cdn-a-ac.flytoday.ir/upload/activityimages/13049/18.jpg",
+     "caption": "",
+     "group": ""
+    },
+    {
+     "type": "Image",
+     "order": 15,
+     "link": "https://cdn-a-ac.flytoday.ir/upload/activityimages/13049/IMG_0798.JPG",
+     "caption": "",
+     "group": ""
+    }
+   ],
+   "groups": [
+    ""
+   ]
+  },
+  "features": [
+   {
+    "description": "ترانسفر از هتل در صورت انتخاب گزینه",
+    "icon": "bus"
+   },
+   {
+    "description": "چای",
+    "icon": "wine-champagne___bar___minibar___pool-bar___casino___pub___pub-crawls"
+   },
+   {
+    "description": "قهوه",
+    "icon": "wine-champagne___bar___minibar___pool-bar___casino___pub___pub-crawls"
+   },
+   {
+    "description": "آب",
+    "icon": "wine-champagne___bar___minibar___pool-bar___casino___pub___pub-crawls"
+   },
+   {
+    "description": "نوشیدنی‌های غیرالکلی",
+    "icon": "wine-champagne___bar___minibar___pool-bar___casino___pub___pub-crawls"
+   },
+   {
+    "description": "شام بوفه",
+    "icon": "restaurant-outline"
+   },
+   {
+    "description": "گزینه‌های گیاهی، شام باربیکیو",
+    "icon": "restaurant-outline"
+   },
+   {
+    "description": "نمایش",
+    "icon": "additional-services"
+   },
+   {
+    "description": "نقش حنا",
+    "icon": "additional-services"
+   },
+   {
+    "description": "ماشین سواری روی تپه‌های شنی",
+    "icon": "additional-services"
+   }
+  ],
+  "scheduling": {
+   "activityDuration": {
+    "value": 0,
+    "type": "Days",
+    "typeName": null
+   },
+   "opened": [],
+   "closed": []
+  },
+  "duration": null,
+  "description": {
+   "En": [
+    "Get an exciting experience of the crossing the famous dunes before taking photos with the endless desert and the sun setting in the background, feel the fine sand slipping between your fingers as you make your way to the Desert camp. Here you will be welcomed with flavorful Arabic tea and coffee with dates and soft drinks to quench your thirst.",
+    "Feel the culture by dressing up in traditional attire and take selfies as the Henna artist paints your hand. This will be followed by Tanoura show (traditional folk dance), Fire show and belly dancer perform to the rhythm of Arabic Music (The sequence of the event may change without prior notice).",
+    "Enjoy your meal with Veg and Non-Veg BBQ items experiencing the Arabic hospitality in this once in a lifetime Desert Safari tour in Dubai.",
+    "Budget Sharing The pickup and drop from hotels will be on sharing basis by SUVs and Dune bashing in the desert for about 20 – 25 minutes ( depending on weather conditions). The services will be provided at a safari camp with all amenities, toilets, seating and linen. Standard buffet menu includes: • Starters, Salads, Main Dish, Non-Veg BBQ items • Desserts • Soft drinks (may be local brand), Water, Coffee and Gahwa are served complimentary.",
+    "Standard Camp The pickup and drop from hotels will be on sharing basis by 4 x 4 vehicles and Dune bashing in the desert for about 30 – 40 minutes (depending on weather conditions). The services will be provided at a safari camp with standard amenities, with clean toilets, seating and linen. The buffet menu includes: • Starters, Salads, Main Dish, Chicken, Lamb and Veg BBQ items • Desserts • Soft drinks, Water, Coffee and Gahwa served complimentary",
+    "Standard Private Camp The pickup and drop from hotels will be by exclusive 4 x 4 vehicle and Dune bashing in the desert for about 30 – 40 minutes (depending on weather conditions). The services will be provided at a safari camp with standard amenities, with clean toilets, seating and linen. The buffet menu includes: • Starters, Salads, Main Dish, Chicken, Lamb and Veg BBQ items, • Desserts • Soft drinks, Water, Coffee and Gahwa served complimentary",
+    "Premium Service The pickup and drop from hotels will be on sharing basis by 4 x 4 vehicles and Dune bashing in the desert for about 30 – 40 minutes (depending on weather conditions). The services will be provided at a safari camp with deluxe amenities, with clean toilets, seating and linen. International buffet that includes: • Starters, Salads, Pasta, Veg suttee, Chicken, Lamb and Veg BBQ items • Desserts • Soft drinks, Water, Coffee and Gahwa served complimentary",
+    "After all the evening fun you will be dropped back to your drop off location.",
+    "Duration: 6 - 7 hours",
+    "Others  On Islamic occasions and National holidays *** will not be served and there will be no live entertainment. Shisha – additional cost if requested on private table and not in the allotted shisha lounge."
+   ],
+   "Fa": [
+    "قبل از عکس گرفتن با صحرای بی پایان و غروب خورشید در پس زمینه، تجربه هیجان انگیزی از عبور از تپه های شنی معروف داشته باشید، در حالی که به کمپ صحرا می روید، شن های ریز را که بین انگشتان خود می لغزد احساس کنید. در اینجا با چای و قهوه عربی خوش طعم با خرما و نوشابه از شما استقبال می شود تا تشنگی شما را برطرف کند.",
+    "با پوشیدن لباس های سنتی فرهنگ را احساس کنید و در حالی که هنرمند حنا دست شما را نقاشی می کند، سلفی بگیرید. پس از آن نمایش تنوره (رقص محلی سنتی)، نمایش آتش و رقصنده شکم با ریتم موسیقی عربی اجرا می شود (توالی رویداد ممکن است بدون اطلاع قبلی تغییر کند).",
+    "از غذای خود با اقلام باربیکیو گیاهی و غیر گیاهی لذت ببرید و مهمان نوازی عربی را در این تور سافاری صحرایی یک بار در زندگی در دبی تجربه کنید.",
+    "تقسیم بودجه تحویل و تحویل از هتل ها به صورت مشترک توسط SUV ها و تپه های شنی در صحرا به مدت حدود 20 تا 25 دقیقه (بسته به شرایط آب و هوایی) خواهد بود. این خدمات در کمپ سافاری با کلیه امکانات رفاهی، سرویس بهداشتی، صندلی و ملحفه ارائه می شود. منوی بوفه استاندارد شامل: • پیش غذا، سالاد، غذای اصلی، اقلام باربیکیو غیر گیاهی •دسر • نوشابه (ممکن است برند محلی باشد)، آب، قهوه و گاهوا به صورت رایگان سرو می شود.",
+    "اردوگاه استاندارد تحویل و رها کردن از هتل ها به صورت مشترک توسط وسایل نقلیه 4 x 4 و تپه های شنی در صحرا به مدت حدود 30 تا 40 دقیقه (بسته به شرایط آب و هوایی) خواهد بود. این خدمات در یک کمپ سافاری با امکانات رفاهی استاندارد، با توالت تمیز، صندلی و ملحفه ارائه می شود. اینمنوی بوفهشامل: • پیش غذا، سالاد، غذای اصلی، مرغ، گوشت بره و سبزیجات باربیکیو •دسر • نوشابه، آب، قهوه و گاهوا به صورت رایگان سرو می شود",
+    "کمپ خصوصی استاندارد وانت و پیاده کردن از هتل ها با وسیله نقلیه انحصاری 4 x 4 و تپه های شنی در صحرا به مدت حدود 30 تا 40 دقیقه (بسته به شرایط آب و هوایی) انجام می شود. این خدمات در یک کمپ سافاری با امکانات رفاهی استاندارد، با توالت تمیز، صندلی و ملحفه ارائه می شود. اینمنوی بوفهشامل: • پیش غذا، سالاد، غذای اصلی، مرغ، گوشت بره و سبزیجات، •دسر • نوشابه، آب، قهوه و گاهوا به صورت رایگان سرو می شود",
+    "خدمات ممتاز تحویل و رها کردن از هتل ها به صورت مشترک توسط وسایل نقلیه 4 x 4 و تپه های شنی در صحرا به مدت حدود 30 تا 40 دقیقه (بسته به شرایط آب و هوایی) خواهد بود. این خدمات در یک کمپ سافاری با امکانات رفاهی لوکس، با توالت تمیز، صندلی و ملحفه ارائه می شود. بوفه بین المللیکه شامل: • پیش غذا، سالاد، ماکارونی، سوته گیاهی، مرغ، بره و سبزیجات باربیکیو •دسر • نوشابه، آب، قهوه و گاهوا به صورت رایگان سرو می شود",
+    "پس از این همه سرگرمی عصرانه شما به محل تحویل خود رها می شوید.",
+    "مدت زمان: 6 - 7 ساعت",
+    "دیگران در مناسبت های اسلامی و تعطیلات ملی *** سرو نخواهد شد و هیچ سرگرمی زنده ای وجود نخواهد داشت. قلیان – هزینه اضافی در صورت درخواست روی میز خصوصی و نه در سالن قلیان اختصاص داده شده."
+   ]
+  },
+  "recommendedFor": [],
+  "services": {
+   "En": [
+    {
+     "groupName": "TRANSPORT",
+     "icon": "bus",
+     "services": [
+      {
+       "description": "Hotel pick-up and drop-off for selected hotels",
+       "included": true
+      }
+     ]
+    },
+    {
+     "groupName": "DRINKS",
+     "icon": "wine-champagne___bar___minibar___pool-bar___casino___pub___pub-crawls",
+     "services": [
+      {
+       "description": "Tea",
+       "included": true
+      },
+      {
+       "description": "Coffee",
+       "included": true
+      },
+      {
+       "description": "Water",
+       "included": true
+      },
+      {
+       "description": "Soft drinks",
+       "included": true
+      },
+      {
+       "description": "***ic beverages",
+       "included": false
+      }
+     ]
+    },
+    {
+     "groupName": "MEAL",
+     "icon": "restaurant-outline",
+     "services": [
+      {
+       "description": "Buffet Dinner",
+       "included": true
+      },
+      {
+       "description": "Vegetarian options BBQ Dinner",
+       "included": true
+      }
+     ]
+    },
+    {
+     "groupName": "UNKNOWN",
+     "icon": "additional-services",
+     "services": [
+      {
+       "description": "Shows",
+       "included": true
+      },
+      {
+       "description": "Henna tattoo",
+       "included": true
+      },
+      {
+       "description": "Dune bashing",
+       "included": true
+      },
+      {
+       "description": "Picture with falcon, Hubbly Bubbly/ Sheesha on the table (outside the common area), Quad biking / Dune Buggy, ***.",
+       "included": false
+      }
+     ]
+    }
+   ],
+   "Fa": [
+    {
+     "groupName": "حمل و نقل",
+     "icon": "bus",
+     "services": [
+      {
+       "description": "ترانسفر از هتل در صورت انتخاب گزینه",
+       "included": true
+      }
+     ]
+    },
+    {
+     "groupName": "نوشیدنی‌ها",
+     "icon": "wine-champagne___bar___minibar___pool-bar___casino___pub___pub-crawls",
+     "services": [
+      {
+       "description": "چای",
+       "included": true
+      },
+      {
+       "description": "قهوه",
+       "included": true
+      },
+      {
+       "description": "آب",
+       "included": true
+      },
+      {
+       "description": "نوشیدنی‌های غیرالکلی",
+       "included": true
+      },
+      {
+       "description": "نوشیدنی",
+       "included": false
+      }
+     ]
+    },
+    {
+     "groupName": "وعده غذایی",
+     "icon": "restaurant-outline",
+     "services": [
+      {
+       "description": "شام بوفه",
+       "included": true
+      },
+      {
+       "description": "گزینه‌های گیاهی، شام باربیکیو",
+       "included": true
+      }
+     ]
+    },
+    {
+     "groupName": "نامشخص",
+     "icon": "additional-services",
+     "services": [
+      {
+       "description": "نمایش",
+       "included": true
+      },
+      {
+       "description": "نقش حنا",
+       "included": true
+      },
+      {
+       "description": "ماشین سواری روی تپه‌های شنی",
+       "included": true
+      },
+      {
+       "description": "عکس با شاهین، قلیان روی میز (خارج از فضای عمومی)، موتور چهارچرخ‌/ ماشین صحرایی سواری",
+       "included": false
+      }
+     ]
+    }
+   ]
+  },
+  "geography": {
+   "location": {
+    "cityName": "Dubai",
+    "countryName": "United Arab Emirates",
+    "latitude": 0,
+    "longitude": 0
+   },
+   "routes": null,
+   "startingPoints": [
+    {
+     "type": "Other",
+     "meetingPointType": "Address",
+     "location": {
+      "cityName": "",
+      "countryName": "United Arab Emirates",
+      "latitude": 0,
+      "longitude": 0
+     },
+     "address": "",
+     "zip": "",
+     "description": "سافاری صحرا، تپه های شنی و شام باربیکیو",
+     "instructions": [
+      "تحویل گرفتن از هتل های دبی.  برای تحویل تور خصوصی در هر هتل / اقامتگاه در محدوده شهر دبی و بندر دبی, لطفا 48 ساعت قبل تماس بگیرید تا زمان و مکان تحویل را تأیید کنید., برای هر هتل یا اقامتگاهی در محدوده شهر عجمان یا شهر شارجه، لطفا 48 ساعت قبل تماس بگیرید تا مکان و زمان تحویل را مجددا تأیید کنید.,"
+     ]
+    }
+   ],
+   "endPoints": [
+    {
+     "type": "Other",
+     "meetingPointType": "Other",
+     "location": {
+      "cityName": "",
+      "countryName": "United Arab Emirates",
+      "latitude": 0,
+      "longitude": 0
+     },
+     "address": "",
+     "zip": "",
+     "description": "",
+     "instructions": []
+    }
+   ]
+  },
+  "rating": null,
+  "notes": {
+   "En": []
+  },
+  "region": {
+   "id": 1234,
+   "name": "Dubai",
+   "translatedName": "دبی",
+   "slug": "dubai"
+  },
+  "segment": {
+   "name": "Safari",
+   "nameSlug": "safari",
+   "isPopular": false,
+   "translatedName": "سافاری"
+  },
+  "importantInfo": {
+   "En": [
+    "Pregnant women and people with heart problems are not allowed to take part in this activity.",
+    "Not suitable for persons suffering with back or neck problems.",
+    "Minimum Age: 3 years old",
+    "If you have a food allergy or dietary requirement, please advice when booking.",
+    "Vegetarian meals are available upon request.",
+    "Casual wear",
+    "Gloves."
+   ],
+   "Fa": [
+    "زنان باردار و افرادی که مشکلات قلبی دارند مجاز به شرکت در این فعالیت نیستند.",
+    "برای افرادی که از مشکلات کمر یا گردن رنج می برند مناسب نیست.",
+    "حداقل سن: 3 سال",
+    "اگر آلرژی غذایی یا نیاز به رژیم غذایی دارید، لطفا هنگام رزرو راهنمایی کنید.",
+    "وعده های غذایی گیاهی در صورت درخواست در دسترس هستند.",
+    "لباس گاه به گاه",
+    "دستکش."
+   ]
+  },
+  "detailedInfo": {
+   "En": []
+  },
+  "advancedTips": {
+   "En": []
+  },
+  "redeemInfo": {
+   "redeemInfoType": "Voucher",
+   "directEntrance": false,
+   "comments": {
+    "En": [
+     "Voucherless. You don’t need to bring any voucher (digital or printed)!"
+    ],
+    "Fa": [
+     "بدون کوپن. نیازی به همراه داشتن کوپن (دیجیتال یا چاپی) ندارید!"
+    ]
+   }
+  },
+  "mainSegmentSlug": "safari",
+  "activityGuidingOption": {
+   "guidingOptionType": "TourGuide",
+   "included": true,
+   "guidingOptionTypeText": "همراه با تور لیدر"
+  },
+  "guidingOption": null,
+  "nameSlug": "desert-safari-dune-bashing-and-bbq-dinner"
+ }
+}

@@ -1,0 +1,36 @@
+{
+ "stations": [
+  {
+   "stationCode": 191,
+   "name": "mashhad",
+   "nameFa": "مشهد",
+   "popularity": 2
+  },
+  {
+   "stationCode": 301,
+   "name": "eslamshahr",
+   "nameFa": "اسلامشهر",
+   "popularity": 10000
+  },
+  {
+   "stationCode": 24,
+   "name": "andimeshk",
+   "nameFa": "اندیمشک",
+   "popularity": 10000
+  },
+  {
+   "stationCode": 72,
+   "name": "khorramshahr",
+   "nameFa": "خرمشهر",
+   "popularity": 10000
+  },
+  {
+   "stationCode": 156,
+   "name": "qaemshahr",
+   "nameFa": "قائمشهر",
+   "popularity": 10000
+  }
+ ],
+ "total": 8,
+ "typeSearch": "match"
+}

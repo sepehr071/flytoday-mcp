@@ -1,0 +1,49 @@
+{
+ "locations": [
+  {
+   "iata": "ika",
+   "type": "None",
+   "name": "فرودگاه بین المللی امام خمینی",
+   "cityName": "تهران",
+   "countryCode": "IR",
+   "countryName": "ایران",
+   "airportType": null,
+   "latitude": "35.409722",
+   "longitude": "51.150833",
+   "distance": null,
+   "distanceUnit": null,
+   "children": [],
+   "flightTypes": [
+    "International"
+   ],
+   "flightDirectionTypes": [
+    "Outbound",
+    "Inbound"
+   ],
+   "rank": null
+  },
+  {
+   "iata": "mhd",
+   "type": "None",
+   "name": "فرودگاه مشهد",
+   "cityName": "مشهد",
+   "countryCode": "IR",
+   "countryName": "ایران",
+   "airportType": null,
+   "latitude": "36.233333",
+   "longitude": "59.633333",
+   "distance": null,
+   "distanceUnit": null,
+   "children": [],
+   "flightTypes": [
+    "Domestic",
+    "International"
+   ],
+   "flightDirectionTypes": [
+    "Outbound",
+    "Inbound"
+   ],
+   "rank": null
+  }
+ ]
+}

@@ -1,0 +1,413 @@
+{
+ "searchId": 416564,
+ "outlines": [
+  {
+   "activityId": 13040,
+   "isBookmarked": false,
+   "duration": {
+    "value": 1,
+    "type": "Days",
+    "typeName": "روز"
+   },
+   "name": {
+    "En": "Traditional Dubai - Half-Day City Tour"
+   },
+   "currency": {
+    "code": "IRR",
+    "fractionalUnit": 1,
+    "decimalPoint": 0,
+    "tolerance": 1
+   },
+   "amountFrom": [
+    {
+     "passengerType": "Adult",
+     "ageFrom": 12,
+     "ageTo": 99,
+     "amount": 37047318,
+     "boxOfficeAmount": 40385268,
+     "clubPoint": 0,
+     "quantity": 0,
+     "code": null,
+     "amountBehavior": 0,
+     "boxOfficeDiscountPercentage": 8,
+     "totalAmount": 0
+    }
+   ],
+   "freeCancellation": false
+  },
+  {
+   "activityId": 12620,
+   "isBookmarked": false,
+   "duration": {
+    "value": 1,
+    "type": "Days",
+    "typeName": "روز"
+   },
+   "name": {
+    "En": "Dubai by Night City Tour"
+   },
+   "currency": {
+    "code": "IRR",
+    "fractionalUnit": 1,
+    "decimalPoint": 0,
+    "tolerance": 1
+   },
+   "amountFrom": [
+    {
+     "passengerType": "Adult",
+     "ageFrom": 12,
+     "ageTo": 99,
+     "amount": 71455692,
+     "boxOfficeAmount": 77880264,
+     "clubPoint": 0,
+     "quantity": 0,
+     "code": null,
+     "amountBehavior": 0,
+     "boxOfficeDiscountPercentage": 8,
+     "totalAmount": 0
+    }
+   ],
+   "freeCancellation": false
+  },
+  {
+   "activityId": 13063,
+   "isBookmarked": false,
+   "duration": {
+    "value": 1,
+    "type": "Days",
+    "typeName": "روز"
+   },
+   "name": {
+    "En": "Marhaba Bronze: Meet and Greet at Terminal 1 and 3"
+   },
+   "currency": {
+    "code": "IRR",
+    "fractionalUnit": 1,
+    "decimalPoint": 0,
+    "tolerance": 1
+   },
+   "amountFrom": [
+    {
+     "passengerType": "Adult",
+     "ageFrom": 2,
+     "ageTo": 99,
+     "amount": 78979824,
+     "boxOfficeAmount": 83252400,
+     "clubPoint": 0,
+     "quantity": 0,
+     "code": null,
+     "amountBehavior": 0,
+     "boxOfficeDiscountPercentage": 5,
+     "totalAmount": 0
+    }
+   ],
+   "freeCancellation": false
+  },
+  {
+   "activityId": 13031,
+   "isBookmarked": false,
+   "duration": {
+    "value": 1,
+    "type": "Days",
+    "typeName": "روز"
+   },
+   "name": {
+    "En": "Historic Dubai City Tour with Abra Ride"
+   },
+   "currency": {
+    "code": "IRR",
+    "fractionalUnit": 1,
+    "decimalPoint": 0,
+    "tolerance": 1
+   },
+   "amountFrom": [
+    {
+     "passengerType": "Adult",
+     "ageFrom": 13,
+     "ageTo": 99,
+     "amount": 79411794,
+     "boxOfficeAmount": 91986048,
+     "clubPoint": 0,
+     "quantity": 0,
+     "code": null,
+     "amountBehavior": 0,
+     "boxOfficeDiscountPercentage": 13,
+     "totalAmount": 0
+    }
+   ],
+   "freeCancellation": false
+  },
+  {
+   "activityId": 13067,
+   "isBookmarked": false,
+   "duration": {
+    "value": 1,
+    "type": "Days",
+    "typeName": "روز"
+   },
+   "name": {
+    "En": "Dubai Speedboat Tour: Marina, Atlantis, Palm and Burj Al Arab"
+   },
+   "currency": {
+    "code": "IRR",
+    "fractionalUnit": 1,
+    "decimalPoint": 0,
+    "tolerance": 1
+   },
+   "amountFrom": [
+    {
+     "passengerType": "Adult",
+     "ageFrom": 13,
+     "ageTo": 99,
+     "amount": 85883490,
+     "boxOfficeAmount": 99486618,
+     "clubPoint": 0,
+     "quantity": 0,
+     "code": null,
+     "amountBehavior": 0,
+     "boxOfficeDiscountPercentage": 13,
+     "totalAmount": 0
+    }
+   ],
+   "freeCancellation": false
+  },
+  {
+   "activityId": 13018,
+   "isBookmarked": false,
+   "duration": {
+    "value": 1,
+    "type": "Days",
+    "typeName": "روز"
+   },
+   "name": {
+    "En": "Morning Desert Safari, Sandboarding and Camel Ride"
+   },
+   "currency": {
+    "code": "IRR",
+    "fractionalUnit": 1,
+    "decimalPoint": 0,
+    "tolerance": 1
+   },
+   "amountFrom": [
+    {
+     "passengerType": "Adult",
+     "ageFrom": 12,
+     "ageTo": 99,
+     "amount": 93454746,
+     "boxOfficeAmount": 114668400,
+     "clubPoint": 0,
+     "quantity": 0,
+     "code": null,
+     "amountBehavior": 0,
+     "boxOfficeDiscountPercentage": 18,
+     "totalAmount": 0
+    }
+   ],
+   "freeCancellation": false
+  },
+  {
+   "activityId": 13049,
+   "isBookmarked": false,
+   "duration": {
+    "value": 1,
+    "type": "Days",
+    "typeName": "روز"
+   },
+   "name": {
+    "En": "Desert Safari, Dune Bashing and BBQ Dinner"
+   },
+   "currency": {
+    "code": "IRR",
+    "fractionalUnit": 1,
+    "decimalPoint": 0,
+    "tolerance": 1
+   },
+   "amountFrom": [
+    {
+     "passengerType": "Adult",
+     "ageFrom": 3,
+     "ageTo": 99,
+     "amount": 101167374,
+     "boxOfficeAmount": 114668400,
+     "clubPoint": 0,
+     "quantity": 0,
+     "code": null,
+     "amountBehavior": 0,
+     "boxOfficeDiscountPercentage": 11,
+     "totalAmount": 0
+    }
+   ],
+   "freeCancellation": false
+  },
+  {
+   "activityId": 13043,
+   "isBookmarked": false,
+   "duration": {
+    "value": 1,
+    "type": "Days",
+    "typeName": "روز"
+   },
+   "name": {
+    "En": "RIB Yellow Boats Sightseeing Cruise"
+   },
+   "currency": {
+    "code": "IRR",
+    "fractionalUnit": 1,
+    "decimalPoint": 0,
+    "tolerance": 1
+   },
+   "amountFrom": [
+    {
+     "passengerType": "Adult",
+     "ageFrom": 13,
+     "ageTo": 99,
+     "amount": 125302716,
+     "boxOfficeAmount": 139015800,
+     "clubPoint": 0,
+     "quantity": 0,
+     "code": null,
+     "amountBehavior": 0,
+     "boxOfficeDiscountPercentage": 9,
+     "totalAmount": 0
+    }
+   ],
+   "freeCancellation": false
+  },
+  {
+   "activityId": 13066,
+   "isBookmarked": false,
+   "duration": {
+    "value": 1,
+    "type": "Days",
+    "typeName": "روز"
+   },
+   "name": {
+    "En": "Dubai Marina Yacht - Shared Tour"
+   },
+   "currency": {
+    "code": "IRR",
+    "fractionalUnit": 1,
+    "decimalPoint": 0,
+    "tolerance": 1
+   },
+   "amountFrom": [
+    {
+     "passengerType": "Adult",
+     "ageFrom": 13,
+     "ageTo": 99,
+     "amount": 132897534,
+     "boxOfficeAmount": 153938400,
+     "clubPoint": 0,
+     "quantity": 0,
+     "code": null,
+     "amountBehavior": 0,
+     "boxOfficeDiscountPercentage": 13,
+     "totalAmount": 0
+    }
+   ],
+   "freeCancellation": false
+  },
+  {
+   "activityId": 13061,
+   "isBookmarked": false,
+   "duration": {
+    "value": 1,
+    "type": "Days",
+    "typeName": "روز"
+   },
+   "name": {
+    "En": "Marhaba Silver: Meet & Greet at Terminal 1 and 3"
+   },
+   "currency": {
+    "code": "IRR",
+    "fractionalUnit": 1,
+    "decimalPoint": 0,
+    "tolerance": 1
+   },
+   "amountFrom": [
+    {
+     "passengerType": "Adult",
+     "ageFrom": 2,
+     "ageTo": 99,
+     "amount": 134264130,
+     "boxOfficeAmount": 141372000,
+     "clubPoint": 0,
+     "quantity": 0,
+     "code": null,
+     "amountBehavior": 0,
+     "boxOfficeDiscountPercentage": 5,
+     "totalAmount": 0
+    }
+   ],
+   "freeCancellation": false
+  },
+  {
+   "activityId": 13069,
+   "isBookmarked": false,
+   "duration": {
+    "value": 1,
+    "type": "Days",
+    "typeName": "روز"
+   },
+   "name": {
+    "En": "Dubai Marina Sunset Dinner Cruise"
+   },
+   "currency": {
+    "code": "IRR",
+    "fractionalUnit": 1,
+    "decimalPoint": 0,
+    "tolerance": 1
+   },
+   "amountFrom": [
+    {
+     "passengerType": "Adult",
+     "ageFrom": 12,
+     "ageTo": 99,
+     "amount": 142385166,
+     "boxOfficeAmount": 164934000,
+     "clubPoint": 0,
+     "quantity": 0,
+     "code": null,
+     "amountBehavior": 0,
+     "boxOfficeDiscountPercentage": 13,
+     "totalAmount": 0
+    }
+   ],
+   "freeCancellation": false
+  },
+  {
+   "activityId": 13080,
+   "isBookmarked": false,
+   "duration": {
+    "value": 1,
+    "type": "Days",
+    "typeName": "روز"
+   },
+   "name": {
+    "En": "Arabian Desert Dunes Safari with Camel Ride and Dinner"
+   },
+   "currency": {
+    "code": "IRR",
+    "fractionalUnit": 1,
+    "decimalPoint": 0,
+    "tolerance": 1
+   },
+   "amountFrom": [
+    {
+     "passengerType": "Adult",
+     "ageFrom": 4,
+     "ageTo": 99,
+     "amount": 149171022,
+     "boxOfficeAmount": 172788000,
+     "clubPoint": 0,
+     "quantity": 0,
+     "code": null,
+     "amountBehavior": 0,
+     "boxOfficeDiscountPercentage": 13,
+     "totalAmount": 0
+    }
+   ],
+   "freeCancellation": false
+  }
+ ]
+}

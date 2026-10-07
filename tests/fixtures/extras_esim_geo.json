@@ -1,0 +1,324 @@
+{
+ "geoLocations": [
+  {
+   "priority": 1,
+   "code": "AE",
+   "name": "امارات متحده عربی",
+   "slug": "united-arab-emirates",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/QUU.png",
+   "geoLocationType": "COUNTRY"
+  },
+  {
+   "priority": 2,
+   "code": "TR",
+   "name": "ترکیه",
+   "slug": "turkey",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/VFI.png",
+   "geoLocationType": "COUNTRY"
+  },
+  {
+   "priority": 3,
+   "code": "IQ",
+   "name": "عراق",
+   "slug": "iraq",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/SVE.png",
+   "geoLocationType": "COUNTRY"
+  },
+  {
+   "priority": 4,
+   "code": "QA",
+   "name": "قطر",
+   "slug": "qatar",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/UUE.png",
+   "geoLocationType": "COUNTRY"
+  },
+  {
+   "priority": 5,
+   "code": "AM",
+   "name": "ارمنستان",
+   "slug": "armenia",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/QU0.png",
+   "geoLocationType": "COUNTRY"
+  },
+  {
+   "priority": 6,
+   "code": "AZ",
+   "name": "آذربایجان",
+   "slug": "azerbaijan",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/QVo.png",
+   "geoLocationType": "COUNTRY"
+  },
+  {
+   "priority": 7,
+   "code": "OM",
+   "name": "عمان",
+   "slug": "oman",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/T00.png",
+   "geoLocationType": "COUNTRY"
+  },
+  {
+   "priority": 8,
+   "code": "TH",
+   "name": "تایلند",
+   "slug": "thailand",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/VEg.png",
+   "geoLocationType": "COUNTRY"
+  },
+  {
+   "priority": 9,
+   "code": "MY",
+   "name": "مالزی",
+   "slug": "malaysia",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/TVk.png",
+   "geoLocationType": "COUNTRY"
+  },
+  {
+   "priority": 10,
+   "code": "GE",
+   "name": "گرجستان",
+   "slug": "georgia",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/R0U.png",
+   "geoLocationType": "COUNTRY"
+  },
+  {
+   "priority": 11,
+   "code": "IN",
+   "name": "هند",
+   "slug": "india",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/SU4.png",
+   "geoLocationType": "COUNTRY"
+  },
+  {
+   "priority": 12,
+   "code": "CN",
+   "name": "چین",
+   "slug": "china",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/Q04.png",
+   "geoLocationType": "COUNTRY"
+  },
+  {
+   "priority": 13,
+   "code": "DE",
+   "name": "آلمان",
+   "slug": "germany",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/REU.png",
+   "geoLocationType": "COUNTRY"
+  },
+  {
+   "priority": 14,
+   "code": "FR",
+   "name": "فرانسه",
+   "slug": "france",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/RlI.png",
+   "geoLocationType": "COUNTRY"
+  },
+  {
+   "priority": 15,
+   "code": "IT",
+   "name": "ایتالیا",
+   "slug": "italy",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/SVQ.png",
+   "geoLocationType": "COUNTRY"
+  },
+  {
+   "priority": 16,
+   "code": "ES",
+   "name": "اسپانیا",
+   "slug": "spain",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/RVM.png",
+   "geoLocationType": "COUNTRY"
+  },
+  {
+   "priority": 17,
+   "code": "NL",
+   "name": "هلند",
+   "slug": "netherlands",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/Tkw.png",
+   "geoLocationType": "COUNTRY"
+  },
+  {
+   "priority": 18,
+   "code": "CA",
+   "name": "کانادا",
+   "slug": "canada",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/Q0E.png",
+   "geoLocationType": "COUNTRY"
+  },
+  {
+   "priority": 19,
+   "code": "US",
+   "name": "ایالات متحده",
+   "slug": "united-states",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/VVM.png",
+   "geoLocationType": "COUNTRY"
+  },
+  {
+   "priority": 20,
+   "code": "RU",
+   "name": "روسیه",
+   "slug": "russia",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/UlU.png",
+   "geoLocationType": "COUNTRY"
+  },
+  {
+   "priority": 21,
+   "code": "ID",
+   "name": "اندونزی",
+   "slug": "indonesia",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/SUQ.png",
+   "geoLocationType": "COUNTRY"
+  },
+  {
+   "priority": 22,
+   "code": "UZ",
+   "name": "ازبکستان",
+   "slug": "uzbekistan",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/VVo.png",
+   "geoLocationType": "COUNTRY"
+  },
+  {
+   "priority": 10000,
+   "code": "GB",
+   "name": "انگلستان",
+   "slug": "united-kingdom",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/R0I.png",
+   "geoLocationType": "COUNTRY"
+  },
+  {
+   "priority": 10000,
+   "code": "MX",
+   "name": "مکزیک",
+   "slug": "mexico",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/TVg.png",
+   "geoLocationType": "COUNTRY"
+  },
+  {
+   "priority": 10000,
+   "code": "HK",
+   "name": "هنگ کنگ",
+   "slug": "hong-kong",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/SEs.png",
+   "geoLocationType": "COUNTRY"
+  },
+  {
+   "priority": 10000,
+   "code": "GR",
+   "name": "یونان",
+   "slug": "greece",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/R1I.png",
+   "geoLocationType": "COUNTRY"
+  },
+  {
+   "priority": 10000,
+   "code": "KR",
+   "name": "کره جنوبی",
+   "slug": "south-korea",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/S1I.png",
+   "geoLocationType": "COUNTRY"
+  },
+  {
+   "priority": 10000,
+   "code": "JP",
+   "name": "ژاپن",
+   "slug": "japan",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/SlA.png",
+   "geoLocationType": "COUNTRY"
+  },
+  {
+   "priority": 10000,
+   "code": "SG",
+   "name": "سنگاپور",
+   "slug": "singapore",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/U0c.png",
+   "geoLocationType": "COUNTRY"
+  },
+  {
+   "priority": 10000,
+   "code": "AW",
+   "name": "آروبا",
+   "slug": "aruba",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/QVc.png",
+   "geoLocationType": "COUNTRY"
+  },
+  {
+   "priority": 10000,
+   "code": "AF",
+   "name": "افغانستان",
+   "slug": "afghanistan",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/QUY.png",
+   "geoLocationType": "COUNTRY"
+  },
+  {
+   "priority": 10000,
+   "code": "AI",
+   "name": "آنگویلا",
+   "slug": "anguilla",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/QUk.png",
+   "geoLocationType": "COUNTRY"
+  },
+  {
+   "priority": 10000,
+   "code": "AL",
+   "name": "آلبانی",
+   "slug": "albania",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/QUw.png",
+   "geoLocationType": "COUNTRY"
+  },
+  {
+   "priority": 10000,
+   "code": "AD",
+   "name": "آندورا",
+   "slug": "andorra",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/QUQ.png",
+   "geoLocationType": "COUNTRY"
+  },
+  {
+   "priority": 10000,
+   "code": "AR",
+   "name": "آرژانتین",
+   "slug": "argentina",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/QVI.png",
+   "geoLocationType": "COUNTRY"
+  },
+  {
+   "priority": 10000,
+   "code": "AG",
+   "name": "آنتیگوا و باربودا",
+   "slug": "antigua-and-barbuda",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/QUc.png",
+   "geoLocationType": "COUNTRY"
+  },
+  {
+   "priority": 10000,
+   "code": "AU",
+   "name": "استرالیا",
+   "slug": "australia",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/QVU.png",
+   "geoLocationType": "COUNTRY"
+  },
+  {
+   "priority": 10000,
+   "code": "AT",
+   "name": "اتریش",
+   "slug": "austria",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/QVQ.png",
+   "geoLocationType": "COUNTRY"
+  },
+  {
+   "priority": 10000,
+   "code": "BE",
+   "name": "بلژیک",
+   "slug": "belgium",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/QkU.png",
+   "geoLocationType": "COUNTRY"
+  },
+  {
+   "priority": 10000,
+   "code": "BJ",
+   "name": "بنین",
+   "slug": "benin",
+   "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/Qko.png",
+   "geoLocationType": "COUNTRY"
+  }
+ ]
+}

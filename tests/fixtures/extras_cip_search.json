@@ -1,0 +1,530 @@
+{
+ "searchId": 278495,
+ "pricedItineraries": [
+  {
+   "fareSourceCode": "d7b5662a-e933-4c7e-8fcc-40edd03987d6",
+   "cipInfo": {
+    "titles": [
+     {
+      "lang": "Fa",
+      "name": "خدمات تشریفات اختصاصی فرودگاه امام خمینی (سالنCIP)"
+     }
+    ],
+    "desciptions": [
+     {
+      "lang": "Fa",
+      "name": "حمل و تحویل بار و چمدان مسافران-پذیرایی با انواع غذاهای ایرانی، فرنگی و نوشیدنی-ورودی اختصاصی بازرسی پلیس و گذرنامه-اینترنت پر سرعت و اتاق سیگار-اتاق بازی کودکان و نمازخانه"
+     }
+    ],
+    "notes": [
+     {
+      "lang": "Fa",
+      "name": "حضور مسافر در سالن سی آی پی حداقل ۲ و حداکثر ۴ ساعت قبل از پرواز امکان پذیر است"
+     }
+    ],
+    "airports": [],
+    "rules": {
+     "adult": [
+      "جریمه کنسلی از 4 ساعت مانده به پرواز به بعد: ۱۰۰ درصد",
+      "جریمه کنسلی از لحظه صدور تا 4 ساعت مانده به پرواز: ۰ درصد"
+     ],
+     "child": [
+      "جریمه کنسلی از 4 ساعت مانده به پرواز به بعد: ۱۰۰ درصد",
+      "جریمه کنسلی از لحظه صدور تا 4 ساعت مانده به پرواز: ۰ درصد"
+     ],
+     "infant": [
+      "جریمه کنسلی از 4 ساعت مانده به پرواز به بعد: ۱۰۰ درصد",
+      "جریمه کنسلی از لحظه صدور تا 4 ساعت مانده به پرواز: ۰ درصد"
+     ],
+     "extraRule": [
+      "حضور مسافر در سالن سی آی پی حداقل ۲ و حداکثر ۴ ساعت قبل از پرواز امکان پذیر است",
+      "حداکثر زمان استفاده از سالن سی آی پی ۴ ساعت می باشد",
+      "صدور فاکتور رسمی حداکثر یک هفته پس از تاریخ پرواز امکان پذیر است",
+      "زمان پشتیبانی تایید درخواست کنسلی از ساعت ۸ الی ۲۴ می باشد"
+     ]
+    },
+    "priceInclude": [
+     "IR"
+    ],
+    "priceExclude": null,
+    "airportCode": "ika",
+    "maxCloseSaleCIP": 0,
+    "image": "https://cdn-a.cdnfl2.ir/upload/flytoday/upload/cip/images/CIP-Emam.jpg",
+    "flightDirectionType": "Outbound",
+    "flightType": "International",
+    "date": "0001-01-01T00:00:00"
+   },
+   "services": [
+    {
+     "serviceId": "972dd7b0-8942-429b-8631-78e4d5ceb3d3",
+     "title": "حیوان خانگی",
+     "description": "حیوان خانگی",
+     "serviceType": "Pet",
+     "behavior": "GroupPax",
+     "ptcFareBreakdowns": [
+      {
+       "passengerCode": "Adt",
+       "passengerQuantity": 1,
+       "baseFare": 34000000,
+       "totalFare": 37400000,
+       "commission": 0,
+       "serviceTax": 0,
+       "original": 37400000,
+       "taxes": 3400000,
+       "currency": null,
+       "clubPoint": 0
+      }
+     ],
+     "maxCloseSaleCIP": 0
+    },
+    {
+     "serviceId": "2ad0d5d6-c5d2-43ee-bf42-121a4506fdb2",
+     "title": "خدمات ویژه، ویلچر",
+     "description": "خدمات ویژه، ویلچر",
+     "serviceType": "Wheelchair",
+     "behavior": "PerPax",
+     "ptcFareBreakdowns": [
+      {
+       "passengerCode": "Adt",
+       "passengerQuantity": 1,
+       "baseFare": 27000000,
+       "totalFare": 29700000,
+       "commission": 0,
+       "serviceTax": 0,
+       "original": 29700000,
+       "taxes": 2700000,
+       "currency": null,
+       "clubPoint": 0
+      }
+     ],
+     "maxCloseSaleCIP": 0
+    },
+    {
+     "serviceId": "0605bbea-f720-4d6c-8d57-e4c0e45edeb5",
+     "title": "ترنسفر SUV کرج لواسان",
+     "description": "ترنسفر SUV کرج لواسان",
+     "serviceType": "Transfer",
+     "behavior": "GroupPax",
+     "ptcFareBreakdowns": [
+      {
+       "passengerCode": "Adt",
+       "passengerQuantity": 1,
+       "baseFare": 39000000,
+       "totalFare": 39000000,
+       "commission": 0,
+       "serviceTax": 0,
+       "original": 39000000,
+       "taxes": 0,
+       "currency": null,
+       "clubPoint": 0
+      }
+     ],
+     "maxCloseSaleCIP": 4
+    },
+    {
+     "serviceId": "97b13d3a-51e1-4dc8-8527-5422b2400862",
+     "title": "ترنسفر ون تهران",
+     "description": "ترنسفر ون تهران",
+     "serviceType": "Transfer",
+     "behavior": "GroupPax",
+     "ptcFareBreakdowns": [
+      {
+       "passengerCode": "Adt",
+       "passengerQuantity": 1,
+       "baseFare": 33000000,
+       "totalFare": 33000000,
+       "commission": 0,
+       "serviceTax": 0,
+       "original": 33000000,
+       "taxes": 0,
+       "currency": null,
+       "clubPoint": 0
+      }
+     ],
+     "maxCloseSaleCIP": 4
+    },
+    {
+     "serviceId": "32aa1144-8834-4e68-bb05-537e94a61a8c",
+     "title": "ترنسفر سواری تهران",
+     "description": "ترنسفر سواری تهران",
+     "serviceType": "Transfer",
+     "behavior": "GroupPax",
+     "ptcFareBreakdowns": [
+      {
+       "passengerCode": "Adt",
+       "passengerQuantity": 1,
+       "baseFare": 26000000,
+       "totalFare": 26000000,
+       "commission": 0,
+       "serviceTax": 0,
+       "original": 26000000,
+       "taxes": 0,
+       "currency": null,
+       "clubPoint": 0
+      }
+     ],
+     "maxCloseSaleCIP": 4
+    },
+    {
+     "serviceId": "ab1be972-1de3-496a-8d44-31b68922851f",
+     "title": "ترنسفر SUV تهران",
+     "description": "ترنسفر SUV تهران",
+     "serviceType": "Transfer",
+     "behavior": "GroupPax",
+     "ptcFareBreakdowns": [
+      {
+       "passengerCode": "Adt",
+       "passengerQuantity": 1,
+       "baseFare": 29000000,
+       "totalFare": 29000000,
+       "commission": 0,
+       "serviceTax": 0,
+       "original": 29000000,
+       "taxes": 0,
+       "currency": null,
+       "clubPoint": 0
+      }
+     ],
+     "maxCloseSaleCIP": 4
+    },
+    {
+     "serviceId": "71692c55-82e2-4820-ad37-5cc91b0722d9",
+     "title": "ترنسفر سواری کرج لواسان",
+     "description": "ترنسفر سواری کرج لواسان",
+     "serviceType": "Transfer",
+     "behavior": "GroupPax",
+     "ptcFareBreakdowns": [
+      {
+       "passengerCode": "Adt",
+       "passengerQuantity": 1,
+       "baseFare": 29000000,
+       "totalFare": 29000000,
+       "commission": 0,
+       "serviceTax": 0,
+       "original": 29000000,
+       "taxes": 0,
+       "currency": null,
+       "clubPoint": 0
+      }
+     ],
+     "maxCloseSaleCIP": 4
+    },
+    {
+     "serviceId": "dbbed9e3-15b8-4c3f-ab7e-439fd3a93c1a",
+     "title": "ترنسفر ون کرج لواسان",
+     "description": "ترنسفر ون کرج لواسان",
+     "serviceType": "Transfer",
+     "behavior": "GroupPax",
+     "ptcFareBreakdowns": [
+      {
+       "passengerCode": "Adt",
+       "passengerQuantity": 1,
+       "baseFare": 43000000,
+       "totalFare": 43000000,
+       "commission": 0,
+       "serviceTax": 0,
+       "original": 43000000,
+       "taxes": 0,
+       "currency": null,
+       "clubPoint": 0
+      }
+     ],
+     "maxCloseSaleCIP": 4
+    }
+   ],
+   "ptcFareBreakdowns": [
+    {
+     "passengerCode": "Adt",
+     "passengerQuantity": 1,
+     "baseFare": 90000000,
+     "totalFare": 99000000,
+     "commission": 4950000,
+     "serviceTax": 0,
+     "original": 99000000,
+     "taxes": 9000000,
+     "currency": null,
+     "clubPoint": 0
+    }
+   ]
+  },
+  {
+   "fareSourceCode": "e3e979b0-b96d-4fb4-9a46-300590c0e460",
+   "cipInfo": {
+    "titles": [
+     {
+      "lang": "Fa",
+      "name": "خدمات تشریفات اختصاصی فرودگاه امام خمینی (سالنCIP)"
+     }
+    ],
+    "desciptions": [
+     {
+      "lang": "Fa",
+      "name": "حمل و تحویل بار و چمدان مسافران-پذیرایی با انواع غذاهای ایرانی، فرنگی و نوشیدنی-ورودی اختصاصی بازرسی پلیس و گذرنامه-اینترنت پر سرعت و اتاق سیگار-اتاق بازی کودکان و نمازخانه"
+     }
+    ],
+    "notes": [
+     {
+      "lang": "Fa",
+      "name": "حضور مسافر در سالن سی آی پی حداقل ۲ و حداکثر ۴ ساعت قبل از پرواز امکان پذیر است"
+     }
+    ],
+    "airports": [],
+    "rules": {
+     "adult": [
+      "جریمه کنسلی از 4 ساعت مانده به پرواز به بعد: ۱۰۰ درصد",
+      "جریمه کنسلی از لحظه صدور تا 4 ساعت مانده به پرواز: ۰ درصد"
+     ],
+     "child": [
+      "جریمه کنسلی از 4 ساعت مانده به پرواز به بعد: ۱۰۰ درصد",
+      "جریمه کنسلی از لحظه صدور تا 4 ساعت مانده به پرواز: ۰ درصد"
+     ],
+     "infant": [
+      "جریمه کنسلی از 4 ساعت مانده به پرواز به بعد: ۱۰۰ درصد",
+      "جریمه کنسلی از لحظه صدور تا 4 ساعت مانده به پرواز: ۰ درصد"
+     ],
+     "extraRule": [
+      "حضور مسافر در سالن سی آی پی حداقل ۲ و حداکثر ۴ ساعت قبل از پرواز امکان پذیر است",
+      "حداکثر زمان استفاده از سالن سی آی پی ۴ ساعت می باشد",
+      "صدور فاکتور رسمی حداکثر یک هفته پس از تاریخ پرواز امکان پذیر است",
+      "زمان پشتیبانی تایید درخواست کنسلی از ساعت ۸ الی ۲۴ می باشد"
+     ]
+    },
+    "priceInclude": null,
+    "priceExclude": [
+     "IR"
+    ],
+    "airportCode": "ika",
+    "maxCloseSaleCIP": 0,
+    "image": "https://cdn-a.cdnfl2.ir/upload/flytoday/upload/cip/images/CIP-Emam.jpg",
+    "flightDirectionType": "Outbound",
+    "flightType": "International",
+    "date": "0001-01-01T00:00:00"
+   },
+   "services": [
+    {
+     "serviceId": "2b5bc85d-0713-4fc3-a5fa-152b78549867",
+     "title": "حیوان خانگی",
+     "description": "حیوان خانگی",
+     "serviceType": "Pet",
+     "behavior": "GroupPax",
+     "ptcFareBreakdowns": [
+      {
+       "passengerCode": "Adt",
+       "passengerQuantity": 1,
+       "baseFare": 34000000,
+       "totalFare": 37400000,
+       "commission": 0,
+       "serviceTax": 0,
+       "original": 37400000,
+       "taxes": 3400000,
+       "currency": null,
+       "clubPoint": 0
+      }
+     ],
+     "maxCloseSaleCIP": 0
+    },
+    {
+     "serviceId": "468d04f0-af3b-44a6-9e2e-da88e56e37de",
+     "title": "خدمات ویژه، ویلچر",
+     "description": "خدمات ویژه، ویلچر",
+     "serviceType": "Wheelchair",
+     "behavior": "PerPax",
+     "ptcFareBreakdowns": [
+      {
+       "passengerCode": "Adt",
+       "passengerQuantity": 1,
+       "baseFare": 27000000,
+       "totalFare": 29700000,
+       "commission": 0,
+       "serviceTax": 0,
+       "original": 29700000,
+       "taxes": 2700000,
+       "currency": null,
+       "clubPoint": 0
+      }
+     ],
+     "maxCloseSaleCIP": 0
+    },
+    {
+     "serviceId": "6d8f70e5-9c7e-4df7-bfc3-e01a84974e88",
+     "title": "ترنسفر SUV کرج لواسان",
+     "description": "ترنسفر SUV کرج لواسان",
+     "serviceType": "Transfer",
+     "behavior": "GroupPax",
+     "ptcFareBreakdowns": [
+      {
+       "passengerCode": "Adt",
+       "passengerQuantity": 1,
+       "baseFare": 39000000,
+       "totalFare": 39000000,
+       "commission": 0,
+       "serviceTax": 0,
+       "original": 39000000,
+       "taxes": 0,
+       "currency": null,
+       "clubPoint": 0
+      }
+     ],
+     "maxCloseSaleCIP": 4
+    },
+    {
+     "serviceId": "13cee36b-1d7f-439a-af43-d4bdc01ffad3",
+     "title": "ترنسفر ون تهران",
+     "description": "ترنسفر ون تهران",
+     "serviceType": "Transfer",
+     "behavior": "GroupPax",
+     "ptcFareBreakdowns": [
+      {
+       "passengerCode": "Adt",
+       "passengerQuantity": 1,
+       "baseFare": 33000000,
+       "totalFare": 33000000,
+       "commission": 0,
+       "serviceTax": 0,
+       "original": 33000000,
+       "taxes": 0,
+       "currency": null,
+       "clubPoint": 0
+      }
+     ],
+     "maxCloseSaleCIP": 4
+    },
+    {
+     "serviceId": "dcf63ae6-fb6c-417c-89ce-f5aa88b95dde",
+     "title": "ترنسفر سواری تهران",
+     "description": "ترنسفر سواری تهران",
+     "serviceType": "Transfer",
+     "behavior": "GroupPax",
+     "ptcFareBreakdowns": [
+      {
+       "passengerCode": "Adt",
+       "passengerQuantity": 1,
+       "baseFare": 26000000,
+       "totalFare": 26000000,
+       "commission": 0,
+       "serviceTax": 0,
+       "original": 26000000,
+       "taxes": 0,
+       "currency": null,
+       "clubPoint": 0
+      }
+     ],
+     "maxCloseSaleCIP": 4
+    },
+    {
+     "serviceId": "59c9a4aa-8443-4726-b204-0706eb0e5628",
+     "title": "ترنسفر SUV تهران",
+     "description": "ترنسفر SUV تهران",
+     "serviceType": "Transfer",
+     "behavior": "GroupPax",
+     "ptcFareBreakdowns": [
+      {
+       "passengerCode": "Adt",
+       "passengerQuantity": 1,
+       "baseFare": 29000000,
+       "totalFare": 29000000,
+       "commission": 0,
+       "serviceTax": 0,
+       "original": 29000000,
+       "taxes": 0,
+       "currency": null,
+       "clubPoint": 0
+      }
+     ],
+     "maxCloseSaleCIP": 4
+    },
+    {
+     "serviceId": "f9d87c98-1cbe-4f00-a6b7-d5939a696ea8",
+     "title": "ترنسفر سواری کرج لواسان",
+     "description": "ترنسفر سواری کرج لواسان",
+     "serviceType": "Transfer",
+     "behavior": "GroupPax",
+     "ptcFareBreakdowns": [
+      {
+       "passengerCode": "Adt",
+       "passengerQuantity": 1,
+       "baseFare": 29000000,
+       "totalFare": 29000000,
+       "commission": 0,
+       "serviceTax": 0,
+       "original": 29000000,
+       "taxes": 0,
+       "currency": null,
+       "clubPoint": 0
+      }
+     ],
+     "maxCloseSaleCIP": 4
+    },
+    {
+     "serviceId": "3fb22431-3986-43c0-9f10-c1bf44e831a3",
+     "title": "ترنسفر ون کرج لواسان",
+     "description": "ترنسفر ون کرج لواسان",
+     "serviceType": "Transfer",
+     "behavior": "GroupPax",
+     "ptcFareBreakdowns": [
+      {
+       "passengerCode": "Adt",
+       "passengerQuantity": 1,
+       "baseFare": 43000000,
+       "totalFare": 43000000,
+       "commission": 0,
+       "serviceTax": 0,
+       "original": 43000000,
+       "taxes": 0,
+       "currency": null,
+       "clubPoint": 0
+      }
+     ],
+     "maxCloseSaleCIP": 4
+    }
+   ],
+   "ptcFareBreakdowns": [
+    {
+     "passengerCode": "Adt",
+     "passengerQuantity": 1,
+     "baseFare": 90000000,
+     "totalFare": 99000000,
+     "commission": 0,
+     "serviceTax": 0,
+     "original": 99000000,
+     "taxes": 9000000,
+     "currency": null,
+     "clubPoint": 0
+    }
+   ]
+  }
+ ],
+ "filter": {
+  "services": [
+   {
+    "filterName": "Service",
+    "items": {
+     "خدمات تشریفات اختصاصی فرودگاه امام خمینی (سالنCIP)": {
+      "serviceName": "خدمات تشریفات اختصاصی فرودگاه امام خمینی (سالنCIP)",
+      "resultCount": 2
+     }
+    }
+   }
+  ],
+  "extraServices": [
+   {
+    "serviceName": "حیوان خانگی",
+    "startPrice": 37400000,
+    "serviceType": "Pet",
+    "serviceId": ""
+   },
+   {
+    "serviceName": "خدمات ویژه، ویلچر",
+    "startPrice": 29700000,
+    "serviceType": "Wheelchair",
+    "serviceId": ""
+   },
+   {
+    "serviceName": "ترنسفر SUV کرج لواسان",
+    "startPrice": 26000000,
+    "serviceType": "Transfer",
+    "serviceId": ""
+   }
+  ]
+ }
+}

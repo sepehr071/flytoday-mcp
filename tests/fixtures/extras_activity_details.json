@@ -1,0 +1,583 @@
+{
+ "searchId": 416575,
+ "isBookmarked": false,
+ "amountsFrom": {
+  "amount": 101167374,
+  "boxOfficeAmount": 114668400,
+  "currency": {
+   "code": "IRR",
+   "fractionalUnit": 1,
+   "decimalPoint": 0,
+   "tolerance": 1
+  },
+  "currencyName": null,
+  "ageFrom": 3,
+  "ageTo": 99,
+  "notAvailable": false,
+  "boxOfficeDiscountPercentage": 11,
+  "supportedFareSourceCodes": [
+   "94B+Mvy17BDaR/oKBm2yEEQ5MsjS4ZmitImik4UXPEs/WVL2G1fnmkZhqRpL0CsS",
+   "yMSO8HBgoDN9EEvP3d/Frc1mYPyb4x4M3wbXIQDh2BMdaKhKPIhHvjNqZ+D+G01Z",
+   "a/9ZzRuf8o9j00/hyjHj9pI9W7truTohUfVeMmawgnDrom+rrNpPRZl2DFqXnDeq",
+   "/dABBYkmLHK3bRKwaQxXl+jn3heIsPcA2p3xjgfzhuRlx55g1fhkZI5XURQv8PNw"
+  ]
+ },
+ "rating": 9,
+ "commentsCount": 1,
+ "itineraries": [
+  {
+   "activityId": 13049,
+   "activityName": {
+    "En": "Desert Safari, Dune Bashing and BBQ Dinner",
+    "Fa": "Desert Safari, Dune Bashing and BBQ Dinner"
+   },
+   "name": {
+    "En": "Shared Tour  - Budget Camp",
+    "Fa": "Shared Tour  - Budget Camp"
+   },
+   "voucherType": "Non",
+   "supportedLanguages": [
+    "انگلیسی"
+   ],
+   "duration": {
+    "value": 1,
+    "type": "Days",
+    "typeName": "Days"
+   },
+   "activityRates": [
+    {
+     "fareSourceCode": "94B+Mvy17BDaR/oKBm2yEEQ5MsjS4ZmitImik4UXPEs/WVL2G1fnmkZhqRpL0CsS",
+     "operationDates": [
+      {
+       "from": "2026-10-10T00:00:00",
+       "to": "2026-10-10T00:00:00",
+       "isRefundable": true,
+       "cancellationPolicies": [
+        {
+         "dateFrom": "2026-10-09T03:00:00",
+         "amount": 101167374
+        }
+       ]
+      },
+      {
+       "from": "2026-10-11T00:00:00",
+       "to": "2026-10-11T00:00:00",
+       "isRefundable": true,
+       "cancellationPolicies": [
+        {
+         "dateFrom": "2026-10-10T03:00:00",
+         "amount": 101167374
+        }
+       ]
+      }
+     ],
+     "ptcBreakDowns": [
+      {
+       "passengerType": "Adult",
+       "ageFrom": 3,
+       "ageTo": 99,
+       "amount": 101167374,
+       "boxOfficeAmount": 114668400,
+       "clubPoint": 50,
+       "quantity": 0,
+       "code": "Adult03999",
+       "amountBehavior": "PerPax",
+       "boxOfficeDiscountPercentage": 11,
+       "totalAmount": 101167374
+      },
+      {
+       "passengerType": "Child",
+       "ageFrom": 0,
+       "ageTo": 2,
+       "amount": 0,
+       "boxOfficeAmount": 0,
+       "clubPoint": 0,
+       "quantity": 0,
+       "code": "Child0002",
+       "amountBehavior": "PerPax",
+       "boxOfficeDiscountPercentage": 0,
+       "totalAmount": 0
+      }
+     ],
+     "languages": {
+      "En": {
+       "language": "En",
+       "languageName": "انگلیسی"
+      }
+     },
+     "freeCancellation": false
+    }
+   ],
+   "activityRemarks": [
+    {
+     "type": "CONTRACT_REMARKS",
+     "text": "محل ملاقات: تحویل گرفتن در لابی هتل // دستورالعمل های محل ملاقات: تحویل فقط برای هتل های واقع در شهر دبی. زمان تحویل گرفتن: اکتبر - آوریل: 2:30 بعد از ظهر - 3 بعد از ظهر ; مه – سپتامبر: 3:15 بعد از ظهر – 3:45 بعد از ظهر. لطفا زمان یا مکان تحویل خود را با تماس با Rayna Tours LLC 24 ساعت قبل از تاریخ سرویس در +971 420 874 04 تأیید کنید. لطفا حداقل 15 دقیقه قبل به محل تحویل می رسید // نقطه پایان: همان نقطه شروع // مدت زمان: 5 ساعت // شامل: تحویل و تحویل هتل برای هتل های منتخب. چای. آب. قهوه. نوشابه. شام بوفه. نمایش. راهنما // شامل نمی شود: ***نوشیدنی های آی سی. عکس با شاهین. شیشه. دوچرخه سواری چهارگانه. کالسکه Dune // دستورالعمل های اجباری: لطفا مطمئن شوید که در طول فرآیند رزرو به سوالات اجباری پاسخ داده اید تا از ارائه صحیح خدمات اطمینان حاصل کنید. به یاد داشته باشید که یک شناسه عکس دار معتبر همراه خود داشته باشید // نوع کوپن: کوپن الکترونیکی. نمایش the voucher on your mobile device to enjoy the activity // Voucher validity: Service date //   name: Rayna Tours LLC //   emergency phone: +971 420 874 05"
+    }
+   ],
+   "currency": {
+    "code": "IRR",
+    "fractionalUnit": 1,
+    "decimalPoint": 0,
+    "tolerance": 1
+   },
+   "currencyName": null,
+   "freeCancellation": false,
+   "languages": {
+    "En": {
+     "language": "En",
+     "languageName": "انگلیسی",
+     "sessions": []
+    }
+   },
+   "sessions": {}
+  },
+  {
+   "activityId": 13049,
+   "activityName": {
+    "En": "Desert Safari, Dune Bashing and BBQ Dinner",
+    "Fa": "Desert Safari, Dune Bashing and BBQ Dinner"
+   },
+   "name": {
+    "En": "Shared tour - Standard Camp",
+    "Fa": "Shared tour - Standard Camp"
+   },
+   "voucherType": "Non",
+   "supportedLanguages": [
+    "انگلیسی"
+   ],
+   "duration": {
+    "value": 1,
+    "type": "Days",
+    "typeName": "Days"
+   },
+   "activityRates": [
+    {
+     "fareSourceCode": "yMSO8HBgoDN9EEvP3d/Frc1mYPyb4x4M3wbXIQDh2BMdaKhKPIhHvjNqZ+D+G01Z",
+     "operationDates": [
+      {
+       "from": "2026-10-10T00:00:00",
+       "to": "2026-10-10T00:00:00",
+       "isRefundable": true,
+       "cancellationPolicies": [
+        {
+         "dateFrom": "2026-10-09T03:00:00",
+         "amount": 114093188
+        }
+       ]
+      },
+      {
+       "from": "2026-10-11T00:00:00",
+       "to": "2026-10-11T00:00:00",
+       "isRefundable": true,
+       "cancellationPolicies": [
+        {
+         "dateFrom": "2026-10-10T03:00:00",
+         "amount": 114093188
+        }
+       ]
+      }
+     ],
+     "ptcBreakDowns": [
+      {
+       "passengerType": "Adult",
+       "ageFrom": 12,
+       "ageTo": 99,
+       "amount": 109359096,
+       "boxOfficeAmount": 132913242,
+       "clubPoint": 54,
+       "quantity": 0,
+       "code": "Adult12999",
+       "amountBehavior": "PerPax",
+       "boxOfficeDiscountPercentage": 17,
+       "totalAmount": 109359096
+      },
+      {
+       "passengerType": "Child",
+       "ageFrom": 3,
+       "ageTo": 11,
+       "amount": 99415932,
+       "boxOfficeAmount": 120833790,
+       "clubPoint": 49,
+       "quantity": 0,
+       "code": "Child0311",
+       "amountBehavior": "PerPax",
+       "boxOfficeDiscountPercentage": 17,
+       "totalAmount": 99415932
+      },
+      {
+       "passengerType": "Child",
+       "ageFrom": 0,
+       "ageTo": 2,
+       "amount": 0,
+       "boxOfficeAmount": 0,
+       "clubPoint": 0,
+       "quantity": 0,
+       "code": "Child0002",
+       "amountBehavior": "PerPax",
+       "boxOfficeDiscountPercentage": 0,
+       "totalAmount": 0
+      }
+     ],
+     "languages": {
+      "En": {
+       "language": "En",
+       "languageName": "انگلیسی"
+      }
+     },
+     "freeCancellation": false
+    },
+    {
+     "fareSourceCode": "OHdbnAz8fJFdOVmwVR0e/S2ctne9QQQ1VZ6MuOzfsosjEowGJ5rngs3tVGSSZqa4",
+     "operationDates": [
+      {
+       "from": "2026-11-01T00:00:00",
+       "to": "2026-11-01T00:00:00",
+       "isRefundable": true,
+       "cancellationPolicies": [
+        {
+         "dateFrom": "2026-10-31T03:00:00",
+         "amount": 124746578
+        }
+       ]
+      },
+      {
+       "from": "2026-11-02T00:00:00",
+       "to": "2026-11-02T00:00:00",
+       "isRefundable": true,
+       "cancellationPolicies": [
+        {
+         "dateFrom": "2026-11-01T03:00:00",
+         "amount": 124746578
+        }
+       ]
+      }
+     ],
+     "ptcBreakDowns": [
+      {
+       "passengerType": "Adult",
+       "ageFrom": 12,
+       "ageTo": 99,
+       "amount": 119302260,
+       "boxOfficeAmount": 141372000,
+       "clubPoint": 59,
+       "quantity": 0,
+       "code": "Adult12999",
+       "amountBehavior": "PerPax",
+       "boxOfficeDiscountPercentage": 15,
+       "totalAmount": 119302260
+      },
+      {
+       "passengerType": "Child",
+       "ageFrom": 3,
+       "ageTo": 11,
+       "amount": 114330678,
+       "boxOfficeAmount": 129033366,
+       "clubPoint": 57,
+       "quantity": 0,
+       "code": "Child0311",
+       "amountBehavior": "PerPax",
+       "boxOfficeDiscountPercentage": 11,
+       "totalAmount": 114330678
+      },
+      {
+       "passengerType": "Child",
+       "ageFrom": 0,
+       "ageTo": 2,
+       "amount": 0,
+       "boxOfficeAmount": 0,
+       "clubPoint": 0,
+       "quantity": 0,
+       "code": "Child0002",
+       "amountBehavior": "PerPax",
+       "boxOfficeDiscountPercentage": 0,
+       "totalAmount": 0
+      }
+     ],
+     "languages": {
+      "En": {
+       "language": "En",
+       "languageName": "انگلیسی"
+      }
+     },
+     "freeCancellation": false
+    }
+   ],
+   "activityRemarks": [
+    {
+     "type": "CONTRACT_REMARKS",
+     "text": "محل ملاقات: در هتل // دستورالعمل های محل ملاقات: فقط در محدوده شهر دبی. لطفا زمان تحویل یا مکان تحویل خود را با تماس یا پیام رسانی به تعطیلات تفریحی دبی 24 ساعت قبل از تاریخ خدمات در +971 509 402 008 ( واتساپ). زمان تحویل گرفتن: اکتبر - آوریل: 2:30 بعد از ظهر - 3 بعد از ظهر ; مه – سپتامبر: 3:15 بعد از ظهر – 3:45 بعد از ظهر. لطفا اطمینان حاصل کنید که حداقل 15 دقیقه قبل به محل تحویل می رسید // نقطه پایان: همان نقطه ملاقات // مدت زمان: 5 - 6 ساعت // شامل: ترانسفر هتل برای هتل های منتخب. آب. قهوه. چای. نوشابه. شام بوفه // شامل نمی شود: ***نوشیدنی های آی سی // دستورالعمل های اجباری: لطفا مطمئن شوید که در طول فرآیند رزرو به سوالات اجباری پاسخ داده اید تا از ارائه صحیح خدمات اطمینان حاصل کنید. به یاد داشته باشید که یک شناسه عکس دار معتبر همراه داشته باشید. برای مهمانانی که مشکلات قلبی، گردن و/یا کمر دارند توصیه نمی شود. به زنان باردار و کودکان زیر 3 سال توصیه می شود طبق گفته دولت از رانندگی در تپه های شنی خودداری کنند. با این حال، مقامات مستقیما به درخواست کمپ در صورت حمل نوزاد می توانند قبل از تاریخ رزرو انجام شوند // توصیه ها: کد لباس: گاه به گاه // نوع کوپن: بدون کوپن. نیازی به همراه داشتن کوپن (دیجیتال یا چاپی) ندارید! نام: تعطیلات تفریحی دبی // تلفن اضطراری: +971 4 208 7405. (یکشنبه تا پنجشنبه، 8:30 صبح تا 6 بعد از ظهر)."
+    }
+   ],
+   "currency": {
+    "code": "IRR",
+    "fractionalUnit": 1,
+    "decimalPoint": 0,
+    "tolerance": 1
+   },
+   "currencyName": null,
+   "freeCancellation": false,
+   "languages": {
+    "En": {
+     "language": "En",
+     "languageName": "انگلیسی",
+     "sessions": []
+    }
+   },
+   "sessions": {}
+  }
+ ],
+ "activityAmountsFromCalendar": {
+  "2026-10-10": {
+   "amount": 101167374,
+   "boxOfficeAmount": 114668400,
+   "currency": {
+    "code": "IRR",
+    "fractionalUnit": 1,
+    "decimalPoint": 0,
+    "tolerance": 1
+   },
+   "currencyName": null,
+   "ageFrom": 3,
+   "ageTo": 99,
+   "notAvailable": false,
+   "boxOfficeDiscountPercentage": 11,
+   "supportedFareSourceCodes": [
+    "94B+Mvy17BDaR/oKBm2yEEQ5MsjS4ZmitImik4UXPEs/WVL2G1fnmkZhqRpL0CsS",
+    "yMSO8HBgoDN9EEvP3d/Frc1mYPyb4x4M3wbXIQDh2BMdaKhKPIhHvjNqZ+D+G01Z",
+    "a/9ZzRuf8o9j00/hyjHj9pI9W7truTohUfVeMmawgnDrom+rrNpPRZl2DFqXnDeq",
+    "/dABBYkmLHK3bRKwaQxXl+jn3heIsPcA2p3xjgfzhuRlx55g1fhkZI5XURQv8PNw"
+   ]
+  },
+  "2026-10-11": {
+   "amount": 101167374,
+   "boxOfficeAmount": 114668400,
+   "currency": {
+    "code": "IRR",
+    "fractionalUnit": 1,
+    "decimalPoint": 0,
+    "tolerance": 1
+   },
+   "currencyName": null,
+   "ageFrom": 3,
+   "ageTo": 99,
+   "notAvailable": false,
+   "boxOfficeDiscountPercentage": 11,
+   "supportedFareSourceCodes": [
+    "94B+Mvy17BDaR/oKBm2yEEQ5MsjS4ZmitImik4UXPEs/WVL2G1fnmkZhqRpL0CsS",
+    "yMSO8HBgoDN9EEvP3d/Frc1mYPyb4x4M3wbXIQDh2BMdaKhKPIhHvjNqZ+D+G01Z",
+    "a/9ZzRuf8o9j00/hyjHj9pI9W7truTohUfVeMmawgnDrom+rrNpPRZl2DFqXnDeq",
+    "/dABBYkmLHK3bRKwaQxXl+jn3heIsPcA2p3xjgfzhuRlx55g1fhkZI5XURQv8PNw"
+   ]
+  },
+  "2026-10-12": {
+   "amount": 101167374,
+   "boxOfficeAmount": 114668400,
+   "currency": {
+    "code": "IRR",
+    "fractionalUnit": 1,
+    "decimalPoint": 0,
+    "tolerance": 1
+   },
+   "currencyName": null,
+   "ageFrom": 3,
+   "ageTo": 99,
+   "notAvailable": false,
+   "boxOfficeDiscountPercentage": 11,
+   "supportedFareSourceCodes": [
+    "94B+Mvy17BDaR/oKBm2yEEQ5MsjS4ZmitImik4UXPEs/WVL2G1fnmkZhqRpL0CsS",
+    "yMSO8HBgoDN9EEvP3d/Frc1mYPyb4x4M3wbXIQDh2BMdaKhKPIhHvjNqZ+D+G01Z",
+    "a/9ZzRuf8o9j00/hyjHj9pI9W7truTohUfVeMmawgnDrom+rrNpPRZl2DFqXnDeq",
+    "/dABBYkmLHK3bRKwaQxXl+jn3heIsPcA2p3xjgfzhuRlx55g1fhkZI5XURQv8PNw"
+   ]
+  },
+  "2026-10-13": {
+   "amount": 101167374,
+   "boxOfficeAmount": 114668400,
+   "currency": {
+    "code": "IRR",
+    "fractionalUnit": 1,
+    "decimalPoint": 0,
+    "tolerance": 1
+   },
+   "currencyName": null,
+   "ageFrom": 3,
+   "ageTo": 99,
+   "notAvailable": false,
+   "boxOfficeDiscountPercentage": 11,
+   "supportedFareSourceCodes": [
+    "94B+Mvy17BDaR/oKBm2yEEQ5MsjS4ZmitImik4UXPEs/WVL2G1fnmkZhqRpL0CsS",
+    "yMSO8HBgoDN9EEvP3d/Frc1mYPyb4x4M3wbXIQDh2BMdaKhKPIhHvjNqZ+D+G01Z",
+    "a/9ZzRuf8o9j00/hyjHj9pI9W7truTohUfVeMmawgnDrom+rrNpPRZl2DFqXnDeq",
+    "/dABBYkmLHK3bRKwaQxXl+jn3heIsPcA2p3xjgfzhuRlx55g1fhkZI5XURQv8PNw"
+   ]
+  },
+  "2026-10-14": {
+   "amount": 101167374,
+   "boxOfficeAmount": 114668400,
+   "currency": {
+    "code": "IRR",
+    "fractionalUnit": 1,
+    "decimalPoint": 0,
+    "tolerance": 1
+   },
+   "currencyName": null,
+   "ageFrom": 3,
+   "ageTo": 99,
+   "notAvailable": false,
+   "boxOfficeDiscountPercentage": 11,
+   "supportedFareSourceCodes": [
+    "94B+Mvy17BDaR/oKBm2yEEQ5MsjS4ZmitImik4UXPEs/WVL2G1fnmkZhqRpL0CsS",
+    "yMSO8HBgoDN9EEvP3d/Frc1mYPyb4x4M3wbXIQDh2BMdaKhKPIhHvjNqZ+D+G01Z",
+    "a/9ZzRuf8o9j00/hyjHj9pI9W7truTohUfVeMmawgnDrom+rrNpPRZl2DFqXnDeq",
+    "/dABBYkmLHK3bRKwaQxXl+jn3heIsPcA2p3xjgfzhuRlx55g1fhkZI5XURQv8PNw"
+   ]
+  },
+  "2026-10-15": {
+   "amount": 101167374,
+   "boxOfficeAmount": 114668400,
+   "currency": {
+    "code": "IRR",
+    "fractionalUnit": 1,
+    "decimalPoint": 0,
+    "tolerance": 1
+   },
+   "currencyName": null,
+   "ageFrom": 3,
+   "ageTo": 99,
+   "notAvailable": false,
+   "boxOfficeDiscountPercentage": 11,
+   "supportedFareSourceCodes": [
+    "94B+Mvy17BDaR/oKBm2yEEQ5MsjS4ZmitImik4UXPEs/WVL2G1fnmkZhqRpL0CsS",
+    "yMSO8HBgoDN9EEvP3d/Frc1mYPyb4x4M3wbXIQDh2BMdaKhKPIhHvjNqZ+D+G01Z",
+    "a/9ZzRuf8o9j00/hyjHj9pI9W7truTohUfVeMmawgnDrom+rrNpPRZl2DFqXnDeq",
+    "/dABBYkmLHK3bRKwaQxXl+jn3heIsPcA2p3xjgfzhuRlx55g1fhkZI5XURQv8PNw"
+   ]
+  },
+  "2026-10-16": {
+   "amount": 101167374,
+   "boxOfficeAmount": 114668400,
+   "currency": {
+    "code": "IRR",
+    "fractionalUnit": 1,
+    "decimalPoint": 0,
+    "tolerance": 1
+   },
+   "currencyName": null,
+   "ageFrom": 3,
+   "ageTo": 99,
+   "notAvailable": false,
+   "boxOfficeDiscountPercentage": 11,
+   "supportedFareSourceCodes": [
+    "94B+Mvy17BDaR/oKBm2yEEQ5MsjS4ZmitImik4UXPEs/WVL2G1fnmkZhqRpL0CsS",
+    "yMSO8HBgoDN9EEvP3d/Frc1mYPyb4x4M3wbXIQDh2BMdaKhKPIhHvjNqZ+D+G01Z",
+    "a/9ZzRuf8o9j00/hyjHj9pI9W7truTohUfVeMmawgnDrom+rrNpPRZl2DFqXnDeq",
+    "/dABBYkmLHK3bRKwaQxXl+jn3heIsPcA2p3xjgfzhuRlx55g1fhkZI5XURQv8PNw"
+   ]
+  },
+  "2026-10-17": {
+   "amount": 101167374,
+   "boxOfficeAmount": 114668400,
+   "currency": {
+    "code": "IRR",
+    "fractionalUnit": 1,
+    "decimalPoint": 0,
+    "tolerance": 1
+   },
+   "currencyName": null,
+   "ageFrom": 3,
+   "ageTo": 99,
+   "notAvailable": false,
+   "boxOfficeDiscountPercentage": 11,
+   "supportedFareSourceCodes": [
+    "94B+Mvy17BDaR/oKBm2yEEQ5MsjS4ZmitImik4UXPEs/WVL2G1fnmkZhqRpL0CsS",
+    "yMSO8HBgoDN9EEvP3d/Frc1mYPyb4x4M3wbXIQDh2BMdaKhKPIhHvjNqZ+D+G01Z",
+    "a/9ZzRuf8o9j00/hyjHj9pI9W7truTohUfVeMmawgnDrom+rrNpPRZl2DFqXnDeq",
+    "/dABBYkmLHK3bRKwaQxXl+jn3heIsPcA2p3xjgfzhuRlx55g1fhkZI5XURQv8PNw"
+   ]
+  },
+  "2026-10-18": {
+   "amount": 101167374,
+   "boxOfficeAmount": 114668400,
+   "currency": {
+    "code": "IRR",
+    "fractionalUnit": 1,
+    "decimalPoint": 0,
+    "tolerance": 1
+   },
+   "currencyName": null,
+   "ageFrom": 3,
+   "ageTo": 99,
+   "notAvailable": false,
+   "boxOfficeDiscountPercentage": 11,
+   "supportedFareSourceCodes": [
+    "94B+Mvy17BDaR/oKBm2yEEQ5MsjS4ZmitImik4UXPEs/WVL2G1fnmkZhqRpL0CsS",
+    "yMSO8HBgoDN9EEvP3d/Frc1mYPyb4x4M3wbXIQDh2BMdaKhKPIhHvjNqZ+D+G01Z",
+    "a/9ZzRuf8o9j00/hyjHj9pI9W7truTohUfVeMmawgnDrom+rrNpPRZl2DFqXnDeq",
+    "/dABBYkmLHK3bRKwaQxXl+jn3heIsPcA2p3xjgfzhuRlx55g1fhkZI5XURQv8PNw"
+   ]
+  },
+  "2026-10-19": {
+   "amount": 101167374,
+   "boxOfficeAmount": 114668400,
+   "currency": {
+    "code": "IRR",
+    "fractionalUnit": 1,
+    "decimalPoint": 0,
+    "tolerance": 1
+   },
+   "currencyName": null,
+   "ageFrom": 3,
+   "ageTo": 99,
+   "notAvailable": false,
+   "boxOfficeDiscountPercentage": 11,
+   "supportedFareSourceCodes": [
+    "94B+Mvy17BDaR/oKBm2yEEQ5MsjS4ZmitImik4UXPEs/WVL2G1fnmkZhqRpL0CsS",
+    "yMSO8HBgoDN9EEvP3d/Frc1mYPyb4x4M3wbXIQDh2BMdaKhKPIhHvjNqZ+D+G01Z",
+    "a/9ZzRuf8o9j00/hyjHj9pI9W7truTohUfVeMmawgnDrom+rrNpPRZl2DFqXnDeq",
+    "/dABBYkmLHK3bRKwaQxXl+jn3heIsPcA2p3xjgfzhuRlx55g1fhkZI5XURQv8PNw"
+   ]
+  },
+  "2026-10-20": {
+   "amount": 101167374,
+   "boxOfficeAmount": 114668400,
+   "currency": {
+    "code": "IRR",
+    "fractionalUnit": 1,
+    "decimalPoint": 0,
+    "tolerance": 1
+   },
+   "currencyName": null,
+   "ageFrom": 3,
+   "ageTo": 99,
+   "notAvailable": false,
+   "boxOfficeDiscountPercentage": 11,
+   "supportedFareSourceCodes": [
+    "94B+Mvy17BDaR/oKBm2yEEQ5MsjS4ZmitImik4UXPEs/WVL2G1fnmkZhqRpL0CsS",
+    "yMSO8HBgoDN9EEvP3d/Frc1mYPyb4x4M3wbXIQDh2BMdaKhKPIhHvjNqZ+D+G01Z",
+    "a/9ZzRuf8o9j00/hyjHj9pI9W7truTohUfVeMmawgnDrom+rrNpPRZl2DFqXnDeq",
+    "/dABBYkmLHK3bRKwaQxXl+jn3heIsPcA2p3xjgfzhuRlx55g1fhkZI5XURQv8PNw"
+   ]
+  },
+  "2026-10-21": {
+   "amount": 101167374,
+   "boxOfficeAmount": 114668400,
+   "currency": {
+    "code": "IRR",
+    "fractionalUnit": 1,
+    "decimalPoint": 0,
+    "tolerance": 1
+   },
+   "currencyName": null,
+   "ageFrom": 3,
+   "ageTo": 99,
+   "notAvailable": false,
+   "boxOfficeDiscountPercentage": 11,
+   "supportedFareSourceCodes": [
+    "94B+Mvy17BDaR/oKBm2yEEQ5MsjS4ZmitImik4UXPEs/WVL2G1fnmkZhqRpL0CsS",
+    "yMSO8HBgoDN9EEvP3d/Frc1mYPyb4x4M3wbXIQDh2BMdaKhKPIhHvjNqZ+D+G01Z",
+    "a/9ZzRuf8o9j00/hyjHj9pI9W7truTohUfVeMmawgnDrom+rrNpPRZl2DFqXnDeq",
+    "/dABBYkmLHK3bRKwaQxXl+jn3heIsPcA2p3xjgfzhuRlx55g1fhkZI5XURQv8PNw"
+   ]
+  }
+ }
+}

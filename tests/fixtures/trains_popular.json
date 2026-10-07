@@ -1,0 +1,54 @@
+{
+ "stations": [
+  {
+   "stationCode": 1,
+   "name": "tehran",
+   "nameFa": "تهران",
+   "popularity": 1
+  },
+  {
+   "stationCode": 191,
+   "name": "mashhad",
+   "nameFa": "مشهد",
+   "popularity": 2
+  },
+  {
+   "stationCode": 161,
+   "name": "qom",
+   "nameFa": "قم",
+   "popularity": 3
+  },
+  {
+   "stationCode": 219,
+   "name": "yazd",
+   "nameFa": "یزد",
+   "popularity": 4
+  },
+  {
+   "stationCode": 21,
+   "name": "isfahan",
+   "nameFa": "اصفهان",
+   "popularity": 5
+  },
+  {
+   "stationCode": 37,
+   "name": "bandarabbas",
+   "nameFa": "بندرعباس",
+   "popularity": 6
+  },
+  {
+   "stationCode": 117,
+   "name": "hamedan",
+   "nameFa": "همدان",
+   "popularity": 7
+  },
+  {
+   "stationCode": 255,
+   "name": "shiraz",
+   "nameFa": "شیراز",
+   "popularity": 8
+  }
+ ],
+ "total": 8,
+ "typeSearch": null
+}

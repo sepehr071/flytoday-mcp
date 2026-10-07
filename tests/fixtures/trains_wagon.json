@@ -1,0 +1,61 @@
+{
+ "wagonId": 580510315,
+ "wagonName": "4 ستاره 4 تخته غدیر",
+ "wagonAmenities": [
+  {
+   "id": 1,
+   "title": "ارتباط داخلی"
+  },
+  {
+   "id": 2,
+   "title": "بسته پذیرایی"
+  },
+  {
+   "id": 5,
+   "title": "سیستم تهویه"
+  },
+  {
+   "id": 7,
+   "title": "سیستم صوتی"
+  },
+  {
+   "id": 8,
+   "title": "پریز برق"
+  },
+  {
+   "id": 11,
+   "title": "چراغ مطالعه"
+  },
+  {
+   "id": 12,
+   "title": "سیستم تصویری"
+  },
+  {
+   "id": 14,
+   "title": "سرویس خواب"
+  },
+  {
+   "id": 24,
+   "title": "ويلچر"
+  }
+ ],
+ "extraServices": [
+  {
+   "id": 0,
+   "title": "پذیرایی :خوراک مرغ دورچین",
+   "price": 1420000,
+   "serviceCode": 49
+  },
+  {
+   "id": 0,
+   "title": "پذیرایی : چلوجوجه کباب",
+   "price": 1420000,
+   "serviceCode": 50
+  }
+ ],
+ "trainFacilities": [],
+ "imageUrls": [
+  "https://cdn-a.cdnfl2.ir/upload/flytoday/upload/domesticrails/wagonimages/qadir_train_1.jpg",
+  "https://cdn-a.cdnfl2.ir/upload/flytoday/upload/domesticrails/wagonimages/qadir_train_2.jpg"
+ ]
+}

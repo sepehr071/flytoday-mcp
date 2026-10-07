@@ -1,0 +1,41 @@
+{
+ "hotelInfo": [
+  {
+   "id": 741221,
+   "name": "Palmiye Hotel Taksim",
+   "nameLocal": "پالمیه تکسیم",
+   "address": "Halas Sokak 19 ISTANBUL, Turkey",
+   "rating": "3.0",
+   "reviewScore": "5.40",
+   "numberOfComment": 5,
+   "reviewsCount": 0,
+   "sumOfCommentsAndReview": 5,
+   "isAccommodation": false
+  },
+  {
+   "id": 12214366,
+   "name": "Avist Hotel Avcilar",
+   "nameLocal": "بیگ لایف سوئیت",
+   "address": "BONCUK SOKAK, 31 Istanbul Istanbul, Turkey",
+   "rating": "0",
+   "reviewScore": null,
+   "numberOfComment": 6,
+   "reviewsCount": 41,
+   "sumOfCommentsAndReview": 47,
+   "isAccommodation": false
+  },
+  {
+   "id": 858346,
+   "name": "Bufes Hotel",
+   "nameLocal": "بوفس",
+   "address": "Büyüksekerci Sk. Istanbul Istanbul, Turkey",
+   "rating": "0",
+   "reviewScore": "3.20",
+   "numberOfComment": 2,
+   "reviewsCount": 9,
+   "sumOfCommentsAndReview": 11,
+   "isAccommodation": false
+  }
+ ],
+ "totalCount": 7714
+}

@@ -1,0 +1,451 @@
+{
+ "searchId": 6025402,
+ "originDestinationItineraries": [
+  {
+   "origin": {
+    "id": "0001",
+    "name": "Tehran",
+    "nameFa": "تهران",
+    "cityId": "0001",
+    "cityName": "Tehran",
+    "cityNameFa": "تهران",
+    "terminalNameFa": "تهران"
+   },
+   "destination": {
+    "id": "0002",
+    "name": "Isfahan",
+    "nameFa": "اصفهان",
+    "cityId": "0002",
+    "cityName": "Isfahan",
+    "cityNameFa": "اصفهان",
+    "terminalNameFa": "اصفهان"
+   },
+   "departureDate": "2026-10-14T00:30:00",
+   "firstAvailableDate": null,
+   "isFull": false,
+   "noResult": false,
+   "itineraries": [
+    {
+     "fareSourceCode": "34656432626165322D323834372D343837362D393364612D346566643037616430653063313739313336303339323834312C31313833392D37393532303332382D362C31",
+     "name": "همسفر چابکسواران پایانه بیهقی",
+     "busCompanyNameFa": "همسفر چابکسواران پایانه بیهقی",
+     "busCompanyName": "همسفر چابکسواران پایانه بیهقی",
+     "busCompanyId": "0109",
+     "busGroupCompanyCode": "HMSFR",
+     "busGroupCompanyNameFa": "همسفر",
+     "departureDate": "2026-10-14T00:30:00",
+     "busType": "مان VIP (کاوه)",
+     "origin": {
+      "id": "10003",
+      "name": "NorthTehran",
+      "nameFa": "پایانه بیهقی ( تهران )",
+      "cityId": "0001",
+      "cityName": "Tehran",
+      "cityNameFa": "تهران",
+      "terminalNameFa": "پایانه بیهقی ( تهران )"
+     },
+     "destination": {
+      "id": "10011",
+      "name": "KaveIsfahan",
+      "nameFa": "پایانه  کاوه  (اصفهان )",
+      "cityId": "0002",
+      "cityName": "Isfahan",
+      "cityNameFa": "اصفهان",
+      "terminalNameFa": "پایانه  کاوه  (اصفهان )"
+     },
+     "finalDestination": {
+      "id": "10011",
+      "name": "KaveIsfahan",
+      "nameFa": "پایانه  کاوه  (اصفهان )",
+      "cityId": "0002",
+      "cityName": "Isfahan",
+      "cityNameFa": "اصفهان",
+      "terminalNameFa": "پایانه  کاوه  (اصفهان )"
+     },
+     "otherDestinations": [
+      {
+       "id": "10011",
+       "name": "KaveIsfahan",
+       "nameFa": "پایانه  کاوه  (اصفهان )",
+       "cityId": "0002",
+       "cityName": "Isfahan",
+       "cityNameFa": "اصفهان",
+       "terminalNameFa": "پایانه  کاوه  (اصفهان )"
+      }
+     ],
+     "remainingSeat": 25,
+     "price": 7120000,
+     "fullPrice": 7120000,
+     "hasDiscount": false,
+     "description": "سکوی شماره 4",
+     "isFull": false,
+     "facilities": [
+      "VIP"
+     ],
+     "pickupLocation": null,
+     "dropoffLocation": null
+    },
+    {
+     "fareSourceCode": "34656432626165322D323834372D343837362D393364612D346566643037616430653063313739313336303339323834312C31313833392D37393532303032382D362C31",
+     "name": "همسفر چابکسواران پایانه بیهقی",
+     "busCompanyNameFa": "همسفر چابکسواران پایانه بیهقی",
+     "busCompanyName": "همسفر چابکسواران پایانه بیهقی",
+     "busCompanyId": "0109",
+     "busGroupCompanyCode": "HMSFR",
+     "busGroupCompanyNameFa": "همسفر",
+     "departureDate": "2026-10-14T01:00:00",
+     "busType": "مان VIP (کاوه)",
+     "origin": {
+      "id": "10003",
+      "name": "NorthTehran",
+      "nameFa": "پایانه بیهقی ( تهران )",
+      "cityId": "0001",
+      "cityName": "Tehran",
+      "cityNameFa": "تهران",
+      "terminalNameFa": "پایانه بیهقی ( تهران )"
+     },
+     "destination": {
+      "id": "10011",
+      "name": "KaveIsfahan",
+      "nameFa": "پایانه  کاوه  (اصفهان )",
+      "cityId": "0002",
+      "cityName": "Isfahan",
+      "cityNameFa": "اصفهان",
+      "terminalNameFa": "پایانه  کاوه  (اصفهان )"
+     },
+     "finalDestination": {
+      "id": "10011",
+      "name": "KaveIsfahan",
+      "nameFa": "پایانه  کاوه  (اصفهان )",
+      "cityId": "0002",
+      "cityName": "Isfahan",
+      "cityNameFa": "اصفهان",
+      "terminalNameFa": "پایانه  کاوه  (اصفهان )"
+     },
+     "otherDestinations": [
+      {
+       "id": "10011",
+       "name": "KaveIsfahan",
+       "nameFa": "پایانه  کاوه  (اصفهان )",
+       "cityId": "0002",
+       "cityName": "Isfahan",
+       "cityNameFa": "اصفهان",
+       "terminalNameFa": "پایانه  کاوه  (اصفهان )"
+      }
+     ],
+     "remainingSeat": 26,
+     "price": 7120000,
+     "fullPrice": 7120000,
+     "hasDiscount": false,
+     "description": "سکوی شماره 4",
+     "isFull": false,
+     "facilities": [
+      "VIP"
+     ],
+     "pickupLocation": null,
+     "dropoffLocation": null
+    },
+    {
+     "fareSourceCode": "34656432626165322D323834372D343837362D393364612D346566643037616430653063313739313336303339323834312C31313833392D37393532303334332D362C31",
+     "name": "همسفر چابکسواران پایانه بیهقی",
+     "busCompanyNameFa": "همسفر چابکسواران پایانه بیهقی",
+     "busCompanyName": "همسفر چابکسواران پایانه بیهقی",
+     "busCompanyId": "0109",
+     "busGroupCompanyCode": "HMSFR",
+     "busGroupCompanyNameFa": "همسفر",
+     "departureDate": "2026-10-14T01:30:00",
+     "busType": "مان VIP (کاوه)",
+     "origin": {
+      "id": "10003",
+      "name": "NorthTehran",
+      "nameFa": "پایانه بیهقی ( تهران )",
+      "cityId": "0001",
+      "cityName": "Tehran",
+      "cityNameFa": "تهران",
+      "terminalNameFa": "پایانه بیهقی ( تهران )"
+     },
+     "destination": {
+      "id": "10011",
+      "name": "KaveIsfahan",
+      "nameFa": "پایانه  کاوه  (اصفهان )",
+      "cityId": "0002",
+      "cityName": "Isfahan",
+      "cityNameFa": "اصفهان",
+      "terminalNameFa": "پایانه  کاوه  (اصفهان )"
+     },
+     "finalDestination": {
+      "id": "10011",
+      "name": "KaveIsfahan",
+      "nameFa": "پایانه  کاوه  (اصفهان )",
+      "cityId": "0002",
+      "cityName": "Isfahan",
+      "cityNameFa": "اصفهان",
+      "terminalNameFa": "پایانه  کاوه  (اصفهان )"
+     },
+     "otherDestinations": [
+      {
+       "id": "10011",
+       "name": "KaveIsfahan",
+       "nameFa": "پایانه  کاوه  (اصفهان )",
+       "cityId": "0002",
+       "cityName": "Isfahan",
+       "cityNameFa": "اصفهان",
+       "terminalNameFa": "پایانه  کاوه  (اصفهان )"
+      }
+     ],
+     "remainingSeat": 26,
+     "price": 7120000,
+     "fullPrice": 7120000,
+     "hasDiscount": false,
+     "description": "سکوی شماره 4",
+     "isFull": false,
+     "facilities": [
+      "VIP"
+     ],
+     "pickupLocation": null,
+     "dropoffLocation": null
+    },
+    {
+     "fareSourceCode": "34656432626165322D323834372D343837362D393364612D346566643037616430653063313739313336303339323834312C31313232362D3333313236343430332D322C31",
+     "name": "تی بی تی- تعاونى شماره 15 پايانه جنوب",
+     "busCompanyNameFa": "شرکت تی بی تی- تعاونى شماره 15 پايانه جنوب",
+     "busCompanyName": "شرکت تی بی تی- تعاونى شماره 15 پايانه جنوب",
+     "busCompanyId": "0055",
+     "busGroupCompanyCode": "T15",
+     "busGroupCompanyNameFa": "ترابربی تا",
+     "departureDate": "2026-10-14T10:00:00",
+     "busType": "درسا مانیتوردار شارژ اختصاصی",
+     "origin": {
+      "id": "10002",
+      "name": "SouthTehran",
+      "nameFa": "پایانه جنوب ( تهران )",
+      "cityId": "0001",
+      "cityName": "Tehran",
+      "cityNameFa": "تهران",
+      "terminalNameFa": "پایانه جنوب ( تهران )"
+     },
+     "destination": {
+      "id": "0002",
+      "name": "Isfahan",
+      "nameFa": "اصفهان",
+      "cityId": "0002",
+      "cityName": "Isfahan",
+      "cityNameFa": "اصفهان",
+      "terminalNameFa": "اصفهان"
+     },
+     "finalDestination": {
+      "id": "0151",
+      "name": "Najafabad",
+      "nameFa": "نجف آباد",
+      "cityId": "0151",
+      "cityName": "Najafabad",
+      "cityNameFa": "نجف آباد",
+      "terminalNameFa": "نجف آباد"
+     },
+     "otherDestinations": [
+      {
+       "id": "10011",
+       "name": "KaveIsfahan",
+       "nameFa": "پایانه  کاوه  (اصفهان )",
+       "cityId": "0002",
+       "cityName": "Isfahan",
+       "cityNameFa": "اصفهان",
+       "terminalNameFa": "پایانه  کاوه  (اصفهان )"
+      }
+     ],
+     "remainingSeat": 22,
+     "price": 6470000,
+     "fullPrice": 6470000,
+     "hasDiscount": false,
+     "description": "",
+     "isFull": false,
+     "facilities": [
+      "مانیتور"
+     ],
+     "pickupLocation": null,
+     "dropoffLocation": null
+    },
+    {
+     "fareSourceCode": "34656432626165322D323834372D343837362D393364612D346566643037616430653063313739313336303339323834312C31313233332D34323432373137342D332C31",
+     "name": "تعاونى شماره 8 ترمينال جنوب",
+     "busCompanyNameFa": "شرکت تعاونى شماره 8 ترمينال جنوب",
+     "busCompanyName": "شرکت تعاونى شماره 8 ترمينال جنوب",
+     "busCompanyId": "0063",
+     "busGroupCompanyCode": "T08",
+     "busGroupCompanyNameFa": "لوان نور",
+     "departureDate": "2026-10-14T11:00:00",
+     "busType": "وی آی پی مان26نفره+شارژراختصاصی65-55185363",
+     "origin": {
+      "id": "10002",
+      "name": "SouthTehran",
+      "nameFa": "پایانه جنوب ( تهران )",
+      "cityId": "0001",
+      "cityName": "Tehran",
+      "cityNameFa": "تهران",
+      "terminalNameFa": "پایانه جنوب ( تهران )"
+     },
+     "destination": {
+      "id": "0002",
+      "name": "Isfahan",
+      "nameFa": "اصفهان",
+      "cityId": "0002",
+      "cityName": "Isfahan",
+      "cityNameFa": "اصفهان",
+      "terminalNameFa": "اصفهان"
+     },
+     "finalDestination": {
+      "id": "0010",
+      "name": "ShahrEKord",
+      "nameFa": "شهرکرد",
+      "cityId": "0010",
+      "cityName": "ShahrEKord",
+      "cityNameFa": "شهرکرد",
+      "terminalNameFa": "شهرکرد"
+     },
+     "otherDestinations": [
+      {
+       "id": "10011",
+       "name": "KaveIsfahan",
+       "nameFa": "پایانه  کاوه  (اصفهان )",
+       "cityId": "0002",
+       "cityName": "Isfahan",
+       "cityNameFa": "اصفهان",
+       "terminalNameFa": "پایانه  کاوه  (اصفهان )"
+      }
+     ],
+     "remainingSeat": 23,
+     "price": 6480000,
+     "fullPrice": 6480000,
+     "hasDiscount": false,
+     "description": "09195391009نوری زاده",
+     "isFull": false,
+     "facilities": [
+      "شارژر"
+     ],
+     "pickupLocation": null,
+     "dropoffLocation": null
+    },
+    {
+     "fareSourceCode": "34656432626165322D323834372D343837362D393364612D346566643037616430653063313739313336303339323834312C31313231382D32353231353233332D362C31",
+     "name": "تعاونی شماره13 تک سفرایرانیان- پايانه جنوب",
+     "busCompanyNameFa": "شرکت تعاونی شماره13 تک سفرایرانیان- پايانه جنوب",
+     "busCompanyName": "شرکت تعاونی شماره13 تک سفرایرانیان- پايانه جنوب",
+     "busCompanyId": "0050",
+     "busGroupCompanyCode": "T13",
+     "busGroupCompanyNameFa": "تک سفر ایرانیان",
+     "departureDate": "2026-10-14T11:30:00",
+     "busType": "تک صندلی 32 نفره",
+     "origin": {
+      "id": "10002",
+      "name": "SouthTehran",
+      "nameFa": "پایانه جنوب ( تهران )",
+      "cityId": "0001",
+      "cityName": "Tehran",
+      "cityNameFa": "تهران",
+      "terminalNameFa": "پایانه جنوب ( تهران )"
+     },
+     "destination": {
+      "id": "0002",
+      "name": "Isfahan",
+      "nameFa": "اصفهان",
+      "cityId": "0002",
+      "cityName": "Isfahan",
+      "cityNameFa": "اصفهان",
+      "terminalNameFa": "اصفهان"
+     },
+     "finalDestination": {
+      "id": "0002",
+      "name": "Isfahan",
+      "nameFa": "اصفهان",
+      "cityId": "0002",
+      "cityName": "Isfahan",
+      "cityNameFa": "اصفهان",
+      "terminalNameFa": "اصفهان"
+     },
+     "otherDestinations": [
+      {
+       "id": "10011",
+       "name": "KaveIsfahan",
+       "nameFa": "پایانه  کاوه  (اصفهان )",
+       "cityId": "0002",
+       "cityName": "Isfahan",
+       "cityNameFa": "اصفهان",
+       "terminalNameFa": "پایانه  کاوه  (اصفهان )"
+      }
+     ],
+     "remainingSeat": 29,
+     "price": 5365000,
+     "fullPrice": 5365000,
+     "hasDiscount": false,
+     "description": "",
+     "isFull": false,
+     "facilities": [],
+     "pickupLocation": null,
+     "dropoffLocation": null
+    },
+    {
+     "fareSourceCode": "34656432626165322D323834372D343837362D393364612D346566643037616430653063313739313336303339323834312C31313736362D3736343336323230382D362C31",
+     "name": "سير و سفر پايانه جنوب",
+     "busCompanyNameFa": "شركت سير و سفر پايانه جنوب",
+     "busCompanyName": "شركت سير و سفر پايانه جنوب",
+     "busCompanyId": "0087",
+     "busGroupCompanyCode": "SYRSFR",
+     "busGroupCompanyNameFa": "سیروسفر",
+     "departureDate": "2026-10-14T21:15:00",
+     "busType": "مارالV.I.P + مانیتور+ شارژر",
+     "origin": {
+      "id": "10002",
+      "name": "SouthTehran",
+      "nameFa": "پایانه جنوب ( تهران )",
+      "cityId": "0001",
+      "cityName": "Tehran",
+      "cityNameFa": "تهران",
+      "terminalNameFa": "پایانه جنوب ( تهران )"
+     },
+     "destination": {
+      "id": "0002",
+      "name": "Isfahan",
+      "nameFa": "اصفهان",
+      "cityId": "0002",
+      "cityName": "Isfahan",
+      "cityNameFa": "اصفهان",
+      "terminalNameFa": "اصفهان"
+     },
+     "finalDestination": {
+      "id": "0002",
+      "name": "Isfahan",
+      "nameFa": "اصفهان",
+      "cityId": "0002",
+      "cityName": "Isfahan",
+      "cityNameFa": "اصفهان",
+      "terminalNameFa": "اصفهان"
+     },
+     "otherDestinations": [
+      {
+       "id": "10011",
+       "name": "KaveIsfahan",
+       "nameFa": "پایانه  کاوه  (اصفهان )",
+       "cityId": "0002",
+       "cityName": "Isfahan",
+       "cityNameFa": "اصفهان",
+       "terminalNameFa": "پایانه  کاوه  (اصفهان )"
+      }
+     ],
+     "remainingSeat": 0,
+     "price": 6470000,
+     "fullPrice": 6470000,
+     "hasDiscount": false,
+     "description": "",
+     "isFull": true,
+     "facilities": [
+      "شارژر",
+      "VIP",
+      "مانیتور"
+     ],
+     "pickupLocation": null,
+     "dropoffLocation": null
+    }
+   ]
+  }
+ ]
+}

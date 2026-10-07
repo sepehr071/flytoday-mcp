@@ -1,0 +1,329 @@
+{
+ "id": 90398,
+ "regionInfo": {
+  "slug": "turkey",
+  "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Geographies/VFI.png",
+  "code": "TR",
+  "title": "ترکیه"
+ },
+ "packages": [
+  {
+   "fareCode": "MTAwLDE3ODUzNyxtZXJoYWJhLTdkYXlzLTFnYg",
+   "type": "SIM",
+   "price": 6587350,
+   "dataAmount": 1024,
+   "validityInDay": 7,
+   "isUnlimited": false,
+   "title": "1 GB - 7 days",
+   "data": "1 GB",
+   "voiceCount": 0,
+   "textCount": 0,
+   "operator": {
+    "id": "6ac5fc09413bf47304e6f444",
+    "type": "local",
+    "title": "Merhaba",
+    "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Operators/TWVyaGFiYQ.png",
+    "planType": "data",
+    "rechargeability": true
+   },
+   "coverageCount": 1
+  },
+  {
+   "fareCode": "MTAwLDE3ODUzNyxtZXJoYWJhLTE1ZGF5cy0yZ2I",
+   "type": "SIM",
+   "price": 7691150,
+   "dataAmount": 2048,
+   "validityInDay": 15,
+   "isUnlimited": false,
+   "title": "2 GB - 15 days",
+   "data": "2 GB",
+   "voiceCount": 0,
+   "textCount": 0,
+   "operator": {
+    "id": "6ac5fc09413bf47304e6f444",
+    "type": "local",
+    "title": "Merhaba",
+    "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Operators/TWVyaGFiYQ.png",
+    "planType": "data",
+    "rechargeability": true
+   },
+   "coverageCount": 1
+  },
+  {
+   "fareCode": "MTAwLDE3ODUzNyxtZXJoYWJhLTMwZGF5cy0zZ2I",
+   "type": "SIM",
+   "price": 7967100,
+   "dataAmount": 3072,
+   "validityInDay": 30,
+   "isUnlimited": false,
+   "title": "3 GB - 30 days",
+   "data": "3 GB",
+   "voiceCount": 0,
+   "textCount": 0,
+   "operator": {
+    "id": "6ac5fc09413bf47304e6f444",
+    "type": "local",
+    "title": "Merhaba",
+    "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Operators/TWVyaGFiYQ.png",
+    "planType": "data",
+    "rechargeability": true
+   },
+   "coverageCount": 1
+  },
+  {
+   "fareCode": "MTAwLDE3ODUzNyxtZXJoYWJhLTMwZGF5cy01Z2I",
+   "type": "SIM",
+   "price": 9622800,
+   "dataAmount": 5120,
+   "validityInDay": 30,
+   "isUnlimited": false,
+   "title": "5 GB - 30 days",
+   "data": "5 GB",
+   "voiceCount": 0,
+   "textCount": 0,
+   "operator": {
+    "id": "6ac5fc09413bf47304e6f444",
+    "type": "local",
+    "title": "Merhaba",
+    "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Operators/TWVyaGFiYQ.png",
+    "planType": "data",
+    "rechargeability": true
+   },
+   "coverageCount": 1
+  },
+  {
+   "fareCode": "MTAwLDE3ODUzNyxtZXJoYWJhLTNkYXlzLXVubGltaXRlZC14",
+   "type": "SIM",
+   "price": 11554450,
+   "dataAmount": 28672,
+   "validityInDay": 3,
+   "isUnlimited": true,
+   "title": "Unlimited - 3 days",
+   "data": "Unlimited",
+   "voiceCount": 0,
+   "textCount": 0,
+   "operator": {
+    "id": "6ac5fc09413bf47304e6f445",
+    "type": "local",
+    "title": "Merhaba",
+    "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Operators/TWVyaGFiYQ.png",
+    "planType": "data",
+    "rechargeability": false
+   },
+   "coverageCount": 1
+  },
+  {
+   "fareCode": "MTAwLDE3ODUzNyxtZXJoYWJhLTE1ZGF5cy0xMGdi",
+   "type": "SIM",
+   "price": 12106350,
+   "dataAmount": 10240,
+   "validityInDay": 15,
+   "isUnlimited": false,
+   "title": "10 GB - 15 days",
+   "data": "10 GB",
+   "voiceCount": 0,
+   "textCount": 0,
+   "operator": {
+    "id": "6ac5fc09413bf47304e6f444",
+    "type": "local",
+    "title": "Merhaba",
+    "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Operators/TWVyaGFiYQ.png",
+    "planType": "data",
+    "rechargeability": true
+   },
+   "coverageCount": 1
+  },
+  {
+   "fareCode": "MTAwLDE3ODUzNyxtZXJoYWJhLTMwZGF5cy0xMGdi",
+   "type": "SIM",
+   "price": 12658250,
+   "dataAmount": 10240,
+   "validityInDay": 30,
+   "isUnlimited": false,
+   "title": "10 GB - 30 days",
+   "data": "10 GB",
+   "voiceCount": 0,
+   "textCount": 0,
+   "operator": {
+    "id": "6ac5fc09413bf47304e6f444",
+    "type": "local",
+    "title": "Merhaba",
+    "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Operators/TWVyaGFiYQ.png",
+    "planType": "data",
+    "rechargeability": true
+   },
+   "coverageCount": 1
+  },
+  {
+   "fareCode": "MTAwLDE3ODUzNyxtZXJoYWJhLTVkYXlzLXVubGltaXRlZC14",
+   "type": "SIM",
+   "price": 14865850,
+   "dataAmount": 43008,
+   "validityInDay": 5,
+   "isUnlimited": true,
+   "title": "Unlimited - 5 days",
+   "data": "Unlimited",
+   "voiceCount": 0,
+   "textCount": 0,
+   "operator": {
+    "id": "6ac5fc09413bf47304e6f445",
+    "type": "local",
+    "title": "Merhaba",
+    "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Operators/TWVyaGFiYQ.png",
+    "planType": "data",
+    "rechargeability": false
+   },
+   "coverageCount": 1
+  },
+  {
+   "fareCode": "MTAwLDE3ODUzNyxtZXJoYWJhLTE1ZGF5cy0yMGdi",
+   "type": "SIM",
+   "price": 16245600,
+   "dataAmount": 20480,
+   "validityInDay": 15,
+   "isUnlimited": false,
+   "title": "20 GB - 15 days",
+   "data": "20 GB",
+   "voiceCount": 0,
+   "textCount": 0,
+   "operator": {
+    "id": "6ac5fc09413bf47304e6f444",
+    "type": "local",
+    "title": "Merhaba",
+    "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Operators/TWVyaGFiYQ.png",
+    "planType": "data",
+    "rechargeability": true
+   },
+   "coverageCount": 1
+  },
+  {
+   "fareCode": "MTAwLDE3ODUzNyxtZXJoYWJhLTMwZGF5cy0yMGdi",
+   "type": "SIM",
+   "price": 17349400,
+   "dataAmount": 20480,
+   "validityInDay": 30,
+   "isUnlimited": false,
+   "title": "20 GB - 30 days",
+   "data": "20 GB",
+   "voiceCount": 0,
+   "textCount": 0,
+   "operator": {
+    "id": "6ac5fc09413bf47304e6f444",
+    "type": "local",
+    "title": "Merhaba",
+    "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Operators/TWVyaGFiYQ.png",
+    "planType": "data",
+    "rechargeability": true
+   },
+   "coverageCount": 1
+  },
+  {
+   "fareCode": "MTAwLDE3ODUzNyxtZXJoYWJhLTdkYXlzLXVubGltaXRlZC14",
+   "type": "SIM",
+   "price": 17349400,
+   "dataAmount": 53248,
+   "validityInDay": 7,
+   "isUnlimited": true,
+   "title": "Unlimited - 7 days",
+   "data": "Unlimited",
+   "voiceCount": 0,
+   "textCount": 0,
+   "operator": {
+    "id": "6ac5fc09413bf47304e6f445",
+    "type": "local",
+    "title": "Merhaba",
+    "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Operators/TWVyaGFiYQ.png",
+    "planType": "data",
+    "rechargeability": false
+   },
+   "coverageCount": 1
+  },
+  {
+   "fareCode": "MTAwLDE3ODUzNyxtZXJoYWJhLTEwZGF5cy11bmxpbWl0ZWQ",
+   "type": "SIM",
+   "price": 23696250,
+   "dataAmount": 66560,
+   "validityInDay": 10,
+   "isUnlimited": true,
+   "title": "Unlimited - 10 days",
+   "data": "Unlimited",
+   "voiceCount": 0,
+   "textCount": 0,
+   "operator": {
+    "id": "6ac5fc09413bf47304e6f445",
+    "type": "local",
+    "title": "Merhaba",
+    "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Operators/TWVyaGFiYQ.png",
+    "planType": "data",
+    "rechargeability": false
+   },
+   "coverageCount": 1
+  },
+  {
+   "fareCode": "MTAwLDE3ODUzNyxtZXJoYWJhLTE1ZGF5cy11bmxpbWl0ZWQteA",
+   "type": "SIM",
+   "price": 34458300,
+   "dataAmount": 93184,
+   "validityInDay": 15,
+   "isUnlimited": true,
+   "title": "Unlimited - 15 days",
+   "data": "Unlimited",
+   "voiceCount": 0,
+   "textCount": 0,
+   "operator": {
+    "id": "6ac5fc09413bf47304e6f445",
+    "type": "local",
+    "title": "Merhaba",
+    "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Operators/TWVyaGFiYQ.png",
+    "planType": "data",
+    "rechargeability": false
+   },
+   "coverageCount": 1
+  },
+  {
+   "fareCode": "MTAwLDE3ODUzNyxtZXJoYWJhLTMwZGF5cy01MGdi",
+   "type": "SIM",
+   "price": 38321600,
+   "dataAmount": 51200,
+   "validityInDay": 30,
+   "isUnlimited": false,
+   "title": "50 GB - 30 days",
+   "data": "50 GB",
+   "voiceCount": 0,
+   "textCount": 0,
+   "operator": {
+    "id": "6ac5fc09413bf47304e6f444",
+    "type": "local",
+    "title": "Merhaba",
+    "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Operators/TWVyaGFiYQ.png",
+    "planType": "data",
+    "rechargeability": true
+   },
+   "coverageCount": 1
+  },
+  {
+   "fareCode": "MTAwLDE3ODUzNyxtZXJoYWJhLTMwZGF5cy11bmxpbWl0ZWQteA",
+   "type": "SIM",
+   "price": 46600100,
+   "dataAmount": 173056,
+   "validityInDay": 30,
+   "isUnlimited": true,
+   "title": "Unlimited - 30 days",
+   "data": "Unlimited",
+   "voiceCount": 0,
+   "textCount": 0,
+   "operator": {
+    "id": "6ac5fc09413bf47304e6f445",
+    "type": "local",
+    "title": "Merhaba",
+    "imageUrl": "https://cdn-a-es.cdnfl2.ir/upload/esim/images/Operators/TWVyaGFiYQ.png",
+    "planType": "data",
+    "rechargeability": false
+   },
+   "coverageCount": 1
+  }
+ ],
+ "total": 15,
+ "pageSize": 1000,
+ "pageNumber": 1
+}

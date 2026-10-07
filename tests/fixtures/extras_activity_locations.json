@@ -1,0 +1,844 @@
+{
+ "searchType": "match",
+ "total": 364,
+ "locations": [
+  {
+   "id": "seg_1234attractions-tour",
+   "activityType": "ActivitySegment",
+   "rank": 15,
+   "isDomestic": false,
+   "isPopular": true,
+   "sequenceId": 1234,
+   "name": "Attractions Tour",
+   "nameSlug": "attractions-tour",
+   "parentRegionNameSlug": "dubai",
+   "parentSegmentNameSlug": "",
+   "countryName": "United Arab Emirates",
+   "countryCode": "AE",
+   "cityName": "Dubai",
+   "hotelRegion_Id": 462962,
+   "hotelRegion_Name": "Dubai",
+   "hotelRegion_NameSlug": "dubai",
+   "regionId": 1234,
+   "contentCount": 17,
+   "translatedNames": [
+    {
+     "key": "Fa",
+     "value": "تور جاذبه های گردشگری"
+    },
+    {
+     "key": "Fa",
+     "value": "j,v[hbfiihdگvnaگvd"
+    },
+    {
+     "key": "Fa",
+     "value": "تورجاذبههایگردشگری"
+    },
+    {
+     "key": "Fa",
+     "value": "تور جاضبه های گردشگری"
+    },
+    {
+     "key": "Fa",
+     "value": "تور جاظبه های گردشگری"
+    },
+    {
+     "key": "Fa",
+     "value": "تور جازبه های گردشگری"
+    },
+    {
+     "key": "Fa",
+     "value": "طور جاذبه های گردشگری"
+    },
+    {
+     "key": "Fa",
+     "value": "تور جآذبه هآی گردشگری"
+    },
+    {
+     "key": "Fa",
+     "value": "دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "nfd"
+    },
+    {
+     "key": "Fa",
+     "value": "امارات"
+    },
+    {
+     "key": "Fa",
+     "value": "hlhvhj"
+    },
+    {
+     "key": "Fa",
+     "value": "اماراط"
+    },
+    {
+     "key": "Fa",
+     "value": "آمآرآت"
+    },
+    {
+     "key": "Fa",
+     "value": "برشا - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "fvah-nfd"
+    },
+    {
+     "key": "Fa",
+     "value": "برشا-دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "برشآ - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": " داون تاون دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "nh,kjh,knfd"
+    },
+    {
+     "key": "Fa",
+     "value": "داونتاوندبی"
+    },
+    {
+     "key": "Fa",
+     "value": "داون تاون دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "داون طاون دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "دآون تآون دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "پالم جمیرا - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "پhgl[ldvh-nfd"
+    },
+    {
+     "key": "Fa",
+     "value": "پالمجمیرا-دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "پآلم جمیرآ - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "ابوظبی"
+    },
+    {
+     "key": "Fa",
+     "value": "hf,zfd"
+    },
+    {
+     "key": "Fa",
+     "value": "ابوضبی"
+    },
+    {
+     "key": "Fa",
+     "value": "ابوذبی"
+    },
+    {
+     "key": "Fa",
+     "value": "ابوزبی"
+    },
+    {
+     "key": "Fa",
+     "value": "آبوظبی"
+    },
+    {
+     "key": "Fa",
+     "value": "زبیل - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "cfdg-nfd"
+    },
+    {
+     "key": "Fa",
+     "value": "زبیل-دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "ضبیل - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "ظبیل - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "ذبیل - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "الکرامه - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "hg;vhli-nfd"
+    },
+    {
+     "key": "Fa",
+     "value": "الکرامه-دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "آلکرآمه - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "بر - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "fv-nfd"
+    },
+    {
+     "key": "Fa",
+     "value": "بر-دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "دبی مال - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "nfdlhg-nfd"
+    },
+    {
+     "key": "Fa",
+     "value": "دبیمال-دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "دبی مآل - دبی"
+    }
+   ]
+  },
+  {
+   "id": "seg_1234tickets-attraction-passes",
+   "activityType": "ActivitySegment",
+   "rank": 20,
+   "isDomestic": false,
+   "isPopular": true,
+   "sequenceId": 1234,
+   "name": "Tickets & Attraction Passes",
+   "nameSlug": "tickets-attraction-passes",
+   "parentRegionNameSlug": "dubai",
+   "parentSegmentNameSlug": "",
+   "countryName": "United Arab Emirates",
+   "countryCode": "AE",
+   "cityName": "Dubai",
+   "hotelRegion_Id": 462962,
+   "hotelRegion_Name": "Dubai",
+   "hotelRegion_NameSlug": "dubai",
+   "regionId": 1234,
+   "contentCount": 38,
+   "translatedNames": [
+    {
+     "key": "Fa",
+     "value": "دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "nfd"
+    },
+    {
+     "key": "Fa",
+     "value": "امارات"
+    },
+    {
+     "key": "Fa",
+     "value": "hlhvhj"
+    },
+    {
+     "key": "Fa",
+     "value": "اماراط"
+    },
+    {
+     "key": "Fa",
+     "value": "آمآرآت"
+    },
+    {
+     "key": "Fa",
+     "value": " داون تاون دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "nh,kjh,knfd"
+    },
+    {
+     "key": "Fa",
+     "value": "داونتاوندبی"
+    },
+    {
+     "key": "Fa",
+     "value": "داون تاون دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "داون طاون دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "دآون تآون دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "دبی مال - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "nfdlhg-nfd"
+    },
+    {
+     "key": "Fa",
+     "value": "دبیمال-دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "دبی مآل - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "پالم جمیرا - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "پhgl[ldvh-nfd"
+    },
+    {
+     "key": "Fa",
+     "value": "پالمجمیرا-دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "پآلم جمیرآ - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "بر - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "fv-nfd"
+    },
+    {
+     "key": "Fa",
+     "value": "بر-دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "زبیل - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "cfdg-nfd"
+    },
+    {
+     "key": "Fa",
+     "value": "زبیل-دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "ضبیل - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "ظبیل - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "ذبیل - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "ابوظبی"
+    },
+    {
+     "key": "Fa",
+     "value": "hf,zfd"
+    },
+    {
+     "key": "Fa",
+     "value": "ابوضبی"
+    },
+    {
+     "key": "Fa",
+     "value": "ابوذبی"
+    },
+    {
+     "key": "Fa",
+     "value": "ابوزبی"
+    },
+    {
+     "key": "Fa",
+     "value": "آبوظبی"
+    },
+    {
+     "key": "Fa",
+     "value": "الکرامه - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "hg;vhli-nfd"
+    },
+    {
+     "key": "Fa",
+     "value": "الکرامه-دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "آلکرآمه - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "ترید سنتر - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "jvdnskjv-nfd"
+    },
+    {
+     "key": "Fa",
+     "value": "تریدسنتر-دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "ترید صنتر - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "ترید ثنتر - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "طرید سنطر - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "ام سقیم - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "hlsrdl-nfd"
+    },
+    {
+     "key": "Fa",
+     "value": "امسقیم-دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "ام صقیم - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "ام ثقیم - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "ام سغیم - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "آم سقیم - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "برشا - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "fvah-nfd"
+    },
+    {
+     "key": "Fa",
+     "value": "برشا-دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "برشآ - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "البرشا - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "hgfvah-nfd"
+    },
+    {
+     "key": "Fa",
+     "value": "البرشا-دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "آلبرشآ - دبی"
+    }
+   ]
+  },
+  {
+   "id": "seg_1234urban-exploration-tour",
+   "activityType": "ActivitySegment",
+   "rank": 15,
+   "isDomestic": false,
+   "isPopular": true,
+   "sequenceId": 1234,
+   "name": "Urban Exploration Tour",
+   "nameSlug": "urban-exploration-tour",
+   "parentRegionNameSlug": "dubai",
+   "parentSegmentNameSlug": "",
+   "countryName": "United Arab Emirates",
+   "countryCode": "AE",
+   "cityName": "Dubai",
+   "hotelRegion_Id": 462962,
+   "hotelRegion_Name": "Dubai",
+   "hotelRegion_NameSlug": "dubai",
+   "regionId": 1234,
+   "contentCount": 24,
+   "translatedNames": [
+    {
+     "key": "Fa",
+     "value": "تور گشت درون شهری"
+    },
+    {
+     "key": "Fa",
+     "value": "j,vگajnv,kaivd"
+    },
+    {
+     "key": "Fa",
+     "value": "تورگشتدرونشهری"
+    },
+    {
+     "key": "Fa",
+     "value": "طور گشط درون شهری"
+    },
+    {
+     "key": "Fa",
+     "value": "دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "nfd"
+    },
+    {
+     "key": "Fa",
+     "value": "امارات"
+    },
+    {
+     "key": "Fa",
+     "value": "hlhvhj"
+    },
+    {
+     "key": "Fa",
+     "value": "اماراط"
+    },
+    {
+     "key": "Fa",
+     "value": "آمآرآت"
+    },
+    {
+     "key": "Fa",
+     "value": "برشا - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "fvah-nfd"
+    },
+    {
+     "key": "Fa",
+     "value": "برشا-دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "برشآ - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": " داون تاون دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "nh,kjh,knfd"
+    },
+    {
+     "key": "Fa",
+     "value": "داونتاوندبی"
+    },
+    {
+     "key": "Fa",
+     "value": "داون تاون دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "داون طاون دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "دآون تآون دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "دبی مال - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "nfdlhg-nfd"
+    },
+    {
+     "key": "Fa",
+     "value": "دبیمال-دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "دبی مآل - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "پالم جمیرا - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "پhgl[ldvh-nfd"
+    },
+    {
+     "key": "Fa",
+     "value": "پالمجمیرا-دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "پآلم جمیرآ - دبی"
+    }
+   ]
+  },
+  {
+   "id": "seg_1234aquarium",
+   "activityType": "ActivitySegment",
+   "rank": 15,
+   "isDomestic": false,
+   "isPopular": true,
+   "sequenceId": 1234,
+   "name": "Aquarium",
+   "nameSlug": "aquarium",
+   "parentRegionNameSlug": "dubai",
+   "parentSegmentNameSlug": "",
+   "countryName": "United Arab Emirates",
+   "countryCode": "AE",
+   "cityName": "Dubai",
+   "hotelRegion_Id": 462962,
+   "hotelRegion_Name": "Dubai",
+   "hotelRegion_NameSlug": "dubai",
+   "regionId": 1234,
+   "contentCount": 2,
+   "translatedNames": [
+    {
+     "key": "Fa",
+     "value": "بلیط آکواریوم"
+    },
+    {
+     "key": "Fa",
+     "value": "fgdxh;,hvd,l"
+    },
+    {
+     "key": "Fa",
+     "value": "بلیطاکواریوم"
+    },
+    {
+     "key": "Fa",
+     "value": "بلیت اکواریوم"
+    },
+    {
+     "key": "Fa",
+     "value": "بلیط اکواریوم"
+    },
+    {
+     "key": "Fa",
+     "value": "بلیط آکوآریوم"
+    },
+    {
+     "key": "Fa",
+     "value": "دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "nfd"
+    },
+    {
+     "key": "Fa",
+     "value": "امارات"
+    },
+    {
+     "key": "Fa",
+     "value": "hlhvhj"
+    },
+    {
+     "key": "Fa",
+     "value": "اماراط"
+    },
+    {
+     "key": "Fa",
+     "value": "آمآرآت"
+    },
+    {
+     "key": "Fa",
+     "value": " داون تاون دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "nh,kjh,knfd"
+    },
+    {
+     "key": "Fa",
+     "value": "داونتاوندبی"
+    },
+    {
+     "key": "Fa",
+     "value": "داون تاون دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "داون طاون دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "دآون تآون دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "دبی مال - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "nfdlhg-nfd"
+    },
+    {
+     "key": "Fa",
+     "value": "دبیمال-دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "دبی مآل - دبی"
+    }
+   ]
+  },
+  {
+   "id": "seg_1234park-tickets",
+   "activityType": "ActivitySegment",
+   "rank": 15,
+   "isDomestic": false,
+   "isPopular": true,
+   "sequenceId": 1234,
+   "name": "Park Tickets",
+   "nameSlug": "park-tickets",
+   "parentRegionNameSlug": "dubai",
+   "parentSegmentNameSlug": "",
+   "countryName": "United Arab Emirates",
+   "countryCode": "AE",
+   "cityName": "Dubai",
+   "hotelRegion_Id": 462962,
+   "hotelRegion_Name": "Dubai",
+   "hotelRegion_NameSlug": "dubai",
+   "regionId": 1234,
+   "contentCount": 10,
+   "translatedNames": [
+    {
+     "key": "Fa",
+     "value": "بلیط پارک ها"
+    },
+    {
+     "key": "Fa",
+     "value": "fgdxپhv;ih"
+    },
+    {
+     "key": "Fa",
+     "value": "بلیطپارکها"
+    },
+    {
+     "key": "Fa",
+     "value": "بلیت پارک ها"
+    },
+    {
+     "key": "Fa",
+     "value": "بلیط پآرک هآ"
+    },
+    {
+     "key": "Fa",
+     "value": "دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "nfd"
+    },
+    {
+     "key": "Fa",
+     "value": "امارات"
+    },
+    {
+     "key": "Fa",
+     "value": "hlhvhj"
+    },
+    {
+     "key": "Fa",
+     "value": "اماراط"
+    },
+    {
+     "key": "Fa",
+     "value": "آمآرآت"
+    },
+    {
+     "key": "Fa",
+     "value": "زبیل - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "cfdg-nfd"
+    },
+    {
+     "key": "Fa",
+     "value": "زبیل-دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "ضبیل - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "ظبیل - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "ذبیل - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "برشا - دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "fvah-nfd"
+    },
+    {
+     "key": "Fa",
+     "value": "برشا-دبی"
+    },
+    {
+     "key": "Fa",
+     "value": "برشآ - دبی"
+    }
+   ]
+  }
+ ]
+}

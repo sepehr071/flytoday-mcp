@@ -1,0 +1,1005 @@
+{
+ "data": [
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-07",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 1
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-07",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 25
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-07",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 10
+  },
+  {
+   "cheapestPrice": 9300000,
+   "departureDate": "2026-10-07",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 31
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-07",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 17
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-07",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 2
+  },
+  {
+   "cheapestPrice": 10200000,
+   "departureDate": "2026-10-07",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 14
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-07",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 50
+  },
+  {
+   "cheapestPrice": 13000000,
+   "departureDate": "2026-10-07",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 8
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-08",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 10
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-08",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 33
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-08",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 17
+  },
+  {
+   "cheapestPrice": 15100000,
+   "departureDate": "2026-10-08",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 1
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-08",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 50
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-08",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 25
+  },
+  {
+   "cheapestPrice": 10200000,
+   "departureDate": "2026-10-08",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 14
+  },
+  {
+   "cheapestPrice": 13000000,
+   "departureDate": "2026-10-08",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 8
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-08",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 2
+  },
+  {
+   "cheapestPrice": 10000000,
+   "departureDate": "2026-10-08",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 31
+  },
+  {
+   "cheapestPrice": 12839500,
+   "departureDate": "2026-10-08",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 15
+  },
+  {
+   "cheapestPrice": 15100000,
+   "departureDate": "2026-10-09",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 1
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-09",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 17
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-09",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 25
+  },
+  {
+   "cheapestPrice": 13000000,
+   "departureDate": "2026-10-09",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 8
+  },
+  {
+   "cheapestPrice": 10200000,
+   "departureDate": "2026-10-09",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 14
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-09",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 50
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-09",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 10
+  },
+  {
+   "cheapestPrice": 12839500,
+   "departureDate": "2026-10-10",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 15
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-10",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 10
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-10",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 25
+  },
+  {
+   "cheapestPrice": 10200000,
+   "departureDate": "2026-10-10",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 14
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-10",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 17
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-10",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 2
+  },
+  {
+   "cheapestPrice": 7600000,
+   "departureDate": "2026-10-10",
+   "isFull": false,
+   "carIncluded": false,
+   "railCompanyId": 1
+  },
+  {
+   "cheapestPrice": 10000000,
+   "departureDate": "2026-10-10",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 31
+  },
+  {
+   "cheapestPrice": 13000000,
+   "departureDate": "2026-10-10",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 8
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-10",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 33
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-10",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 50
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-11",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 1
+  },
+  {
+   "cheapestPrice": 10200000,
+   "departureDate": "2026-10-11",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 14
+  },
+  {
+   "cheapestPrice": 13000000,
+   "departureDate": "2026-10-11",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 8
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-11",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 10
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-11",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 17
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-11",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 2
+  },
+  {
+   "cheapestPrice": 9300000,
+   "departureDate": "2026-10-11",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 31
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-11",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 50
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-11",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 25
+  },
+  {
+   "cheapestPrice": 14510500,
+   "departureDate": "2026-10-12",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 15
+  },
+  {
+   "cheapestPrice": 12124500,
+   "departureDate": "2026-10-12",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 2
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-12",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 33
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-12",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 17
+  },
+  {
+   "cheapestPrice": 10000000,
+   "departureDate": "2026-10-12",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 31
+  },
+  {
+   "cheapestPrice": 10200000,
+   "departureDate": "2026-10-12",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 14
+  },
+  {
+   "cheapestPrice": 8975500,
+   "departureDate": "2026-10-12",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 1
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-12",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 50
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-12",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 25
+  },
+  {
+   "cheapestPrice": 13000000,
+   "departureDate": "2026-10-12",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 8
+  },
+  {
+   "cheapestPrice": 12860500,
+   "departureDate": "2026-10-14",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 2
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-14",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 17
+  },
+  {
+   "cheapestPrice": 16578500,
+   "departureDate": "2026-10-14",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 1
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-14",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 10
+  },
+  {
+   "cheapestPrice": 9300000,
+   "departureDate": "2026-10-14",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 31
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-14",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 50
+  },
+  {
+   "cheapestPrice": 12839500,
+   "departureDate": "2026-10-14",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 15
+  },
+  {
+   "cheapestPrice": 10200000,
+   "departureDate": "2026-10-14",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 14
+  },
+  {
+   "cheapestPrice": 15200000,
+   "departureDate": "2026-10-15",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 1
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-15",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 33
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-15",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 25
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-15",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 10
+  },
+  {
+   "cheapestPrice": 9300000,
+   "departureDate": "2026-10-15",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 31
+  },
+  {
+   "cheapestPrice": 13000000,
+   "departureDate": "2026-10-15",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 8
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-15",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 17
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-15",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 2
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-15",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 50
+  },
+  {
+   "cheapestPrice": 10200000,
+   "departureDate": "2026-10-15",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 14
+  },
+  {
+   "cheapestPrice": 10000000,
+   "departureDate": "2026-10-16",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 31
+  },
+  {
+   "cheapestPrice": 13000000,
+   "departureDate": "2026-10-16",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 8
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-16",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 33
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-16",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 17
+  },
+  {
+   "cheapestPrice": 15100000,
+   "departureDate": "2026-10-16",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 1
+  },
+  {
+   "cheapestPrice": 10200000,
+   "departureDate": "2026-10-16",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 14
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-16",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 50
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-16",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 10
+  },
+  {
+   "cheapestPrice": 12860500,
+   "departureDate": "2026-10-16",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 2
+  },
+  {
+   "cheapestPrice": 12839500,
+   "departureDate": "2026-10-16",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 15
+  },
+  {
+   "cheapestPrice": 15200000,
+   "departureDate": "2026-10-17",
+   "isFull": false,
+   "carIncluded": false,
+   "railCompanyId": 1
+  },
+  {
+   "cheapestPrice": 10200000,
+   "departureDate": "2026-10-17",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 14
+  },
+  {
+   "cheapestPrice": 13000000,
+   "departureDate": "2026-10-17",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 8
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-17",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 17
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-17",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 2
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-17",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 10
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-17",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 50
+  },
+  {
+   "cheapestPrice": 9300000,
+   "departureDate": "2026-10-17",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 31
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-17",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 25
+  },
+  {
+   "cheapestPrice": 13000000,
+   "departureDate": "2026-10-18",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 8
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-18",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 2
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-18",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 1
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-18",
+   "isFull": false,
+   "carIncluded": false,
+   "railCompanyId": 25
+  },
+  {
+   "cheapestPrice": 9300000,
+   "departureDate": "2026-10-18",
+   "isFull": false,
+   "carIncluded": false,
+   "railCompanyId": 31
+  },
+  {
+   "cheapestPrice": 10200000,
+   "departureDate": "2026-10-18",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 14
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-18",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 33
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-18",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 50
+  },
+  {
+   "cheapestPrice": 13000000,
+   "departureDate": "2026-10-18",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 10
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-18",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 17
+  },
+  {
+   "cheapestPrice": 12839500,
+   "departureDate": "2026-10-18",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 15
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-19",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 10
+  },
+  {
+   "cheapestPrice": 7600000,
+   "departureDate": "2026-10-19",
+   "isFull": false,
+   "carIncluded": false,
+   "railCompanyId": 1
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-19",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 25
+  },
+  {
+   "cheapestPrice": 13000000,
+   "departureDate": "2026-10-19",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 8
+  },
+  {
+   "cheapestPrice": 9300000,
+   "departureDate": "2026-10-19",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 31
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-19",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 17
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-19",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 50
+  },
+  {
+   "cheapestPrice": 10200000,
+   "departureDate": "2026-10-19",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 14
+  },
+  {
+   "cheapestPrice": 15200000,
+   "departureDate": "2026-10-20",
+   "isFull": false,
+   "carIncluded": false,
+   "railCompanyId": 1
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-20",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 25
+  },
+  {
+   "cheapestPrice": 10200000,
+   "departureDate": "2026-10-20",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 14
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-20",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 33
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-20",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 2
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-20",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 17
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-20",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 10
+  },
+  {
+   "cheapestPrice": 12839500,
+   "departureDate": "2026-10-20",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 15
+  },
+  {
+   "cheapestPrice": 13000000,
+   "departureDate": "2026-10-20",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 8
+  },
+  {
+   "cheapestPrice": 10000000,
+   "departureDate": "2026-10-20",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 31
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-20",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 50
+  },
+  {
+   "cheapestPrice": 13000000,
+   "departureDate": "2026-10-21",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 8
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-21",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 50
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-21",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 2
+  },
+  {
+   "cheapestPrice": 8975500,
+   "departureDate": "2026-10-21",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 1
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-21",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 17
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-21",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 10
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-21",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 25
+  },
+  {
+   "cheapestPrice": 10200000,
+   "departureDate": "2026-10-21",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 14
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-22",
+   "isFull": false,
+   "carIncluded": false,
+   "railCompanyId": 1
+  },
+  {
+   "cheapestPrice": 12860500,
+   "departureDate": "2026-10-22",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 2
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-22",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 33
+  },
+  {
+   "cheapestPrice": 12839500,
+   "departureDate": "2026-10-22",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 15
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-22",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 50
+  },
+  {
+   "cheapestPrice": 10000000,
+   "departureDate": "2026-10-22",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 31
+  },
+  {
+   "cheapestPrice": 10200000,
+   "departureDate": "2026-10-22",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 14
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-22",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 17
+  },
+  {
+   "cheapestPrice": 29900000,
+   "departureDate": "2026-10-22",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 10
+  },
+  {
+   "cheapestPrice": 13000000,
+   "departureDate": "2026-10-22",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 8
+  },
+  {
+   "cheapestPrice": 8975500,
+   "departureDate": "2026-10-23",
+   "isFull": true,
+   "carIncluded": false,
+   "railCompanyId": 1
+  }
+ ]
+}
