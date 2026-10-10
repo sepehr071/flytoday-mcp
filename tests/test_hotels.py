@@ -110,6 +110,8 @@ async def test_search_hotels_request_units_and_name_join(client, api):
     assert first["price_toman"] == 12_200_000 and first["per_night_toman"] == 6_100_000  # 122000000 Rial, 2 nights
     assert first["refundable"] is True and first["meal"] == "صبحانه" and first["rooms_left"] == 1
     assert [h["hotel_id"] for h in data["hotels"]] == [24, 209, 26, 230]
+    # the cover photo as the site builds it
+    assert first["image"] == "https://cdn-a-hid.cdnfl2.ir/upload/hotelimagesdomestic/24/main.jpg"
 
 
 async def test_search_hotels_reuses_the_portfolio_cache(client, api):
@@ -137,6 +139,7 @@ async def test_search_hotels_international_cards_from_region_portfolio(client, a
     avist, bufes, palmiye = data["hotels"]
     # the site shows English names abroad; scores and review counts as on the 2026-10-07 results page
     assert avist["name"] == "Avist Hotel Avcilar" and "score" not in avist
+    assert avist["image"] == "https://cdn-a-hi.cdnfl2.ir/upload/hotelimages/12214366/main.jpg"
     assert (bufes["name"], bufes["score"], bufes["reviews"]) == ("Bufes Hotel", 3.2, 2)
     assert (palmiye["stars"], palmiye["score"], palmiye["reviews"], palmiye["name_fa"]) == (3.0, 5.4, 5, "پالمیه تکسیم")
 
@@ -176,6 +179,7 @@ async def test_hotel_offers_join_roominfo_and_basics(client, api):
     assert sent["/v1/Hotel/RoomInfo"] == {"hotelSearchId": 15704877, "language": "fa"}
     assert sent["/V3/hotel/info"] == {"hotelId": 24, "isDomestic": True}
     assert data["name"] == "الماس 1 مشهد" and data["stars"] == 4.0 and data["check_in_time"] == "14:00"
+    assert data["image"] == "https://cdn-a-hid.cdnfl2.ir/upload/hotelimagesdomestic/24/main.jpg"
     assert data["hotel_search_id"] == 15704877 and "رستوران" in data["facilities"]
     prices = [o["price_toman"] for o in data["offers"]]
     assert prices == [12_200_000, 14_700_000, 14_700_000, 20_600_000, 25_400_000, 28_200_000]
@@ -261,6 +265,7 @@ async def test_search_stays_prices_are_toman_already(client, api):
     assert first["name"] == "برگل1 - تکخواب برگل 1" and first["type"] == "آپارتمان" and first["city"] == "رامسر"
     assert villa["property_id"] == 3804 and villa["pool"] is True and villa["free_cancellation_until"] == "2026-10-11"
     assert villa["guests"] == 6 and villa["max_guests"] == 10 and villa["cancellation"] == "Moderate"
+    assert villa["image"] == "https://cdn-a-hid.cdnfl2.ir/upload/hotelimagesdomestic/3804/main.jpg"
 
 
 async def test_search_stays_all_iran_without_dates(client, api):
@@ -304,6 +309,7 @@ async def test_stay_details_calendar_and_reviews(client, api):
     assert days[2] == {"date": "2026-10-09", "price_toman": 7_000_000, "available": True}
     assert data["reviews_total"] == 1 and data["review_score"] == 9 and data["latest_reviews"][0]["score"] == 9
     assert data["cancellation"] == "Moderate" and data["check_in_time"] == "14:00" and data["host"] == "Verified"
+    assert data["image"].endswith("/hotelimagesdomestic/3804/main.jpg")
     backwards = {"property_id": 1, "from_date": "2026-10-10", "to_date": "2026-10-09"}
     assert "must not be before" in await error(client, "ft_stay", backwards)
     assert "at most 45" in await error(client, "ft_stay", {"property_id": 1, "to_date": "2026-12-30"})
@@ -317,4 +323,5 @@ async def test_search_hotels_marks_stay_rows(client, api):
     api["/V3/hotel/Availability"] = data
     row = (await client.call_tool("ft_search_hotels", SEARCH_ARGS)).structured_content["hotels"][-1]
     assert row["is_stay"] is True and row["property_id"] == 230
+    assert row["image"].endswith("/hotelimagesdomestic/230/main.jpg")  # stays share the domestic CDN
     assert "hotel_id" not in row and "rooms_left" not in row

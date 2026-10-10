@@ -53,6 +53,7 @@ async def test_ft_search_flights_one_way(client, api):
     first = data["flights"][0]
     assert first == {
         "airline": "Ava Air",
+        "airline_fa": "آوا ایر",
         "airline_code": "AXV",
         "flight_no": "AXV7702",
         "from": "THR",

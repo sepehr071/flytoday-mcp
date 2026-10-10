@@ -41,6 +41,13 @@ Country = Annotated[
     Field(pattern=r"^[A-Za-z]{2}$", description="ISO country code of the DESTINATION for international, e.g. 'TR'."),
 ]
 
+# The site builds every hotel / stay cover photo as <cdn>/<id>/main.jpg (Portfolio imageLinks is null);
+# Iranian hotels and stays use the domestic CDN, their ids mean other hotels on the foreign one.
+IMAGE_CDN = {
+    True: "https://cdn-a-hid.cdnfl2.ir/upload/hotelimagesdomestic",
+    False: "https://cdn-a-hi.cdnfl2.ir/upload/hotelimages",
+}
+
 # (is_domestic, city id or region code) -> hotel id -> card. Mashhad's portfolio is 380 KB; names do not change.
 _CARDS: dict[tuple[bool, str], dict[int, dict[str, Any]]] = {}
 
@@ -53,6 +60,10 @@ def _nights(check_in: dt.date, check_out: dt.date) -> int:
     if nights > MAX_NIGHTS:
         raise ToolError(f"At most {MAX_NIGHTS} nights per search; got {nights}.")
     return nights
+
+
+def _image(hotel_id: Any, domestic: bool = True) -> str | None:
+    return f"{IMAGE_CDN[domestic]}/{hotel_id}/main.jpg" if hotel_id else None
 
 
 def _clean(d: dict[str, Any]) -> dict[str, Any]:
@@ -268,7 +279,7 @@ async def ft_search_hotels(
     """Priced hotels of a city (Iran) or region (abroad) for dates, one row per hotel with its cheapest room offer.
 
     Give city_id for Iran, or region_code + country_code with international=true. price_toman is the whole stay
-    for the room offer shown (one room; per_night_toman = price / nights). Rows have hotel_id for ft_hotel (rooms,
+    for the room offer shown (one room; per_night_toman = price / nights); image is the cover photo. Rows have hotel_id for ft_hotel (rooms,
     cancellation rules) and ft_hotel_reviews. Rows with is_stay=true are apartments or villas listed among the
     hotels: open them with ft_stay(property_id), not ft_hotel. rooms_left is given only when the site counts rooms.
     This search is rate limited hard (a captcha after about 12 searches in 10 minutes per IP and then blocked for
@@ -316,6 +327,7 @@ async def ft_search_hotels(
                     "room": room.get("name"),
                     "rooms_left": i.get("availableRoom") or None,  # 0 = not counted (the site still sells it)
                     "perks": i.get("promotion"),
+                    "image": _image(i["hotelId"], not international),
                 }
             )
         )
@@ -412,6 +424,7 @@ async def ft_hotel(
                 "city": (info.get("city") or {}).get("fa"),
                 "latitude": _float(info.get("latitude")),
                 "longitude": _float(info.get("longitude")),
+                "image": _image(hotel_id, not international),
                 "check_in_time": (policy.get("beginTime") or {}).get("fa"),
                 "check_out_time": (policy.get("checkOutTime") or {}).get("fa"),
                 "facilities": [
@@ -524,6 +537,7 @@ def _stay_row(i: dict[str, Any]) -> dict[str, Any]:
             "free_cancellation_until": f"{free[:4]}-{free[4:6]}-{free[6:8]}" if len(free) == 8 else None,
             "pool": True if i.get("hasPool") else None,
             "pets_allowed": True if i.get("isPetAllowed") else None,
+            "image": _image(i.get("propertyId")),
         }
     )
 
@@ -674,6 +688,7 @@ async def ft_stay(
                 "building_m2": i.get("buildingMeterage"),
                 "check_in_time": policy.get("beginTime"),
                 "check_out_time": policy.get("checkOutTime"),
+                "image": _image(property_id),
                 "base_price_per_night_toman": i.get("price"),
                 "cancellation": (cal or {}).get("cancellationType"),
                 "host": (i.get("supplier") or {}).get("hostBadgeType"),

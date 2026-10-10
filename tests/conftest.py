@@ -7,7 +7,7 @@ import httpx
 import pytest
 from mcp import Client
 
-from flytoday_mcp import http
+from flytoday_mcp import extras, http
 from flytoday_mcp.server import mcp
 
 FIXTURES = Path(__file__).parent / "fixtures"
@@ -45,7 +45,8 @@ def anyio_backend():
 def fresh_state(request, monkeypatch):
     """The shared httpx client is bound to one event loop; each test gets a new one."""
     if "live" not in request.keywords:  # unit tests use the fixtures' dates: pin "today" to their recording day
-        monkeypatch.setattr(http, "today", lambda: datetime.date(2026, 10, 7))
+        for module in (http, extras):  # extras imports `today` by name
+            monkeypatch.setattr(module, "today", lambda: datetime.date(2026, 10, 7))
     http.set_transport(None)
     yield
     http.set_transport(None)

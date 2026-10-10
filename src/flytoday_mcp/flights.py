@@ -88,7 +88,7 @@ async def ft_find_airport(
     return {"popular_domestic": rows[0], "popular_international": rows[1]}
 
 
-def _flight(it: dict[str, Any], airlines: dict[str, str]) -> dict[str, Any]:
+def _flight(it: dict[str, Any], airlines: dict[str, str], airlines_fa: dict[str, str]) -> dict[str, Any]:
     """One priced itinerary, compact. Prices are Rial in the API."""
     option = it["originDestinationOptions"][0]
     segs = option["flightSegments"]
@@ -105,6 +105,7 @@ def _flight(it: dict[str, Any], airlines: dict[str, str]) -> dict[str, Any]:
     seats = [s["seatsRemaining"] for s in segs if s.get("seatsRemaining") is not None]
     out: dict[str, Any] = {
         "airline": airlines.get(code, code),
+        "airline_fa": airlines_fa.get(code),
         "airline_code": code,
         "flight_no": " + ".join(s["flightNumber"] for s in segs),
         "from": segs[0]["departureAirportLocationCode"].upper(),
@@ -144,11 +145,13 @@ def _flight(it: dict[str, Any], airlines: dict[str, str]) -> dict[str, Any]:
 def _result(data: dict[str, Any] | None, page: int, size: int) -> dict[str, Any]:
     if not data:  # HTTP 204: no flights
         return {"flights": [], "paging": {"page": page, "page_size": size, "total": 0, "pages": 0}, "note": NO_FLIGHTS}
-    airlines = {a["iata"]: a.get("name") or a["iata"] for a in (data.get("additionalData") or {}).get("airlines") or []}
+    rows = (data.get("additionalData") or {}).get("airlines") or []
+    airlines = {a["iata"]: a.get("name") or a["iata"] for a in rows}
+    airlines_fa = {a["iata"]: a["nameLocal"] for a in rows if a.get("nameLocal")}
     flt = data.get("filter") or {}
     total = flt.get("resultCount", len(data["pricedItineraries"]))
     return {
-        "flights": [_flight(it, airlines) for it in data["pricedItineraries"]],
+        "flights": [_flight(it, airlines, airlines_fa) for it in data["pricedItineraries"]],
         "paging": {"page": page, "page_size": size, "total": total, "pages": -(-total // size)},
     }
 
@@ -197,7 +200,7 @@ async def ft_search_flights(
         ),
     ] = None,
 ) -> dict[str, Any]:
-    """Search flights for a date: every flight with times, airline, seats left, price and fare_source_code.
+    """Search flights for a date: every flight with times, airline (airline_fa: Persian name), seats left, price and fare_source_code.
 
     Works for domestic and international routes. price_toman is one adult's fare (taxes included),
     total_toman the whole party. Times are local to each airport. Round trip (return_date): `flights`
