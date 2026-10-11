@@ -212,6 +212,9 @@ All 22 tools are annotated `readOnlyHint: true` and return compact structured JS
   `per_night_toman`); stays give `price_per_night_toman` and `total_toman`; trains per adult; buses per seat.
   Visa and some activity prices are in a foreign currency (`price_currency`).
 - **Dates** in and out are Gregorian `YYYY-MM-DD`; past dates are rejected. Times are local to the place.
+- **Flights** give `airline` (English name) and `airline_fa` (Persian name, when the API has one).
+- **Hotels and stays** (search rows, `ft_hotel`, `ft_stay`) carry `image`, the cover photo, built like the site as
+  `<cdn>/<id>/main.jpg` (the API has no image field).
 - **Searches are rate limited per IP** by Flytoday: about 15 flight/train/bus searches, and hotel search asks for a
   captcha after about 12 searches in 10 minutes (blocked for an hour or more). Use the calendars and paging
   (`search_id`) instead of searching again; the tools never loop searches.
