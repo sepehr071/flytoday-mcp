@@ -1,6 +1,6 @@
 [project]
 name = "flytoday-mcp"
-version = "0.1.0"
+version = "0.1.1"
 description = "Unofficial read-only MCP server for Flytoday: cheapest domestic and international flights, hotels, stays, trains and buses in Iran, with fare rules and exact prices."
 readme = "README.md"
 license = "MIT"
