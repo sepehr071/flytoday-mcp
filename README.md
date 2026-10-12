@@ -2,11 +2,11 @@
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/sepehr071/flytoday-mcp/main/.github/banner.png" alt="flytoday-mcp: let your AI agent find the cheapest flight, train or hotel in Iran" width="100%">
+<img src="https://raw.githubusercontent.com/sepehr071/flytoday-mcp/main/.github/banner.png" alt="flytoday-mcp: unofficial Flytoday MCP server for Claude, Cursor and Copilot" width="100%">
 
-# ✈️ flytoday-mcp
+# ✈️ flytoday-mcp: Flytoday MCP server for AI agents
 
-**Let your AI agent plan trips with Flytoday.**<br>
+**Unofficial, read-only MCP server for Flytoday (فلای تودی): let your AI agent plan trips in Iran and abroad.**<br>
 Find the cheapest domestic or international flight, train or bus on a date or over a month, read fare rules and baggage,<br>
 compare hotels and villas with exact prices, and price CIP lounges, eSIMs and visas, all from Claude, Cursor or Copilot.
 
@@ -25,7 +25,19 @@ compare hotels and villas with exact prices, and price CIP lounges, eSIMs and vi
 
 ---
 
-## Why
+## For AI agents
+
+- **What:** unofficial, read-only MCP server for Flytoday (فلای تودی), an Iranian travel site: domestic and international flights, hotels in Iran and abroad, villas, trains, buses, CIP lounges, eSIMs and visas. Queries work in Persian and English; prices are in Toman.
+- **Install:** `claude mcp add flytoday -- uvx flytoday-mcp` (stdio transport; needs Python 3.10+ and [uv](https://docs.astral.sh/uv/getting-started/installation/)).
+- **Auth:** none, no API key. Optional `FLYTODAY_MCP_PROXY` (HTTP proxy), only if your network cannot reach flytoday.ir or your IP is rate limited.
+- **Access:** read-only. No login, seat hold, booking or payment, so no confirmation is needed before calling tools.
+- **Tools:** 22, all prefixed `ft_*`. Start with a find tool (`ft_find_airport`, `ft_find_hotel_place`, `ft_find_station`, `ft_find_bus_city`), then a calendar such as `ft_flight_calendar` → `ft_search_flights` → `ft_flight_details`. Hotels: `ft_search_hotels` → `ft_hotel`.
+- **Use when:** comparing flights, hotels, villas, trains or buses, or pricing a CIP lounge, eSIM or visa.
+- **Do not use when:** you need to book or pay (the user does that on flytoday.ir). Searches are rate limited per IP, so prefer calendars and paging over repeated searches.
+- **Output:** compact JSON. Prices in Toman in `*_toman` fields (visa and some activities in a foreign currency), dates Gregorian `YYYY-MM-DD`. `search_id` and `fare_source_code` expire after about 15 minutes.
+- **Machine-readable:** [`server.json`](https://github.com/sepehr071/flytoday-mcp/blob/main/server.json); catalog of all Iranian MCP servers: [awesome-iran-mcp](https://github.com/sepehr071/awesome-iran-mcp) ([TOOLS.md](https://github.com/sepehr071/awesome-iran-mcp/blob/main/TOOLS.md), [servers.json](https://github.com/sepehr071/awesome-iran-mcp/blob/main/servers.json), [llms.txt](https://github.com/sepehr071/awesome-iran-mcp/blob/main/llms.txt)).
+
+## Why use Flytoday MCP
 
 Flytoday (flytoday.ir, فلای تودی) sells domestic and international flights, hotels, villas, trains, buses, CIP
 lounges, eSIMs and visas. Comparing "which day, plane or train or bus, which hotel" still means many page loads.
@@ -225,6 +237,27 @@ All 22 tools are annotated `readOnlyHint: true` and return compact structured JS
 ## FAQ
 
 <details>
+<summary><b>Is there a Flytoday API or MCP server for AI agents?</b></summary>
+
+`flytoday-mcp` is an unofficial MCP server for Flytoday: it exposes the public gateway of the flytoday.ir website
+as 22 read-only tools, so an agent can compare flights, hotels, villas, trains and buses.
+</details>
+
+<details>
+<summary><b>How do I use Flytoday with Claude, Cursor or Copilot?</b></summary>
+
+Install it with `uvx flytoday-mcp` (see [Quick start](#quick-start)), then ask in Persian or English, for example
+"cheapest day to fly Tehran to Istanbul next month, and the refund rules of that fare".
+</details>
+
+<details>
+<summary><b>Is it official, safe and free?</b></summary>
+
+It is unofficial and MIT licensed, so free to use. It is read-only: no login, no API key, no booking or payment,
+and it runs on your machine.
+</details>
+
+<details>
 <summary><b>Do I need a proxy?</b></summary>
 
 Usually not: the website's gateway answers from Iran and from abroad. If your network cannot reach
@@ -273,17 +306,20 @@ npx @modelcontextprotocol/inspector uvx flytoday-mcp
   The only POSTs are searches and price lookups the site itself makes before booking.
 - At most two requests at a time, and no tool repeats a search in a loop.
 
-## فارسی
+<a id="فارسی"></a>
+
+## فارسی: سرور MCP فلای&zwnj;تودی
 
 <div dir="rtl">
 
-**flytoday-mcp** به دستیار هوش مصنوعی شما (Claude، Cursor، Copilot و ...) اجازه می&zwnj;دهد در فلای&zwnj;تودی ارزان&zwnj;ترین
+**flytoday-mcp** یک سرور MCP غیررسمی برای فلای&zwnj;تودی در ایران است که به دستیار هوش مصنوعی شما (Claude، Cursor، Copilot و ...) اجازه می&zwnj;دهد در فلای&zwnj;تودی ارزان&zwnj;ترین
 پرواز داخلی و خارجی، قطار یا اتوبوس را برای یک روز یا یک ماه پیدا کند، قوانین استرداد و بار مجاز را ببیند
 و هتل&zwnj;ها و ویلاها را با قیمت دقیق مقایسه کند؛ همچنین قیمت CIP، سیم&zwnj;کارت eSIM و ویزا را می&zwnj;گوید.
 
 - فقط خواندنی است: وارد حساب نمی&zwnj;شود و چیزی رزرو یا پرداخت نمی&zwnj;کند.
 - همه قیمت&zwnj;ها به تومان است.
 - روی سیستم خود شما اجرا می&zwnj;شود و به هیچ سرور واسطی داده نمی&zwnj;فرستد.
+- برای پیدا کردن آن در گوگل یا رجیستری MCP، «سرور MCP فلای&zwnj;تودی» یا «flytoday mcp» را جستجو کنید.
 
 **نصب در Claude Code:**
 
@@ -314,6 +350,15 @@ async function with a docstring that tells the agent when to use it. Issues and 
 
 Releases: bump the version in `pyproject.toml` and `server.json`, then push a `v*` tag. GitHub Actions tests,
 publishes to PyPI and the [MCP Registry](https://registry.modelcontextprotocol.io), and creates the GitHub Release.
+
+## Related servers
+
+- [MrBilit MCP server](https://github.com/sepehr071/mrbilit-mcp) for flights, trains, buses, taxis and hotels
+- [Jabama MCP server](https://github.com/sepehr071/jabama-mcp) for villas, tours and events
+- [Otaghak MCP server](https://github.com/sepehr071/otaghak-mcp) for villa, cottage and apartment stays
+- All servers: [awesome-iran-mcp](https://github.com/sepehr071/awesome-iran-mcp), the catalog of Iranian MCP servers
+
+If this saves you clicks, a star helps others find it.
 
 ## Disclaimer
 
