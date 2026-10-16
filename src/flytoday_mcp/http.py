@@ -9,11 +9,14 @@ from __future__ import annotations
 
 import asyncio
 import datetime as dt
+import json as json_mod
 import os
-from typing import Any
+import time
+from typing import Annotated, Any
 
 import httpx
 from mcp.server.mcpserver.exceptions import ToolError
+from pydantic import Field
 
 SITE = "https://www.flytoday.ir"
 GATEWAY = f"{SITE}/api/gateway"
@@ -33,9 +36,12 @@ HEADERS = {
 # Every backend sits behind one gateway: keep the total load low.
 MAX_CONCURRENCY = 2
 
+FullText = Annotated[bool, Field(description="Skip text clips and item caps; return full texts.")]
+
 _transport: httpx.AsyncBaseTransport | None = None
 _client: httpx.AsyncClient | None = None
 _limit: asyncio.Semaphore | None = None
+_cache: dict[tuple[str, str], tuple[float, Any]] = {}
 
 
 class ApiError(ToolError):
@@ -50,6 +56,7 @@ def set_transport(transport: httpx.AsyncBaseTransport | None) -> None:
     """Swap the transport (tests use httpx.MockTransport). Drops the current client."""
     global _transport, _client, _limit
     _transport, _client, _limit = transport, None, None
+    _cache.clear()
 
 
 def _get_client() -> tuple[httpx.AsyncClient, asyncio.Semaphore]:
@@ -59,7 +66,8 @@ def _get_client() -> tuple[httpx.AsyncClient, asyncio.Semaphore]:
         _client = httpx.AsyncClient(
             transport=_transport,
             headers=HEADERS,
-            timeout=60,
+            timeout=httpx.Timeout(60, connect=10),
+            limits=httpx.Limits(max_connections=4, max_keepalive_connections=2),
             follow_redirects=True,
             trust_env=False,
             # httpx mounts a proxy over any custom transport, so tests must not get one
@@ -90,7 +98,7 @@ async def api(
     if timeout:
         kwargs["timeout"] = timeout
     r = None
-    for attempt in range(2):  # one retry on a dropped connection
+    for attempt in range(2):  # one retry on a dropped connection (every POST here is a read-only query)
         try:
             async with limit:
                 r = await client.request(method, f"{GATEWAY}{path}", **kwargs)
@@ -115,6 +123,23 @@ async def api(
         return r.json()
     except ValueError as e:
         raise ApiError(f"Flytoday returned a non-JSON response (HTTP {r.status_code}).") from e
+
+
+async def cached(path: str, params: dict[str, Any] | None = None, *, ttl: float = 6 * 3600, **kwargs: Any) -> Any:
+    """`api` for near-static lookup lists, memoized for `ttl` seconds per (path, params, kwargs). Callers only read."""
+    key = (path, json_mod.dumps([params, kwargs], sort_keys=True, default=str))
+    hit = _cache.get(key)
+    if hit and time.monotonic() - hit[0] < ttl:
+        return hit[1]
+    data = await api(path, params, **kwargs)
+    _cache[key] = (time.monotonic(), data)
+    return data
+
+
+def clip(text: Any, n: int | None) -> str:
+    """Third-party free text cut to n characters, with an ellipsis marker when something was dropped."""
+    s = str(text or "")
+    return s if n is None or len(s) <= n else s[: n - 1] + "…"
 
 
 def toman(rial: Any) -> int | None:

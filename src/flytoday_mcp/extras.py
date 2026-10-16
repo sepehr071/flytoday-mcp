@@ -10,7 +10,7 @@ from typing import Annotated, Any, Literal
 from mcp.server.mcpserver.exceptions import ToolError
 from pydantic import Field
 
-from .http import PLACES, api, not_past, today, toman
+from .http import PLACES, FullText, api, cached, not_past, today, toman
 from .registry import tool
 
 # Visa prices come with a Persian currency word; ریال is Rial, so those are converted to Toman.
@@ -71,6 +71,7 @@ async def ft_cip(
     adults: Annotated[int, Field(ge=1, le=9, description="Adults, e.g. 1.")] = 1,
     children: Annotated[int, Field(ge=0, le=9, description="Children, e.g. 0.")] = 0,
     infants: Annotated[int, Field(ge=0, le=9, description="Infants, e.g. 0.")] = 0,
+    full_text: FullText = False,
 ) -> dict[str, Any]:
     """CIP / VIP airport lounge service with prices for a date and passenger mix, plus paid add-ons.
 
@@ -81,7 +82,7 @@ async def ft_cip(
     """
     not_past(date)
     code = airport.lower()
-    places = (await api("/v1/CIP/Airports") or {}).get("locations") or []
+    places = (await cached("/v1/CIP/Airports") or {}).get("locations") or []
     known = {p["iata"]: p for p in places}
     if code not in known:
         raise ToolError(
@@ -107,6 +108,7 @@ async def ft_cip(
             "infant": infants,
         },
     )
+    clip, cap = (None, None) if full_text else (300, 8)
     offers = []
     for it in (data or {}).get("pricedItineraries") or []:
         info = it.get("cipInfo") or {}
@@ -136,8 +138,8 @@ async def ft_cip(
                 for s in it.get("services") or []
             ],
             "includes": _first_fa(info.get("desciptions")),
-            "cancellation_rules": (info.get("rules") or {}).get("adult") or [],
-            "notes": (info.get("rules") or {}).get("extraRule") or [],
+            "cancellation_rules": [_text(x, clip) for x in (info.get("rules") or {}).get("adult") or []][:cap],
+            "notes": [_text(x, clip) for x in (info.get("rules") or {}).get("extraRule") or []][:cap],
         }
         offers.append({k: v for k, v in offer.items() if v is not None})
     return {
@@ -179,7 +181,7 @@ async def ft_esim_plans(
     Covers 200+ countries (no regional or global bundles). fare_code identifies the plan on flytoday.ir; plans
     cannot be bought here. coverage_countries is how many countries the plan works in.
     """
-    geo = (await api("/V1/ESim/GeoLocations") or {}).get("geoLocations") or []
+    geo = (await cached("/V1/ESim/GeoLocations") or {}).get("geoLocations") or []
     hit = _find_country(country, geo, ("slug", "code", "name"))
     if not hit:
         raise ToolError(f"No eSIM country matches '{country}'. Use the English name ('turkey') or the Persian name.")
@@ -210,7 +212,7 @@ async def ft_esim_plans(
 # ---------------------------------------------------------------- visa
 
 
-def _text(html: Any, cap: int = 600) -> str:
+def _text(html: Any, cap: int | None = 600) -> str:
     return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", str(html or ""))).strip()[:cap]
 
 
@@ -231,12 +233,11 @@ async def ft_visa(
 ) -> dict[str, Any]:
     """Visa services of Flytoday: the country list with from-prices, or one country's prices, documents and process.
 
-    Without country: every country with visa type, from_price (in price_currency, often USD or EUR, not Toman;
-    Iran's is Rial -> Toman) and processing time. With country: price per visa type (adult/child/infant in the
-    foreign currency AND in Toman at Flytoday's exchange rate), validity, processing time and required documents.
-    Schengen is one entry named 'schengen'. Services are sold on flytoday.ir.
+    Without country: every country with visa type, from_price (in price_currency, often USD or EUR, not Toman)
+    and processing time. With country: price per visa type (foreign currency and Toman at Flytoday's rate),
+    validity, processing time and documents. Schengen is one entry, 'schengen'.
     """
-    listing = await api("/v2/Visa/Search", method="POST", json={}) or {}
+    listing = await cached("/v2/Visa/Search", method="POST", json={}) or {}
     items = listing.get("items") or []
     if country is None:
         return {

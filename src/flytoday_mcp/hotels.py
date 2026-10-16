@@ -50,6 +50,7 @@ IMAGE_CDN = {
 
 # (is_domestic, city id or region code) -> hotel id -> card. Mashhad's portfolio is 380 KB; names do not change.
 _CARDS: dict[tuple[bool, str], dict[int, dict[str, Any]]] = {}
+_LOCKS: dict[tuple[bool, str], asyncio.Lock] = {}
 
 
 def _nights(check_in: dt.date, check_out: dt.date) -> int:
@@ -100,12 +101,13 @@ async def _cards(domestic: bool, place: str) -> dict[int, dict[str, Any]]:
     """Names, stars and scores for every hotel of a city (Iran) or region (abroad), from the portfolio the site
     itself loads with each search; once per place and process."""
     cache = _CARDS.setdefault((domestic, place), {})
-    if not cache:
-        # ponytail: a big foreign region is one 5.5 MB reply (Istanbul, 7714 hotels), like on the site; per-hotel
-        # V3/hotel/info was lighter but gave other scores and review counts than the site shows
-        where = {"cityId": int(place)} if domestic else {"regionCode": place, "cityId": None}
-        data = await api("/V1/hotel/Portfolio", method="POST", json={**where, "isDomestic": domestic})
-        cache.update({h["id"]: _card(h, domestic) for h in (data or {}).get("hotelInfo") or []})
+    async with _LOCKS.setdefault((domestic, place), asyncio.Lock()):  # parallel first calls share one download
+        if not cache:
+            # ponytail: a big foreign region is one 5.5 MB reply (Istanbul, 7714 hotels), like on the site; per-hotel
+            # V3/hotel/info was lighter but gave other scores and review counts than the site shows
+            where = {"cityId": int(place)} if domestic else {"regionCode": place, "cityId": None}
+            data = await api("/V1/hotel/Portfolio", method="POST", json={**where, "isDomestic": domestic})
+            cache.update({h["id"]: _card(h, domestic) for h in (data or {}).get("hotelInfo") or []})
     return cache
 
 
@@ -279,11 +281,10 @@ async def ft_search_hotels(
     """Priced hotels of a city (Iran) or region (abroad) for dates, one row per hotel with its cheapest room offer.
 
     Give city_id for Iran, or region_code + country_code with international=true. price_toman is the whole stay
-    for the room offer shown (one room; per_night_toman = price / nights); image is the cover photo. Rows have hotel_id for ft_hotel (rooms,
-    cancellation rules) and ft_hotel_reviews. Rows with is_stay=true are apartments or villas listed among the
-    hotels: open them with ft_stay(property_id), not ft_hotel. rooms_left is given only when the site counts rooms.
-    This search is rate limited hard (a captcha after about 12 searches in 10 minutes per IP and then blocked for
-    over an hour): search once, narrow with filters and paging, do not loop.
+    for one room (per_night_toman = price / nights); image is the cover photo. Next: ft_hotel(hotel_id) or
+    ft_hotel_reviews. Rows with is_stay=true are apartments or villas: open them with ft_stay(property_id).
+    rooms_left is given only when the site counts rooms. Captcha-limited hard per IP: search once, then
+    filter and page; never loop.
     """
     nights = _nights(check_in, check_out)
     if international:
@@ -463,6 +464,7 @@ async def ft_hotel_reviews(
     page: Annotated[int, Field(ge=1, le=100, description="Page number, 1-based.")] = 1,
     order: Annotated[Literal["newest", "oldest"], Field(description="Review order.")] = "newest",
     limit: Annotated[int, Field(ge=1, le=20, description="Reviews per page.")] = 5,
+    full_text: http.FullText = False,
 ) -> dict[str, Any]:
     """Guest reviews of a hotel: score (1-10), text, pros, cons, trip type and nights. Mostly Persian text.
 
@@ -487,9 +489,9 @@ async def ft_hotel_reviews(
             {
                 "date": str(r.get("date"))[:10].replace("/", "-"),
                 "score": r.get("averageScore"),
-                "text": (r.get("text") or "")[:500],
-                "pros": (r.get("pros") or "")[:300],
-                "cons": (r.get("cons") or "")[:300],
+                "text": http.clip(r.get("text"), None if full_text else 400),
+                "pros": http.clip(r.get("pros"), None if full_text else 200),
+                "cons": http.clip(r.get("cons"), None if full_text else 200),
                 "traveler": (r.get("author") or {}).get("typeEn")
                 if (r.get("author") or {}).get("typeEn") != "None"
                 else None,
@@ -619,6 +621,7 @@ async def ft_stay(
         dt.date | None, Field(description="Last calendar day; default 14 days after from_date, at most 45.")
     ] = None,
     guests: Annotated[int, Field(ge=1, le=30, description="Number of guests (changes the price).")] = 2,
+    full_text: http.FullText = False,
 ) -> dict[str, Any]:
     """One villa / apartment: details (capacity, rooms, facilities, rules, host), the per-night price calendar with
     blocked days, and the review summary with the latest reviews.
@@ -708,7 +711,7 @@ async def ft_stay(
                 {
                     "date": str(r.get("createdAt"))[:10],
                     "score": r.get("overallRating"),
-                    "text": (r.get("text") or "")[:400],
+                    "text": http.clip(r.get("text"), None if full_text else 400),
                     "nights": r.get("nightCount") or None,
                 }
             )

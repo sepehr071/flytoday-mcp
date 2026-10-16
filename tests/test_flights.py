@@ -241,3 +241,21 @@ async def test_ft_flight_details_international(client, api):
     assert "entry_notes" not in await call(
         client, "ft_flight_details", {"fare_source_code": "abcdef0123456789", "search_id": 1}
     )
+
+
+async def test_ft_flight_details_full_text(client, api):
+    long = "x" * 1000
+    rules = fixture("flights_farerules_dom.json")
+    rules["fareRules"][1]["ruleDetails"] = [{"category": f"C{n}", "rules": long} for n in range(8)]
+    api["/V1/flight/farerules"] = rules
+    bags = fixture("flights_baggages_dom.json")
+    bags["services"] = [{"serviceId": 7, "name": "Meal", "extra": "e", "price": 5}] * 12
+    api["/V1/flight/baggages"] = bags
+    args = {"fare_source_code": "6539363039376132383731"}
+    short = await call(client, "ft_flight_details", args)
+    full = await call(client, "ft_flight_details", {**args, "full_text": True})
+    assert len(short["rules"][0]["details"]) == 6 and len(short["rules"][0]["details"][0]["text"]) == 600
+    assert len(full["rules"][0]["details"]) == 8 and len(full["rules"][0]["details"][0]["text"]) == 1000
+    assert short["paid_services"][0] == {"serviceId": 7, "name": "Meal", "price": 5}
+    assert len(short["paid_services"]) == 10 and len(full["paid_services"]) == 12
+    assert full["paid_services"][0]["extra"] == "e"

@@ -244,3 +244,16 @@ async def test_ft_activity_unavailable_and_past(client, api):
     data = (await client.call_tool("ft_activity", {"activity_id": 13049})).structured_content
     assert (data["available"], data["price_toman"], data["options"], data["cheapest_days"]) == (False, None, [], [])
     await fails(client, "in the past", "ft_activity", {"activity_id": 13049, "date_from": "2026-01-01"})
+
+
+async def test_ft_cip_full_text(client, api):
+    cip_routes(api)
+    search = api["/v1/CIP/Search"]
+    search["pricedItineraries"][0]["cipInfo"]["rules"] = {"adult": ["a" * 500] * 10, "extraRule": ["n" * 500] * 10}
+    args = {"airport": "IKA", "date": "2026-10-17"}
+    short = (await client.call_tool("ft_cip", args)).structured_content["offers"][0]
+    full = (await client.call_tool("ft_cip", {**args, "full_text": True})).structured_content["offers"][0]
+    assert len(short["cancellation_rules"]) == len(short["notes"]) == 8
+    assert len(short["cancellation_rules"][0]) == 300
+    assert len(full["cancellation_rules"]) == len(full["notes"]) == 10
+    assert len(full["cancellation_rules"][0]) == 500

@@ -1,3 +1,5 @@
+import asyncio
+
 import httpx
 import pytest
 from conftest import body, fixture
@@ -15,8 +17,16 @@ SEARCH_ARGS = {**HOTEL_ARGS, "city_id": 10}
 @pytest.fixture(autouse=True)
 def fresh_cards():
     hotels._CARDS.clear()
+    hotels._LOCKS.clear()
     yield
     hotels._CARDS.clear()
+    hotels._LOCKS.clear()
+
+
+async def test_cards_concurrent_calls_download_once(api):
+    api[PORTFOLIO] = fixture("hotels_portfolio.json")
+    await asyncio.gather(hotels._cards(True, "10"), hotels._cards(True, "10"))
+    assert len(api.calls) == 1
 
 
 async def error(client, name, args) -> str:
@@ -325,3 +335,26 @@ async def test_search_hotels_marks_stay_rows(client, api):
     assert row["is_stay"] is True and row["property_id"] == 230
     assert row["image"].endswith("/hotelimagesdomestic/230/main.jpg")  # stays share the domestic CDN
     assert "hotel_id" not in row and "rooms_left" not in row
+
+
+async def test_reviews_full_text(client, api):
+    data = fixture("hotels_reviews.json")
+    data["reviews"][0].update(text="t" * 900, pros="p" * 500, cons="c" * 500)
+    api["/v3/Comment/GetCommentList"] = data
+    short = (await client.call_tool("ft_hotel_reviews", {"hotel_id": 24})).structured_content["reviews"][0]
+    full = (await client.call_tool("ft_hotel_reviews", {"hotel_id": 24, "full_text": True})).structured_content
+    full = full["reviews"][0]
+    assert [len(short[k]) for k in ("text", "pros", "cons")] == [400, 200, 200]
+    assert [len(full[k]) for k in ("text", "pros", "cons")] == [900, 500, 500]
+
+
+async def test_stay_reviews_full_text(client, api):
+    api["/v1/Accommodation/Info"] = fixture("hotels_stay_info.json")
+    api["/v1/Accommodation/Calendar"] = fixture("hotels_stay_calendar.json")
+    reviews = fixture("hotels_stay_reviews.json")
+    reviews["reviews"][0]["text"] = "t" * 900
+    api["/v1/Accommodation/Reviews"] = reviews
+    args = {"property_id": 3804, "to_date": "2026-10-14"}
+    short = (await client.call_tool("ft_stay", args)).structured_content
+    full = (await client.call_tool("ft_stay", {**args, "full_text": True})).structured_content
+    assert len(short["latest_reviews"][0]["text"]) == 400 and len(full["latest_reviews"][0]["text"]) == 900

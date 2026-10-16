@@ -7,7 +7,7 @@ from typing import Annotated, Any, Literal
 
 from pydantic import Field
 
-from .http import PLACES, api, not_past, toman
+from .http import PLACES, api, clip, not_past, toman
 from .registry import tool
 
 CityId = Annotated[
@@ -112,7 +112,7 @@ async def ft_search_buses(
             "price_toman": toman(i.get("price")),
             "full_price_toman": toman(i.get("fullPrice")) if i.get("hasDiscount") else None,
             "facilities": i.get("facilities") or None,
-            "note": i.get("description") or None,
+            "note": clip(i.get("description"), 200) or None,
             "fare_source_code": i.get("fareSourceCode"),
         }
         buses.append({k: v for k, v in row.items() if v not in (None, "")})

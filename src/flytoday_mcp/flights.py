@@ -9,7 +9,7 @@ from typing import Annotated, Any, Literal
 
 from pydantic import Field
 
-from .http import PLACES, ApiError, api, not_past, toman
+from .http import PLACES, ApiError, FullText, api, not_past, toman
 from .registry import tool
 
 Airport = Annotated[
@@ -29,7 +29,7 @@ NO_FLIGHTS = "No flights found. Try another date (ft_flight_calendar shows which
 DIRECTION_MARKS = dict.fromkeys([0x200E, 0x200F])  # left/right-to-right marks embedded in Persian text
 
 
-def _clean(text: Any, limit: int = 1500) -> str:
+def _clean(text: Any, limit: int | None = 1500) -> str:
     """Plain text: no HTML tags, no Unicode direction marks."""
     text = re.sub(r"<[^>]+>", " ", str(text or "")).translate(DIRECTION_MARKS)
     return re.sub(r"[ \t]+", " ", text).strip()[:limit]
@@ -202,14 +202,11 @@ async def ft_search_flights(
 ) -> dict[str, Any]:
     """Search flights for a date: every flight with times, airline (airline_fa: Persian name), seats left, price and fare_source_code.
 
-    Works for domestic and international routes. price_toman is one adult's fare (taxes included),
-    total_toman the whole party. Times are local to each airport. Round trip (return_date): `flights`
-    are outbound options whose total_toman is the cheapest round-trip total with that outbound, and
-    `return_flights` are the matching return options for the cheapest outbound (`return_for` is its key;
-    pass key + search_id as outbound_key + search_id to see the returns of another outbound). Filters
-    apply to the outbound leg. Searches are rate limited: page through a result with search_id
-    instead of searching again. Call ft_flight_details with a flight's fare_source_code for the
-    refund rules and baggage; ft_flight_calendar finds the cheapest day first.
+    price_toman is one adult's fare (taxes included), total_toman the whole party. Round trip (return_date):
+    `flights` are outbound options (total_toman = cheapest round trip with that outbound), `return_flights`
+    the returns for the cheapest outbound (`return_for` is its key; pass another key as outbound_key +
+    search_id for its returns). Filters apply to the outbound leg. Rate limited: page with search_id, never
+    search again. Next: ft_flight_details(fare_source_code); ft_flight_calendar finds the cheapest day first.
     """
     not_past(date)
     if return_date and return_date < date:
@@ -337,6 +334,7 @@ async def ft_flight_details(
         int | None,
         Field(description="search_id of that search; adds the entry and transit notes of an international fare."),
     ] = None,
+    full_text: FullText = False,
 ) -> dict[str, Any]:
     """Refund and change rules, confirmed baggage per segment and (international) entry notes of one fare.
 
@@ -351,6 +349,7 @@ async def ft_flight_details(
     if search_id:
         jobs.append(api("/V1/Flight/AirTravelRestriction", {"fareSourceCode": fare_source_code, "searchId": search_id}))
     rules, bags, *restriction = await asyncio.gather(*jobs)
+    clip, cap = (None, None) if full_text else (600, 6)
     out: dict[str, Any] = {
         "rules": [
             {
@@ -361,19 +360,19 @@ async def ft_flight_details(
                         k: v
                         for k, v in {
                             "category": d.get("category"),
-                            "text": _clean(d.get("rules") or d.get("rulesLocal")),
+                            "text": _clean(d.get("rules") or d.get("rulesLocal"), clip),
                             "penalties": [
                                 {
-                                    "from": _clean(i.get("from")),
-                                    "to": _clean(i.get("to")),
-                                    "penalty": _clean(i.get("amount")),
+                                    "from": _clean(i.get("from"), None if full_text else 1500),
+                                    "to": _clean(i.get("to"), None if full_text else 1500),
+                                    "penalty": _clean(i.get("amount"), None if full_text else 1500),
                                 }
                                 for i in d.get("ruleItems") or []
                             ],
                         }.items()
                         if v
                     }
-                    for d in r["ruleDetails"]
+                    for d in r["ruleDetails"][:cap]
                 ],
             }
             for r in (rules or {}).get("fareRules") or []
@@ -390,9 +389,21 @@ async def ft_flight_details(
         ],
     }
     if (bags or {}).get("services"):
-        out["paid_services"] = bags["services"]
+        # shortcut: the services shape was never captured (always empty so far); keep only name/price-like keys
+        keep = ("name", "title", "description", "type", "price", "amount", "currency")
+        out["paid_services"] = [
+            s
+            if full_text
+            else {
+                k: _clean(v, 200) if isinstance(v, str) else v
+                for k, v in s.items()
+                if k in keep or k.lower().endswith("id")
+            }
+            for s in bags["services"][: None if full_text else 10]
+            if isinstance(s, dict)
+        ]
     notes = [
-        {"group": n.get("group"), "text": _clean(n.get("englishDescription") or n.get("persianDescription"), 600)}
+        {"group": n.get("group"), "text": _clean(n.get("englishDescription") or n.get("persianDescription"), clip)}
         for group in ((restriction[0] or {}).get("travelRestrictionItems") or [] if restriction else [])
         for n in group[-1:]
     ]
