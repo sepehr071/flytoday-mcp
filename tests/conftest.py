@@ -47,6 +47,8 @@ def fresh_state(request, monkeypatch):
     if "live" not in request.keywords:  # unit tests use the fixtures' dates: pin "today" to their recording day
         for module in (http, extras):  # extras imports `today` by name
             monkeypatch.setattr(module, "today", lambda: datetime.date(2026, 10, 7))
+    monkeypatch.setattr(http, "JITTER", (0, 0))
+    monkeypatch.setattr(http, "RETRY_DELAY", 0)
     http.set_transport(None)
     yield
     http.set_transport(None)

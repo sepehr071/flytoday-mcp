@@ -29,7 +29,7 @@ compare hotels and villas with exact prices, and price CIP lounges, eSIMs and vi
 
 - **What:** unofficial, read-only MCP server for Flytoday (فلای تودی), an Iranian travel site: domestic and international flights, hotels in Iran and abroad, villas, trains, buses, CIP lounges, eSIMs and visas. Queries work in Persian and English; prices are in Toman.
 - **Install:** `claude mcp add flytoday -- uvx flytoday-mcp` (stdio transport; needs Python 3.10+ and [uv](https://docs.astral.sh/uv/getting-started/installation/)).
-- **Auth:** none, no API key. Optional `FLYTODAY_MCP_PROXY` (HTTP proxy), only if your network cannot reach flytoday.ir or your IP is rate limited.
+- **Auth:** none, no API key. Optional `FLYTODAY_MCP_PROXY` (HTTP proxy, or a comma-separated list), only if your network cannot reach flytoday.ir or your IP is rate limited.
 - **Access:** read-only. No login, seat hold, booking or payment, so no confirmation is needed before calling tools.
 - **Tools:** 22, all prefixed `ft_*`. Start with a find tool (`ft_find_airport`, `ft_find_hotel_place`, `ft_find_station`, `ft_find_bus_city`), then a calendar such as `ft_flight_calendar` → `ft_search_flights` → `ft_flight_details`. Hotels: `ft_search_hotels` → `ft_hotel`.
 - **Use when:** comparing flights, hotels, villas, trains or buses, or pricing a CIP lounge, eSIM or visa.
@@ -261,7 +261,7 @@ and it runs on your machine.
 <summary><b>Do I need a proxy?</b></summary>
 
 Usually not: the website's gateway answers from Iran and from abroad. If your network cannot reach
-www.flytoday.ir, or your IP is rate limited, set `FLYTODAY_MCP_PROXY` to an HTTP proxy. System proxy variables
+www.flytoday.ir, or your IP is rate limited, set `FLYTODAY_MCP_PROXY` to an HTTP proxy (or a comma-separated list, used one at a time). System proxy variables
 (`HTTPS_PROXY`, ...) are ignored on purpose.
 </details>
 
@@ -277,6 +277,9 @@ best option; you book on flytoday.ir.
 
 Flytoday limits searches per IP. Wait (the hotel captcha block can last an hour or more) or use another network
 through `FLYTODAY_MCP_PROXY`. Calendars, details, reviews and stay searches are not limited.
+If Flytoday serves a bot-check page instead, install the browser extra (`pip install flytoday-mcp[browser]`, or
+`uvx --with patchright==1.63.0 flytoday-mcp`) and run `patchright install chromium`; the server then clears it once
+in a headless browser.
 </details>
 
 <details>
@@ -298,7 +301,7 @@ npx @modelcontextprotocol/inspector uvx flytoday-mcp
 
 | Variable | Default | Meaning |
 |---|---|---|
-| `FLYTODAY_MCP_PROXY` | unset | HTTP proxy for every request, e.g. `http://user:pass@host:port` |
+| `FLYTODAY_MCP_PROXY` | unset | HTTP proxy, e.g. `http://user:pass@host:port`; a comma-separated list is used one at a time (next after a block or connect error) |
 
 ## Safety
 
@@ -340,8 +343,8 @@ claude mcp add flytoday -- uvx flytoday-mcp
 ```bash
 git clone https://github.com/sepehr071/flytoday-mcp && cd flytoday-mcp
 uv sync
-uv run pytest            # offline, against recorded responses
-uv run pytest -m live    # real API, one search per tool (set FLYTODAY_MCP_PROXY if needed)
+uv run python -m pytest  # offline, against recorded responses
+uv run python -m pytest -m live  # real API, one search per tool (set FLYTODAY_MCP_PROXY if needed)
 uv run ruff check .
 ```
 

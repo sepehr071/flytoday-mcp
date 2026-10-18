@@ -8,13 +8,13 @@
     "source": "github"
   },
   "websiteUrl": "https://github.com/sepehr071/flytoday-mcp",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "packages": [
     {
       "registryType": "pypi",
       "registryBaseUrl": "https://pypi.org",
       "identifier": "flytoday-mcp",
-      "version": "0.2.0",
+      "version": "0.3.0",
       "runtimeHint": "uvx",
       "transport": {
         "type": "stdio"
@@ -22,7 +22,7 @@
       "environmentVariables": [
         {
           "name": "FLYTODAY_MCP_PROXY",
-          "description": "Optional HTTP proxy URL for every request (only needed if your network cannot reach flytoday.ir or is rate limited). System proxy settings are ignored.",
+          "description": "Optional HTTP proxy URL, or a comma-separated list used one at a time (next one after a block or connect error). Only needed if your network cannot reach flytoday.ir or is rate limited. System proxy settings are ignored.",
           "isRequired": false,
           "isSecret": false
         }

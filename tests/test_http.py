@@ -1,4 +1,6 @@
+import asyncio
 import re
+import sys
 from pathlib import Path
 
 import httpx
@@ -91,7 +93,7 @@ async def test_cached_lookup_is_fetched_once_and_post_is_retried_once(api):
     http.set_transport(httpx.MockTransport(drop))
     with pytest.raises(http.ApiError):
         await http.api("/v1/x", method="POST", json={})
-    assert len(tries) == 2
+    assert len(tries) == 3  # retried twice
 
 
 async def test_api_retries_post_connect_reset():
@@ -105,3 +107,89 @@ async def test_api_retries_post_connect_reset():
 
     http.set_transport(httpx.MockTransport(flaky))
     assert await http.api("/v1/x", method="POST", json={}) == {"ok": True} and len(tries) == 2
+
+
+def test_is_challenge():
+    html = {"content-type": "text/html"}
+    assert http._is_challenge(httpx.Response(403, text="<html>Just a moment...</html>", headers=html))
+    assert http._is_challenge(httpx.Response(503, text="<!doctype html><title>ArvanCloud</title>"))
+    assert not http._is_challenge(httpx.Response(403, text="<html>Forbidden</html>", headers=html))
+    assert not http._is_challenge(httpx.Response(403, json={"status": 403}))
+    assert not http._is_challenge(httpx.Response(200, text="<html></html>", headers=html))
+
+
+async def test_frontend_headers_are_sent_and_no_user_agent_of_ours():
+    seen = []
+    http.set_transport(httpx.MockTransport(lambda r: seen.append(r) or httpx.Response(204)))
+    await http.api("/v1/x", origin=http.PLACES)
+    h = seen[0].headers
+    assert h["origin"] == h["x-origin"] == "https://www.flytoday.ir" and h["referer"] == "https://www.flytoday.ir/"
+    assert h["sec-fetch-site"] == "same-origin" and h["sec-fetch-mode"] == "cors"
+    assert "user-agent" not in h or "Chrome" not in h["user-agent"]
+
+
+async def test_retries_5xx_and_honours_retry_after_but_not_403_or_captcha(monkeypatch):
+    waits = []
+
+    async def fake_sleep(s):
+        waits.append(s)
+
+    monkeypatch.setattr(http.asyncio, "sleep", fake_sleep)
+    hits = []
+
+    def limited(request):
+        hits.append(1)
+        if len(hits) == 1:
+            return httpx.Response(429, json={}, headers={"Retry-After": "3"})
+        if len(hits) == 2:
+            return httpx.Response(503, json={}, headers={"Retry-After": "999"})
+        return httpx.Response(200, json={"ok": True})
+
+    http.set_transport(httpx.MockTransport(limited))
+    assert await http.api("/v1/x") == {"ok": True}
+    assert [w for w in waits if w] == [3, http.MAX_RETRY_WAIT]
+    tries = []
+    for resp in (httpx.Response(403, text="<html>no</html>"), httpx.Response(429, headers={"x-captcha-required": "1"})):
+        tries.clear()
+        http.set_transport(httpx.MockTransport(lambda r, resp=resp, tries=tries: tries.append(1) or resp))
+        with pytest.raises(http.ApiError):
+            await http.api("/v1/x")
+        assert len(tries) == 1
+
+
+async def test_proxy_list_rotates_and_stale_client_does_not(monkeypatch):
+    monkeypatch.setenv("FLYTODAY_MCP_PROXY", "http://p1:1, http://p2:2")
+    assert http._proxies() == ["http://p1:1", "http://p2:2"]
+    old, _ = http._get_client()
+    http._next_proxy(old)
+    new, _ = http._get_client()
+    assert http._proxy_index == 1 and new is not old
+    http._next_proxy(old)  # a late failure on the retired client must not skip the proxy now in use
+    assert http._proxy_index == 1 and http._client is new
+
+
+async def test_challenge_cleared_by_browser_once(monkeypatch):
+    runs = []
+
+    async def fake_browser(proxy):
+        runs.append(proxy)
+        await asyncio.sleep(0.01)
+        return [{"name": "clearance", "value": "ok", "domain": "www.flytoday.ir", "path": "/"}]
+
+    monkeypatch.setattr(http, "_browser_cookies", fake_browser)
+
+    def guarded(request):
+        if "clearance=ok" not in request.headers.get("cookie", ""):
+            return httpx.Response(403, text="<html>Just a moment</html>", headers={"content-type": "text/html"})
+        return httpx.Response(200, json={"ok": True})
+
+    http.set_transport(httpx.MockTransport(guarded))
+    await asyncio.gather(http.api("/v1/x", {"a": 1}), http.api("/v1/x", {"a": 2}))
+    assert len(runs) == 1  # the second caller reused the cookies the first one fetched
+
+
+async def test_challenge_without_patchright(monkeypatch):
+    monkeypatch.setitem(sys.modules, "patchright.async_api", None)  # makes the import fail
+    http.set_transport(httpx.MockTransport(lambda r: httpx.Response(403, text="<html>Just a moment</html>")))
+    with pytest.raises(http.ApiError, match=r"flytoday-mcp\[browser\].*patchright install chromium"):
+        await http.api("/v1/x")
