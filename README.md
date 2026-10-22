@@ -4,11 +4,11 @@
 
 <img src="https://raw.githubusercontent.com/sepehr071/flytoday-mcp/main/.github/banner.png" alt="flytoday-mcp: unofficial Flytoday MCP server for Claude, Cursor and Copilot" width="100%">
 
-# ✈️ flytoday-mcp: Flytoday MCP server for AI agents
+# flytoday-mcp: Flytoday MCP server for AI agents
 
-**Unofficial, read-only MCP server for Flytoday (فلای تودی): let your AI agent plan trips in Iran and abroad.**<br>
-Find the cheapest domestic or international flight, train or bus on a date or over a month, read fare rules and baggage,<br>
-compare hotels and villas with exact prices, and price CIP lounges, eSIMs and visas, all from Claude, Cursor or Copilot.
+**Let your AI agent plan trips on Flytoday (فلای&zwnj;تودی), in Iran and abroad.**<br>
+An unofficial, read-only MCP server for [Flytoday](https://www.flytoday.ir), the Iranian online travel agency:<br>
+cheapest domestic and international flights, trains and buses, fare rules and baggage, hotels and villas with exact prices, plus CIP lounges, eSIMs and visas, from Claude, Cursor or Copilot.
 
 [![PyPI](https://img.shields.io/pypi/v/flytoday-mcp?color=2563eb)](https://pypi.org/project/flytoday-mcp/)
 [![Python](https://img.shields.io/pypi/pyversions/flytoday-mcp)](https://pypi.org/project/flytoday-mcp/)
@@ -19,7 +19,7 @@ compare hotels and villas with exact prices, and price CIP lounges, eSIMs and vi
 [![Install in Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en/install-mcp?name=flytoday&config=eyJjb21tYW5kIjoidXZ4IiwiYXJncyI6WyJmbHl0b2RheS1tY3AiXX0=)
 [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_flytoday--mcp-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://vscode.dev/redirect/mcp/install?name=flytoday&config=%7B%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22flytoday-mcp%22%5D%7D)
 
-[Quick start](#quick-start) · [What it can do](#what-it-can-do) · [Tools](#tools) · [FAQ](#faq) · [فارسی](#فارسی)
+[For AI agents](#for-ai-agents) · [Why](#why) · [What it can do](#what-it-can-do) · [Quick start](#quick-start) · [Tools](#tools) · [Good to know](#good-to-know) · [FAQ](#faq) · [Configuration](#configuration) · [فارسی](#فارسی) · [Development](#development)
 
 </div>
 
@@ -27,19 +27,19 @@ compare hotels and villas with exact prices, and price CIP lounges, eSIMs and vi
 
 ## For AI agents
 
-- **What:** unofficial, read-only MCP server for Flytoday (فلای تودی), an Iranian travel site: domestic and international flights, hotels in Iran and abroad, villas, trains, buses, CIP lounges, eSIMs and visas. Queries work in Persian and English; prices are in Toman.
-- **Install:** `claude mcp add flytoday -- uvx flytoday-mcp` (stdio transport; needs Python 3.10+ and [uv](https://docs.astral.sh/uv/getting-started/installation/)).
-- **Auth:** none, no API key. Optional `FLYTODAY_MCP_PROXY` (HTTP proxy, or a comma-separated list), only if your network cannot reach flytoday.ir or your IP is rate limited.
-- **Access:** read-only. No login, seat hold, booking or payment, so no confirmation is needed before calling tools.
-- **Tools:** 22, all prefixed `ft_*`. Start with a find tool (`ft_find_airport`, `ft_find_hotel_place`, `ft_find_station`, `ft_find_bus_city`), then a calendar such as `ft_flight_calendar` → `ft_search_flights` → `ft_flight_details`. Hotels: `ft_search_hotels` → `ft_hotel`.
-- **Use when:** comparing flights, hotels, villas, trains or buses, or pricing a CIP lounge, eSIM or visa.
+- **What:** unofficial, read-only MCP server (model context protocol) for Flytoday (فلای&zwnj;تودی, flytoday.ir), an Iranian travel site: domestic and international flights, hotels in Iran and abroad, villas and apartments, trains, buses, CIP lounges, eSIMs, visas and activities. Queries work in Persian and English; prices are in Toman.
+- **Install:** `uvx flytoday-mcp` or `claude mcp add flytoday -- uvx flytoday-mcp`. Transport: stdio. Needs Python 3.10+ and [uv](https://docs.astral.sh/uv/getting-started/installation/).
+- **Auth:** none, no API key or account. Optional `FLYTODAY_MCP_PROXY` (HTTP proxy, or a comma-separated list), only if your network cannot reach flytoday.ir or your IP is rate limited. System proxy settings are ignored.
+- **Access:** read-only. No login, seat hold, booking or payment, so no confirmation is needed before calling any tool. All tools are annotated `readOnlyHint: true`.
+- **Tools:** 22, all prefixed `ft_`. Start with a find tool (`ft_find_airport`, `ft_find_hotel_place`, `ft_find_station`, `ft_find_bus_city`) to get ids. Flights: `ft_flight_calendar` → `ft_search_flights` → `ft_flight_details`. Hotels: `ft_search_hotels` → `ft_hotel`. Villas: `ft_search_stays` → `ft_stay`.
+- **Units:** prices in Toman in fields named `*_toman` (visa and some activity prices in a foreign currency, see `price_currency`); dates Gregorian `YYYY-MM-DD`, past dates are rejected. `search_id` and `fare_source_code` expire after about 15 minutes.
+- **Use when:** comparing flights, hotels, villas, trains or buses on Flytoday, or pricing a CIP lounge, eSIM, visa or activity.
 - **Do not use when:** you need to book or pay (the user does that on flytoday.ir). Searches are rate limited per IP, so prefer calendars and paging over repeated searches.
-- **Output:** compact JSON. Prices in Toman in `*_toman` fields (visa and some activities in a foreign currency), dates Gregorian `YYYY-MM-DD`. `search_id` and `fare_source_code` expire after about 15 minutes.
 - **Machine-readable:** [`server.json`](https://github.com/sepehr071/flytoday-mcp/blob/main/server.json); catalog of all Iranian MCP servers: [awesome-iran-mcp](https://github.com/sepehr071/awesome-iran-mcp) ([TOOLS.md](https://github.com/sepehr071/awesome-iran-mcp/blob/main/TOOLS.md), [servers.json](https://github.com/sepehr071/awesome-iran-mcp/blob/main/servers.json), [llms.txt](https://github.com/sepehr071/awesome-iran-mcp/blob/main/llms.txt)).
 
-## Why use Flytoday MCP
+## Why
 
-Flytoday (flytoday.ir, فلای تودی) sells domestic and international flights, hotels, villas, trains, buses, CIP
+Flytoday (flytoday.ir, فلای&zwnj;تودی) sells domestic and international flights, hotels, villas, trains, buses, CIP
 lounges, eSIMs and visas. Comparing "which day, plane or train or bus, which hotel" still means many page loads.
 An agent with `flytoday-mcp` does it in one go:
 
@@ -59,18 +59,30 @@ An agent with `flytoday-mcp` does it in one go:
 
 ## What it can do
 
-- ✈️ **Flights**: domestic and international, one-way or round trip, party prices, airline, direct, charter/system and time filters
-- 📅 **Cheapest day** for flights (+-15 days), trains (~16 days) and buses (~6 weeks)
-- 📜 **Fare details**: refund and change rules, baggage, international entry notes
-- 🏨 **Hotels** in Iran and abroad: priced search, room and meal offers with cancellation terms, guest reviews
-- 🏡 **Villas and apartments** in Iran: price per night and total, per-date calendar with blocked days
-- 🚆🚌 **Trains and buses**: classes, seats left, stops, amenities, VIP and sleeper buses
-- 🛂 **Extras**: CIP lounges at IKA and MHD, eSIM data plans per country, visa prices and documents, tours and tickets
-- 🔒 **Read-only by design**: no login, no seat hold, no booking, no payment
+- **Flights:** domestic and international, one-way or round trip, party prices, airline, direct, charter/system and time filters
+- **Cheapest day** for flights (+-15 days), trains (~16 days) and buses (~6 weeks)
+- **Fare details:** refund and change rules, baggage, international entry notes
+- **Hotels** in Iran and abroad: priced search, room and meal offers with cancellation terms, guest reviews
+- **Villas and apartments** in Iran: price per night and total, per-date calendar with blocked days
+- **Trains and buses:** classes, seats left, stops, amenities, VIP and sleeper buses
+- **Extras:** CIP lounges at IKA and MHD, eSIM data plans per country, visa prices and documents, tours and tickets
+- **Read-only by design:** no login, no seat hold, no booking, no payment
+
+Example prompts:
+
+- "Cheapest day to fly Tehran to Istanbul next month, and the refund rules of that fare?"
+- "Hotels in Mashhad for 2 nights from the 21st, cheapest first, with free cancellation."
+- "A villa in Ramsar for 4 people next weekend under 5 million Toman a night."
+- "Cheapest train from Tehran to Mashhad this week, and where does it stop?"
+- "How much is an eSIM for Turkey, and what documents does a visa need?"
+- <span dir="rtl">ارزان&zwnj;ترین اتوبوس VIP تهران به اصفهان دوشنبه بعد؟</span>
+- <span dir="rtl">ارزان&zwnj;ترین روز برای پرواز تهران به مشهد در هفته آینده کدام است؟</span>
+- <span dir="rtl">قوانین استرداد و بار مجاز این بلیط خارجی چیست؟</span>
+- <span dir="rtl">یک ویلا در رامسر برای ۴ نفر آخر هفته زیر ۵ میلیون تومان پیدا کن.</span>
 
 ## Quick start
 
-You need [uv](https://docs.astral.sh/uv/getting-started/installation/).
+You need [uv](https://docs.astral.sh/uv/getting-started/installation/). No API key or account.
 
 <details open>
 <summary><b>Claude Code</b></summary>
@@ -105,7 +117,7 @@ Need a proxy? Add `"env": { "FLYTODAY_MCP_PROXY": "http://127.0.0.1:8080" }` nex
 <details>
 <summary><b>Cursor</b></summary>
 
-Click **Install in Cursor** above, or add the Claude Desktop block to `~/.cursor/mcp.json`.
+Click **Install in Cursor** above, or add the Claude Desktop block to `~/.cursor/mcp.json` (or `.cursor/mcp.json` in a project).
 </details>
 
 <details>
@@ -123,17 +135,111 @@ Click **Install in VS Code** above, or add to `.vscode/mcp.json`:
 </details>
 
 <details>
+<summary><b>Codex CLI</b></summary>
+
+```bash
+codex mcp add flytoday -- uvx flytoday-mcp
+```
+
+Or in `~/.codex/config.toml`:
+
+```toml
+[mcp_servers.flytoday]
+command = "uvx"
+args = ["flytoday-mcp"]
+```
+</details>
+
+<details>
+<summary><b>Gemini CLI</b></summary>
+
+Add to `~/.gemini/settings.json`:
+
+```json
+{
+  "mcpServers": {
+    "flytoday": { "command": "uvx", "args": ["flytoday-mcp"] }
+  }
+}
+```
+</details>
+
+<details>
+<summary><b>Windsurf</b></summary>
+
+Add the Claude Desktop block to `~/.codeium/windsurf/mcp_config.json`.
+</details>
+
+<details>
 <summary><b>Anything else</b></summary>
 
 It's a standard stdio MCP server: run `uvx flytoday-mcp`, or `pip install flytoday-mcp` and run `flytoday-mcp`.
 </details>
 
-Then just ask:
+## Tools
 
-- "Cheapest day to fly Tehran to Istanbul next month, and the refund rules of that fare?"
-- "Hotels in Mashhad for 2 nights from the 21st, cheapest first, with free cancellation."
-- "A villa in Ramsar for 4 people next weekend under 5 million Toman a night."
-- <span dir="rtl">ارزان&zwnj;ترین اتوبوس VIP تهران به اصفهان دوشنبه بعد؟</span>
+Each vertical has its own ids, taken from its find tool: IATA codes for flights (`THR`, `MHD`, `IST`), hotel
+`city_id` / `region_code`, stay `region_code`, train station codes (Tehran `1`, Mashhad `191`), 4-digit bus city
+ids (Tehran `0001`, Isfahan `0002`).
+
+<details open>
+<summary><b>Flights</b> (4)</summary>
+
+| Tool | What it does |
+|---|---|
+| `ft_find_airport` | Finds IATA codes for Iranian and international cities and airports, or lists the popular ones |
+| `ft_search_flights` | Searches one-way or round-trip flights with filters, sorting and paging, in Toman, with fare_source_code and search_id |
+| `ft_flight_calendar` | Shows the cheapest fare per departure day around a date and marks the cheapest day |
+| `ft_flight_details` | Gives the refund and change rules, baggage and international entry notes of one fare |
+</details>
+
+<details open>
+<summary><b>Hotels and stays</b> (6)</summary>
+
+| Tool | What it does |
+|---|---|
+| `ft_find_hotel_place` | Find city, region and hotel ids for hotels, and region codes for villa stays; popular places when empty |
+| `ft_search_hotels` | Priced hotels of a city or region for dates: whole-stay and per-night Toman, stars, score, refundable, meal |
+| `ft_hotel` | One hotel: room and meal offers with price, rooms left and cancellation terms, room details, basics |
+| `ft_hotel_reviews` | Guest reviews of a hotel with score, text, pros and cons |
+| `ft_search_stays` | Villas and apartments in Iran for dates, cheapest first, Toman per night and total |
+| `ft_stay` | One villa or apartment: details, price calendar with blocked days, reviews |
+</details>
+
+<details open>
+<summary><b>Trains</b> (4)</summary>
+
+| Tool | What it does |
+|---|---|
+| `ft_find_station` | Train station codes by city name, or the popular stations |
+| `ft_search_trains` | Trains between two stations on a date: company, class, times, seats left, price per adult |
+| `ft_train_calendar` | Cheapest train price per day for the next ~16 days, sold-out days flagged |
+| `ft_train_stops` | Stops and times of one train, plus class amenities and meals |
+</details>
+
+<details open>
+<summary><b>Buses</b> (3)</summary>
+
+| Tool | What it does |
+|---|---|
+| `ft_find_bus_city` | Bus city ids by name, or the popular cities |
+| `ft_bus_calendar` | Cheapest bus seat price per day for the next weeks (the site's price strip) |
+| `ft_search_buses` | Buses between two cities on a date: company, terminals, type, seats left, price per seat |
+</details>
+
+<details open>
+<summary><b>CIP, eSIM, visa, activities</b> (5)</summary>
+
+| Tool | What it does |
+|---|---|
+| `ft_cip` | CIP / VIP airport lounge prices and add-ons at IKA and MHD for a date and passengers, per passport nationality |
+| `ft_esim_plans` | eSIM data plans for a country (GB, days, price in Toman), cheapest first |
+| `ft_visa` | Visa country list with from-prices, or one country's prices, documents and processing time |
+| `ft_activities` | Tours, tickets and activities in a destination with from-prices for a date range |
+| `ft_activity` | One activity: description, options, prices and cheapest days |
+</details>
+
+All 22 tools are annotated `readOnlyHint: true` and return compact structured JSON, so they don't flood the agent's context.
 
 ## How it works
 
@@ -150,72 +256,9 @@ Then just ask:
 ```
 
 `flytoday-mcp` runs locally and calls the same public gateway the flytoday.ir website uses. There's no hosted
-server in between, no API key, and nothing about you is sent anywhere else.
-
-## Tools
-
-Each vertical has its own ids, taken from its find tool: IATA codes for flights (`THR`, `MHD`, `IST`), hotel
-`city_id` / `region_code`, stay `region_code`, train station codes (Tehran `1`, Mashhad `191`), 4-digit bus city
-ids (Tehran `0001`, Isfahan `0002`).
-
-<details open>
-<summary><b>✈️ Flights</b> (4)</summary>
-
-| Tool | What it does |
-|---|---|
-| `ft_find_airport` | Finds IATA codes for Iranian and international cities and airports, or lists the popular ones |
-| `ft_search_flights` | Searches one-way or round-trip flights with filters, sorting and paging, in Toman, with fare_source_code and search_id |
-| `ft_flight_calendar` | Shows the cheapest fare per departure day around a date and marks the cheapest day |
-| `ft_flight_details` | Gives the refund and change rules, baggage and international entry notes of one fare |
-</details>
-
-<details open>
-<summary><b>🏨 Hotels and stays</b> (6)</summary>
-
-| Tool | What it does |
-|---|---|
-| `ft_find_hotel_place` | Find city, region and hotel ids for hotels, and region codes for villa stays; popular places when empty |
-| `ft_search_hotels` | Priced hotels of a city or region for dates: whole-stay and per-night Toman, stars, score, refundable, meal |
-| `ft_hotel` | One hotel: room and meal offers with price, rooms left and cancellation terms, room details, basics |
-| `ft_hotel_reviews` | Guest reviews of a hotel with score, text, pros and cons |
-| `ft_search_stays` | Villas and apartments in Iran for dates, cheapest first, Toman per night and total |
-| `ft_stay` | One villa or apartment: details, price calendar with blocked days, reviews |
-</details>
-
-<details open>
-<summary><b>🚆 Trains</b> (4)</summary>
-
-| Tool | What it does |
-|---|---|
-| `ft_find_station` | Train station codes by city name, or the popular stations |
-| `ft_search_trains` | Trains between two stations on a date: company, class, times, seats left, price per adult |
-| `ft_train_calendar` | Cheapest train price per day for the next ~16 days, sold-out days flagged |
-| `ft_train_stops` | Stops and times of one train, plus class amenities and meals |
-</details>
-
-<details open>
-<summary><b>🚌 Buses</b> (3)</summary>
-
-| Tool | What it does |
-|---|---|
-| `ft_find_bus_city` | Bus city ids by name, or the popular cities |
-| `ft_bus_calendar` | Cheapest bus seat price per day for the next weeks (the site's price strip) |
-| `ft_search_buses` | Buses between two cities on a date: company, terminals, type, seats left, price per seat |
-</details>
-
-<details open>
-<summary><b>🛂 CIP, eSIM, visa, activities</b> (5)</summary>
-
-| Tool | What it does |
-|---|---|
-| `ft_cip` | CIP / VIP airport lounge prices and add-ons at IKA and MHD for a date and passengers, per passport nationality |
-| `ft_esim_plans` | eSIM data plans for a country (GB, days, price in Toman), cheapest first |
-| `ft_visa` | Visa country list with from-prices, or one country's prices, documents and processing time |
-| `ft_activities` | Tours, tickets and activities in a destination with from-prices for a date range |
-| `ft_activity` | One activity: description, options, prices and cheapest days |
-</details>
-
-All 22 tools are annotated `readOnlyHint: true` and return compact structured JSON, so they don't flood the agent's context.
+server in between, no API key, and nothing about you is sent anywhere else. Requests go out through a
+Chrome-impersonating HTTP client, at most two at a time with a short random pause, and failed calls (timeouts, 5xx,
+429) are retried up to twice. Static lookup lists (CIP airports, eSIM countries, visa countries) are cached for 6 hours.
 
 ## Good to know
 
@@ -233,6 +276,10 @@ All 22 tools are annotated `readOnlyHint: true` and return compact structured JS
 - **Ids expire**: `search_id` and `fare_source_code` are valid for about 15 minutes.
 - **Sales windows**: trains open about 16 days ahead. An empty result often just means "not on sale yet".
 - When the rail companies' link is down, Flytoday answers HTTP 599; `ft_search_trains` retries three times, then says so.
+- **What it does not do:** no booking, seat hold, payment, refund or login, no tour or package search, and no bus seat map.
+- **Safety:** read-only. The only POSTs are searches and price lookups the site itself makes before booking.
+  At most two requests at a time, and no tool repeats a search in a loop.
+- **Proxy:** set `FLYTODAY_MCP_PROXY` if your network cannot reach flytoday.ir (see [Configuration](#configuration)).
 
 ## FAQ
 
@@ -290,6 +337,13 @@ holds nothing.
 </details>
 
 <details>
+<summary><b>Are prices in Toman or Rial?</b></summary>
+
+Toman. Flytoday's API sends Rial and the tools divide by 10; fields are named `*_toman`. Visa and some activity
+prices are in a foreign currency, shown in `price_currency`.
+</details>
+
+<details>
 <summary><b>How do I debug what the agent sees?</b></summary>
 
 ```bash
@@ -301,13 +355,7 @@ npx @modelcontextprotocol/inspector uvx flytoday-mcp
 
 | Variable | Default | Meaning |
 |---|---|---|
-| `FLYTODAY_MCP_PROXY` | unset | HTTP proxy, e.g. `http://user:pass@host:port`; a comma-separated list is used one at a time (next after a block or connect error) |
-
-## Safety
-
-- Read-only: no login or OTP, no seat hold, reservation, order, payment, refund, review or bookmark.
-  The only POSTs are searches and price lookups the site itself makes before booking.
-- At most two requests at a time, and no tool repeats a search in a loop.
+| `FLYTODAY_MCP_PROXY` | unset | Optional HTTP proxy, e.g. `http://user:pass@host:port`; a comma-separated list is used one at a time (next after a block or connect error). System proxy settings are ignored |
 
 <a id="فارسی"></a>
 
@@ -315,16 +363,29 @@ npx @modelcontextprotocol/inspector uvx flytoday-mcp
 
 <div dir="rtl">
 
-**flytoday-mcp** یک سرور MCP غیررسمی برای فلای&zwnj;تودی در ایران است که به دستیار هوش مصنوعی شما (Claude، Cursor، Copilot و ...) اجازه می&zwnj;دهد در فلای&zwnj;تودی ارزان&zwnj;ترین
+**flytoday-mcp** یک سرور MCP غیررسمی و فقط&zwnj;خواندنی برای فلای&zwnj;تودی (flytoday.ir)، آژانس مسافرتی آنلاین ایران، است. این سرور به دستیار هوش مصنوعی شما (Claude، Cursor، Copilot و ...) اجازه می&zwnj;دهد در فلای&zwnj;تودی ارزان&zwnj;ترین
 پرواز داخلی و خارجی، قطار یا اتوبوس را برای یک روز یا یک ماه پیدا کند، قوانین استرداد و بار مجاز را ببیند
 و هتل&zwnj;ها و ویلاها را با قیمت دقیق مقایسه کند؛ همچنین قیمت CIP، سیم&zwnj;کارت eSIM و ویزا را می&zwnj;گوید.
 
-- فقط خواندنی است: وارد حساب نمی&zwnj;شود و چیزی رزرو یا پرداخت نمی&zwnj;کند.
-- همه قیمت&zwnj;ها به تومان است.
-- روی سیستم خود شما اجرا می&zwnj;شود و به هیچ سرور واسطی داده نمی&zwnj;فرستد.
-- برای پیدا کردن آن در گوگل یا رجیستری MCP، «سرور MCP فلای&zwnj;تودی» یا «flytoday mcp» را جستجو کنید.
+**چه کارهایی می&zwnj;کند**
 
-**نصب در Claude Code:**
+- **پرواز** داخلی و خارجی، یک&zwnj;طرفه و رفت و برگشت، با فیلتر ایرلاین، پرواز مستقیم و ساعت.
+- **ارزان&zwnj;ترین روز** برای پرواز، قطار و اتوبوس (تقویم قیمت).
+- **قوانین بلیط**: استرداد و تغییر، بار مجاز و نکات ورود به کشور مقصد.
+- **هتل** داخلی و خارجی با قیمت دقیق، اتاق&zwnj;ها، شرایط لغو و نظر مهمانان.
+- **ویلا و اقامتگاه** در ایران با قیمت هر شب، قیمت کل و تقویم روزهای پر.
+- **قطار و اتوبوس**: کلاس، صندلی خالی، ایستگاه&zwnj;ها، امکانات، اتوبوس VIP و تخت&zwnj;شو.
+- **خدمات دیگر**: سالن CIP فرودگاه امام و مشهد، بسته اینترنت eSIM، قیمت و مدارک ویزا، تور و بلیت جاذبه&zwnj;ها.
+
+**نکته&zwnj;ها**
+
+- فقط خواندنی است: وارد حساب نمی&zwnj;شود و چیزی رزرو یا پرداخت نمی&zwnj;کند؛ خرید را خودتان در flytoday.ir انجام می&zwnj;دهید.
+- همه قیمت&zwnj;ها به تومان است (قیمت ویزا و بعضی فعالیت&zwnj;ها به ارز خارجی). تاریخ&zwnj;ها میلادی هستند.
+- فلای&zwnj;تودی جستجو را برای هر IP محدود می&zwnj;کند (حدود ۱۵ جستجوی پرواز، قطار و اتوبوس)؛ از تقویم قیمت استفاده کنید و جستجو را تکرار نکنید.
+- کلید API لازم نیست و روی سیستم خود شما اجرا می&zwnj;شود. اگر شبکه شما به flytoday.ir نمی&zwnj;رسد، متغیر `FLYTODAY_MCP_PROXY` را روی یک پراکسی HTTP بگذارید.
+- برای پیدا کردن آن در گوگل یا رجیستری MCP، «سرور MCP فلای&zwnj;تودی»، «بلیط هواپیما»، «بلیط قطار»، «بلیط اتوبوس»، «رزرو هتل» یا «flytoday mcp» را جستجو کنید.
+
+**نصب** (اول [uv](https://docs.astral.sh/uv/getting-started/installation/) را نصب کنید). در Claude Code:
 
 </div>
 
@@ -334,7 +395,13 @@ claude mcp add flytoday -- uvx flytoday-mcp
 
 <div dir="rtl">
 
-بعد بپرسید: «ارزان&zwnj;ترین راه رفتن از تهران به مشهد حدود ۲۸ مهر چیست؟»
+در Claude Desktop، Cursor و بقیه برنامه&zwnj;ها همان تنظیم بخش [Quick start](#quick-start) را بگذارید.
+
+**نمونه پرسش&zwnj;ها**
+
+- «ارزان&zwnj;ترین راه رفتن از تهران به مشهد حدود ۲۸ مهر چیست؟»
+- «ارزان&zwnj;ترین اتوبوس VIP تهران به اصفهان دوشنبه بعد؟»
+- «هتل&zwnj;های مشهد برای دو شب با امکان لغو رایگان، از ارزان به گران.»
 
 </div>
 
@@ -356,17 +423,17 @@ publishes to PyPI and the [MCP Registry](https://registry.modelcontextprotocol.i
 
 ## Related servers
 
+- [awesome-iran-mcp](https://github.com/sepehr071/awesome-iran-mcp): catalog of all Iranian-service MCP servers
 - [MrBilit MCP server](https://github.com/sepehr071/mrbilit-mcp) for flights, trains, buses, taxis and hotels
 - [Jabama MCP server](https://github.com/sepehr071/jabama-mcp) for villas, tours and events
 - [Otaghak MCP server](https://github.com/sepehr071/otaghak-mcp) for villa, cottage and apartment stays
-- All servers: [awesome-iran-mcp](https://github.com/sepehr071/awesome-iran-mcp), the catalog of Iranian MCP servers
 
 If this saves you clicks, a star helps others find it.
 
 ## Disclaimer
 
-Unofficial and not affiliated with or endorsed by Flytoday. It uses the public endpoints of the flytoday.ir website,
-which can change without notice. Please keep request rates reasonable.
+Unofficial and not affiliated with or endorsed by Flytoday. It is read-only and uses the public endpoints of the
+flytoday.ir website, which can change without notice. Please keep request rates reasonable.
 
 ## License
 

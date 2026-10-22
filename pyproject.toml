@@ -1,13 +1,13 @@
 [project]
 name = "flytoday-mcp"
-version = "0.3.0"
+version = "0.3.1"
 description = "Unofficial read-only MCP server for Flytoday: cheapest domestic and international flights, hotels, stays, trains and buses in Iran, with fare rules and exact prices."
 readme = "README.md"
 license = "MIT"
 license-files = ["LICENSE"]
 authors = [{ name = "Sepehr Radmard", email = "sepehrr80@gmail.com" }]
 requires-python = ">=3.10"
-keywords = ["mcp", "model-context-protocol", "flytoday", "iran", "travel", "flights", "hotel", "train", "bus"]
+keywords = ["mcp", "mcp-server", "model-context-protocol", "flytoday", "iran", "persian", "farsi", "travel", "flights", "hotels", "train", "bus", "villa", "cip", "esim"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
