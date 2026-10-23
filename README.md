@@ -35,7 +35,7 @@ cheapest domestic and international flights, trains and buses, fare rules and ba
 - **Units:** prices in Toman in fields named `*_toman` (visa and some activity prices in a foreign currency, see `price_currency`); dates Gregorian `YYYY-MM-DD`, past dates are rejected. `search_id` and `fare_source_code` expire after about 15 minutes.
 - **Use when:** comparing flights, hotels, villas, trains or buses on Flytoday, or pricing a CIP lounge, eSIM, visa or activity.
 - **Do not use when:** you need to book or pay (the user does that on flytoday.ir). Searches are rate limited per IP, so prefer calendars and paging over repeated searches.
-- **Machine-readable:** [`server.json`](https://github.com/sepehr071/flytoday-mcp/blob/main/server.json); catalog of all Iranian MCP servers: [awesome-iran-mcp](https://github.com/sepehr071/awesome-iran-mcp) ([TOOLS.md](https://github.com/sepehr071/awesome-iran-mcp/blob/main/TOOLS.md), [servers.json](https://github.com/sepehr071/awesome-iran-mcp/blob/main/servers.json), [llms.txt](https://github.com/sepehr071/awesome-iran-mcp/blob/main/llms.txt)).
+- **Machine-readable:** [`server.json`](https://github.com/sepehr071/flytoday-mcp/blob/main/server.json); catalog of all Iranian MCP servers: [iran-mcp](https://github.com/sepehr071/iran-mcp) ([TOOLS.md](https://github.com/sepehr071/iran-mcp/blob/main/TOOLS.md), [servers.json](https://github.com/sepehr071/iran-mcp/blob/main/servers.json), [llms.txt](https://github.com/sepehr071/iran-mcp/blob/main/llms.txt)).
 
 ## Why
 
@@ -423,7 +423,7 @@ publishes to PyPI and the [MCP Registry](https://registry.modelcontextprotocol.i
 
 ## Related servers
 
-- [awesome-iran-mcp](https://github.com/sepehr071/awesome-iran-mcp): catalog of all Iranian-service MCP servers
+- [iran-mcp](https://github.com/sepehr071/iran-mcp): catalog of all Iranian-service MCP servers
 - [MrBilit MCP server](https://github.com/sepehr071/mrbilit-mcp) for flights, trains, buses, taxis and hotels
 - [Jabama MCP server](https://github.com/sepehr071/jabama-mcp) for villas, tours and events
 - [Otaghak MCP server](https://github.com/sepehr071/otaghak-mcp) for villa, cottage and apartment stays
@@ -437,9 +437,9 @@ flytoday.ir website, which can change without notice. Please keep request rates 
 
 ## Author
 
-<a href="https://www.linkedin.com/in/sepehr-radmard"><img src="https://raw.githubusercontent.com/sepehr071/awesome-iran-mcp/main/assets/author-banner.png" alt="Sepehr Radmard: open-source MCP servers for the Iranian web. LinkedIn: linkedin.com/in/sepehr-radmard" width="100%"></a>
+<a href="https://www.linkedin.com/in/sepehr-radmard"><img src="https://raw.githubusercontent.com/sepehr071/iran-mcp/main/assets/author-banner.png" alt="Sepehr Radmard: open-source MCP servers for the Iranian web. LinkedIn: linkedin.com/in/sepehr-radmard" width="100%"></a>
 
-Built and maintained by **Sepehr Radmard** (سپهر رادمرد). Connect on [LinkedIn](https://www.linkedin.com/in/sepehr-radmard) or follow [@sepehr071 on GitHub](https://github.com/sepehr071) for more MCP servers for Iranian websites, all listed in [awesome-iran-mcp](https://github.com/sepehr071/awesome-iran-mcp). If this saves you time, a star on the repo helps other people find it.
+Built and maintained by **Sepehr Radmard** (سپهر رادمرد). Connect on [LinkedIn](https://www.linkedin.com/in/sepehr-radmard) or follow [@sepehr071 on GitHub](https://github.com/sepehr071) for more MCP servers for Iranian websites, all listed in [iran-mcp](https://github.com/sepehr071/iran-mcp). If this saves you time, a star on the repo helps other people find it.
 
 ## License
 
