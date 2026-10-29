@@ -15,6 +15,7 @@ cheapest domestic and international flights, trains and buses, fare rules and ba
 [![CI](https://github.com/sepehr071/flytoday-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/sepehr071/flytoday-mcp/actions/workflows/ci.yml)
 [![MCP Registry](https://img.shields.io/badge/MCP_Registry-io.github.sepehr071%2Fflytoday--mcp-7c3aed)](https://registry.modelcontextprotocol.io/?q=flytoday-mcp)
 [![License: MIT](https://img.shields.io/badge/license-MIT-16a34a)](https://github.com/sepehr071/flytoday-mcp/blob/main/LICENSE)
+[![mcpfarsi](https://mcpfarsi.ir/badge/flytoday.svg)](https://mcpfarsi.ir/servers/flytoday/)
 
 [![Install in Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en/install-mcp?name=flytoday&config=eyJjb21tYW5kIjoidXZ4IiwiYXJncyI6WyJmbHl0b2RheS1tY3AiXX0=)
 [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_flytoday--mcp-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://vscode.dev/redirect/mcp/install?name=flytoday&config=%7B%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22flytoday-mcp%22%5D%7D)
@@ -427,6 +428,7 @@ publishes to PyPI and the [MCP Registry](https://registry.modelcontextprotocol.i
 - [MrBilit MCP server](https://github.com/sepehr071/mrbilit-mcp) for flights, trains, buses, taxis and hotels
 - [Jabama MCP server](https://github.com/sepehr071/jabama-mcp) for villas, tours and events
 - [Otaghak MCP server](https://github.com/sepehr071/otaghak-mcp) for villa, cottage and apartment stays
+- Listed on [mcpfarsi.ir](https://mcpfarsi.ir/servers/flytoday/), the Persian MCP marketplace
 
 If this saves you clicks, a star helps others find it.
 

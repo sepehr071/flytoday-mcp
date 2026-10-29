@@ -34,6 +34,7 @@ Homepage = "https://github.com/sepehr071/flytoday-mcp"
 Source = "https://github.com/sepehr071/flytoday-mcp"
 Changelog = "https://github.com/sepehr071/flytoday-mcp/releases"
 Issues = "https://github.com/sepehr071/flytoday-mcp/issues"
+Website = "https://mcpfarsi.ir/servers/flytoday/"
 
 [project.scripts]
 flytoday-mcp = "flytoday_mcp.server:main"
