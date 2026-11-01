@@ -27,7 +27,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-browser = ["patchright==1.63.0"]
+browser = ["patchright==1.64.3"]
 
 [project.urls]
 Homepage = "https://github.com/sepehr071/flytoday-mcp"
