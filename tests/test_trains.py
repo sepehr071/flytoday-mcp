@@ -97,6 +97,13 @@ async def test_train_calendar_groups_days(client, api):
     assert (q["fromStation"], q["toStation"]) == ("1", "191")
 
 
+async def test_train_calendar_falls_back_to_search_when_lookup_empty(client, api):
+    api["/V1/DomesticRails/FareLookUp"] = {"data": []}
+    api[SEARCH] = fixture("trains_search.json")
+    data = (await client.call_tool("ft_train_calendar", {"origin": 1, "destination": 191})).structured_content
+    assert len(data["days"]) == 3 and data["cheapest"]["cheapest_toman"] > 0
+
+
 async def test_train_stops_with_wagon(client, api):
     code = "ab12" * 8
     api[f"/V1/DomesticRails/StopStations/{code}"] = fixture("trains_stops.json")

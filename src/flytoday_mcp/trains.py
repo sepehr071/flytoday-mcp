@@ -144,7 +144,8 @@ async def ft_search_trains(
 async def ft_train_calendar(origin: Station, destination: Station) -> dict[str, Any]:
     """Cheapest train price per day for the next ~16 days, with sold-out days flagged.
 
-    Use to pick a day; then ft_search_trains for that date.
+    Use to pick a day; then ft_search_trains for that date. A route the site has not cached lately lists only the
+    next 3 days (from real searches).
     """
     data = await api(
         "/V1/DomesticRails/FareLookUp",
@@ -160,11 +161,54 @@ async def ft_train_calendar(origin: Station, destination: Station) -> dict[str, 
         {"date": d, "cheapest_toman": toman(min(p)), "sold_out": False} if p else {"date": d, "sold_out": True}
         for d, p in sorted(by_day.items())
     ]
+    if not days:  # the lookup is a cache of recent searches: cold routes are empty, so search the next days
+        days = await _searched_days(origin, destination)
     open_days = [d for d in days if not d["sold_out"]]
     out: dict[str, Any] = {"days": days, "cheapest": min(open_days, key=lambda d: d["cheapest_toman"], default=None)}
     if not days:
         out["note"] = "No fares listed for this route."
     return out
+
+
+async def _searched_days(origin: int, destination: int, span: int = 3) -> list[dict[str, Any]]:
+    """Cheapest price for each of the next `span` days from real searches (a failed day is left out)."""
+    start = dt.date.today()
+    bodies = [
+        {
+            "sexCode": 3,
+            "adultsCount": 1,
+            "childCount": 0,
+            "infantCount": 0,
+            "isExclusive": False,
+            "tripType": "OneWay",
+            "originDestination": [
+                {"origin": origin, "destination": destination, "moveDate": (start + dt.timedelta(days=n)).isoformat()}
+            ],
+        }
+        for n in range(span)
+    ]
+    results = await asyncio.gather(*(_search(b) for b in bodies), return_exceptions=True)
+    days = []
+    for b, data in zip(bodies, results, strict=True):
+        if isinstance(data, BaseException):
+            continue
+        day = ((data or {}).get("itinerariesList") or [{}])[0]
+        if day.get("noResult"):
+            continue
+        prices = [
+            i.get("finalPrice") or i.get("price")
+            for i in day.get("itineraries") or []
+            if (i.get("remainingSeats") or 0) > 0
+            and i.get("isCapacityEnough")
+            and (i.get("finalPrice") or i.get("price"))
+        ]
+        date = b["originDestination"][0]["moveDate"]
+        days.append(
+            {"date": date, "cheapest_toman": toman(min(prices)), "sold_out": False}
+            if prices
+            else {"date": date, "sold_out": True}
+        )
+    return days
 
 
 @tool("Train stops")
