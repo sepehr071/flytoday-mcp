@@ -12,7 +12,7 @@ from .registry import tool
 
 CityId = Annotated[
     str,
-    Field(pattern=r"^\d{4}$", description="4-digit bus city id from ft_find_bus_city, e.g. '0001' (Tehran)."),
+    Field(pattern=r"^\d{4}$", description="4-digit id from ft_find_bus_city, e.g. '0001' (Tehran)."),
 ]
 # Facility tags as the site writes them.
 FACILITIES = {"vip": "VIP", "sleeper": "تخت خواب شو", "charger": "شارژر", "monitor": "مانیتور"}
@@ -20,14 +20,12 @@ FACILITIES = {"vip": "VIP", "sleeper": "تخت خواب شو", "charger": "شا�
 
 @tool("Find bus city")
 async def ft_find_bus_city(
-    query: Annotated[
-        str | None, Field(max_length=60, description="City name, Persian or latin, e.g. 'اصفهان' or 'shiraz'.")
-    ] = None,
+    query: Annotated[str | None, Field(max_length=60, description="City name, Persian or latin.")] = None,
     limit: Annotated[int, Field(ge=1, le=30, description="Max cities.")] = 10,
 ) -> dict[str, Any]:
     """Bus city ids (4 digits) for a city name, or the popular cities when query is empty.
 
-    Use before ft_search_buses (Tehran '0001', Isfahan '0002', Shiraz '0004', Mashhad '0006').
+    Use before ft_search_buses (Tehran '0001', Isfahan '0002').
     """
     if query and query.strip():
         body = {"searchTerm": query.strip(), "pageSize": limit, "pageNumber": 0}
@@ -51,8 +49,7 @@ async def ft_find_bus_city(
 async def ft_bus_calendar(origin: CityId, destination: CityId) -> dict[str, Any]:
     """Cheapest bus seat price per day for the next weeks (the site's price strip), in one cheap call.
 
-    Values are cached minimums per day (one row per company in the API) and can differ a little from a
-    live search; days without a listed bus are left out. Use it to pick a day, then ft_search_buses.
+    Cached daily minimums that can differ a little from a live search. Pick a day, then ft_search_buses.
     """
     data = await api("/V1/Bus/CalendarLookup", {"originId": origin, "destinationId": destination})
     by_day: dict[str, int] = {}
@@ -71,20 +68,19 @@ async def ft_bus_calendar(origin: CityId, destination: CityId) -> dict[str, Any]
 async def ft_search_buses(
     origin: CityId,
     destination: CityId,
-    date: Annotated[dt.date, Field(description="Departure date YYYY-MM-DD, e.g. '2026-10-14'.")],
-    sort: Annotated[Literal["cheapest", "earliest"], Field(description="Order of the results.")] = "earliest",
+    date: Annotated[dt.date, Field(description="Departure date YYYY-MM-DD.")],
+    sort: Annotated[Literal["cheapest", "earliest"], Field(description="Order.")] = "earliest",
     facility: Annotated[
         Literal["vip", "sleeper", "charger", "monitor"] | None,
-        Field(description="Keep only buses with this facility, e.g. 'vip'."),
+        Field(description="Only buses with this facility."),
     ] = None,
     available_only: Annotated[bool, Field(description="Hide sold-out buses.")] = True,
     limit: Annotated[int, Field(ge=1, le=50, description="Max buses.")] = 15,
 ) -> dict[str, Any]:
     """Buses between two cities on a date: company, terminals, departure, bus type, seats left, price per seat.
 
-    A busy route lists over 100 buses (the raw reply is 1.5 MB): narrow with facility, sort or limit.
-    price_toman is per seat. Rows carry `fare_source_code`; `search_id` is at the top. The site's seat map
-    is not offered (it belongs to the booking flow). Searches are rate limited: do not repeat them in a loop.
+    Busy routes list 100+ buses: narrow with facility, sort or limit. price_toman is per seat. No seat map.
+    Rate limited: never loop.
     """
     not_past(date)
     body = {

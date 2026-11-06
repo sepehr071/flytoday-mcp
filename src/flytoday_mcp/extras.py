@@ -52,33 +52,30 @@ async def ft_cip(
         str,
         Field(
             pattern=r"^[A-Za-z]{3}$",
-            description="Airport IATA code that sells CIP lounges: 'IKA' (Tehran Imam Khomeini, international) or 'MHD' (Mashhad, domestic and international).",
+            description="'IKA' (Tehran) or 'MHD' (Mashhad): the only airports with CIP.",
         ),
     ],
     date: Annotated[
         dt.date,
-        Field(
-            description="Flight date YYYY-MM-DD, today or later and at most about 3 months ahead, e.g. '2026-10-20'."
-        ),
+        Field(description="Flight date YYYY-MM-DD, at most ~3 months ahead."),
     ],
     direction: Annotated[
         Literal["departure", "arrival"],
-        Field(description="'departure' = leaving from this airport, 'arrival' = landing here."),
+        Field(description="Leaving from or landing at this airport."),
     ] = "departure",
     flight_type: Annotated[
         Literal["domestic", "international"], Field(description="Kind of flight.")
     ] = "international",
-    adults: Annotated[int, Field(ge=1, le=9, description="Adults, e.g. 1.")] = 1,
-    children: Annotated[int, Field(ge=0, le=9, description="Children, e.g. 0.")] = 0,
-    infants: Annotated[int, Field(ge=0, le=9, description="Infants, e.g. 0.")] = 0,
+    adults: Annotated[int, Field(ge=1, le=9, description="Adults.")] = 1,
+    children: Annotated[int, Field(ge=0, le=9, description="Children.")] = 0,
+    infants: Annotated[int, Field(ge=0, le=9, description="Infants.")] = 0,
     full_text: FullText = False,
 ) -> dict[str, Any]:
     """CIP / VIP airport lounge service with prices for a date and passenger mix, plus paid add-ons.
 
-    Only IKA and MHD sell CIP. `nationality` says which passports an offer is for (IKA lists one offer for
-    Iranian passports and one for all others). price_per_passenger_toman is per person (tax included); total_toman is for the
-    whole party; add-ons (wheelchair, pet, transfers) list their adult price. Nothing is held or booked.
-    Next: the user books on flytoday.ir.
+    `nationality` says which passports an offer is for (IKA lists one offer for Iranian passports and one for
+    others). price_per_passenger_toman is per person (tax included); total_toman the whole party; add-ons list
+    their adult price.
     """
     not_past(date)
     code = airport.lower()
@@ -171,15 +168,14 @@ async def ft_esim_plans(
         Field(
             min_length=2,
             max_length=60,
-            description="Country in English or Persian, or ISO code or slug, e.g. 'turkey', 'ترکیه', 'AE'.",
+            description="Country name (English or Persian), ISO code or slug, e.g. 'turkey', 'AE'.",
         ),
     ],
     limit: Annotated[int, Field(ge=1, le=50, description="Max plans, cheapest first.")] = 15,
 ) -> dict[str, Any]:
     """eSIM data plans for a country with data amount, validity days and price, cheapest first.
 
-    Covers 200+ countries (no regional or global bundles). fare_code identifies the plan on flytoday.ir; plans
-    cannot be bought here. coverage_countries is how many countries the plan works in.
+    Single countries only, no regional bundles. fare_code identifies the plan on flytoday.ir.
     """
     geo = (await cached("/V1/ESim/GeoLocations") or {}).get("geoLocations") or []
     hit = _find_country(country, geo, ("slug", "code", "name"))
@@ -227,15 +223,14 @@ async def ft_visa(
         str | None,
         Field(
             max_length=60,
-            description="Country in English, Persian or slug, e.g. 'turkey', 'پاکستان', 'schengen'. Omit to list every country.",
+            description="Country name (English or Persian) or slug, e.g. 'turkey', 'schengen'. Omit to list all.",
         ),
     ] = None,
 ) -> dict[str, Any]:
     """Visa services of Flytoday: the country list with from-prices, or one country's prices, documents and process.
 
-    Without country: every country with visa type, from_price (in price_currency, often USD or EUR, not Toman)
-    and processing time. With country: price per visa type (foreign currency and Toman at Flytoday's rate),
-    validity, processing time and documents. Schengen is one entry, 'schengen'.
+    Without country: visa type, from_price (in price_currency, often USD or EUR, not Toman) and processing time.
+    With country: price per visa type (foreign currency and Toman), validity, processing time and documents.
     """
     listing = await cached("/v2/Visa/Search", method="POST", json={}) or {}
     items = listing.get("items") or []
@@ -351,27 +346,26 @@ async def ft_activities(
         str | None,
         Field(
             max_length=60,
-            description="Destination, English or Persian, e.g. 'Dubai', 'دبی', 'Istanbul'. Needed unless region_id is given.",
+            description="Destination, English or Persian, e.g. 'Dubai'. Needed unless region_id is given.",
         ),
     ] = None,
     region_id: Annotated[
-        int | None, Field(ge=1, description="Region id from an earlier call, e.g. 1234 (Dubai); skips the lookup.")
+        int | None, Field(ge=1, description="Region id from an earlier call; skips the lookup.")
     ] = None,
     date_from: Annotated[
         dt.date | None,
-        Field(description="First day YYYY-MM-DD; tomorrow or later (today is moved to tomorrow); default tomorrow."),
+        Field(description="First day YYYY-MM-DD; default and minimum tomorrow."),
     ] = None,
     date_to: Annotated[
         dt.date | None,
-        Field(description="Last day YYYY-MM-DD, up to 90 days after date_from; default date_from + 30 days."),
+        Field(description="Last day YYYY-MM-DD, max date_from + 90; default +30."),
     ] = None,
     limit: Annotated[int, Field(ge=1, le=50, description="Max activities, cheapest first.")] = 20,
 ) -> dict[str, Any]:
     """Tours, tickets and experiences in a destination that are on sale in the date range, with from-prices.
 
-    Only activities with a price in the range are listed (many are unavailable on given dates), cheapest
-    first. price_toman is the adult from-price; list_price_toman is the box-office price. region is the
-    destination matched; other_regions lists alternatives to retry with region_id. Next: ft_activity(activity_id).
+    Only activities with a price in the range are listed. price_toman is the adult from-price; list_price_toman
+    the box-office price. other_regions lists alternatives to retry with region_id. Next: ft_activity(activity_id).
     """
     if query is None and region_id is None:
         raise ToolError("Give a destination as query (e.g. 'Dubai') or a region_id.")
@@ -428,20 +422,17 @@ async def ft_activities(
 
 @tool("Activity details")
 async def ft_activity(
-    activity_id: Annotated[int, Field(ge=1, description="Activity id from ft_activities, e.g. 13049.")],
-    date_from: Annotated[
-        dt.date | None, Field(description="Price calendar start YYYY-MM-DD; default today + 3 days.")
-    ] = None,
+    activity_id: Annotated[int, Field(ge=1, description="Activity id from ft_activities.")],
+    date_from: Annotated[dt.date | None, Field(description="Calendar start YYYY-MM-DD; default today + 3.")] = None,
     date_to: Annotated[
         dt.date | None,
-        Field(description="Price calendar end YYYY-MM-DD, up to 90 days after date_from; default date_from + 57 days."),
+        Field(description="Calendar end YYYY-MM-DD, max date_from + 90; default +57."),
     ] = None,
 ) -> dict[str, Any]:
     """One activity: description, highlights, options with adult prices, and the cheapest days in the range.
 
-    price_toman fields are adult prices. The range matters: an activity with no availability in it comes back
-    with available=false, so use a wide range (the default is about two months). Slow upstream (up to a minute).
-    Booking happens on flytoday.ir.
+    price_toman fields are adult prices. No availability in the range gives available=false: keep it wide
+    (default about two months). Slow upstream (up to a minute).
     """
     start, end = _span(date_from, date_to, 3, 57)
     details, content = await asyncio.gather(

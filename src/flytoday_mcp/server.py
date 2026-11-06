@@ -1,6 +1,7 @@
 """MCP server entry point: registers every read-only Flytoday tool."""
 
 import functools
+import inspect
 import json
 import logging
 
@@ -15,21 +16,16 @@ Unofficial, read-only access to Flytoday (flytoday.ir), an Iranian online travel
 log in, hold a seat, book or pay; the user books on flytoday.ir.
 
 Workflow (each vertical has its own ids; take them from its find tool):
-1. Flights: ft_find_airport (IATA city codes; THR covers IKA and THR) -> ft_flight_calendar (cheapest day,
-   one cheap call) -> ft_search_flights (one-way or round trip; page and re-sort with search_id, never search
-   again) -> ft_flight_details with a flight's fare_source_code (refund rules, baggage, entry notes; ids expire
-   after about 15 minutes).
+1. Flights: ft_find_airport (IATA city codes; THR covers IKA) -> ft_flight_calendar (cheapest day) ->
+   ft_search_flights (page and re-sort with search_id, never search again) -> ft_flight_details with a
+   fare_source_code (refund rules, baggage, entry notes; ids expire after ~15 minutes).
 2. Hotels: ft_find_hotel_place gives city_id (Iran) or region_code + country_code (abroad) -> ft_search_hotels
-   -> ft_hotel (room offers, cancellation terms) and ft_hotel_reviews. Hotel search is captcha-limited per IP:
-   search once and reuse the result.
-3. Villas and apartments in Iran: ft_find_hotel_place `stay_regions` region_code -> ft_search_stays ->
-   ft_stay (details, per-date price calendar, blocked days). Stay region codes differ from hotel city ids.
-4. Trains: ft_find_station (station codes, Tehran 1, Mashhad 191) -> ft_train_calendar (cheapest day, about
-   16 days of sales) -> ft_search_trains -> ft_train_stops with ids from a fresh row.
-5. Buses: ft_find_bus_city (4-digit ids, Tehran 0001, Isfahan 0002) -> ft_bus_calendar (cheapest day) ->
-   ft_search_buses (facility filter such as VIP). Seat maps are not offered.
-6. Extras: ft_cip (airport CIP lounge, IKA and MHD), ft_esim_plans (data plans for a country), ft_visa
-   (visa list, or one country's documents and prices), ft_activities then ft_activity (tours and tickets).
+   -> ft_hotel (offers, cancellation) and ft_hotel_reviews. Captcha-limited per IP: search once, reuse.
+3. Villas and apartments in Iran: ft_find_hotel_place `stay_regions` region_code (not the hotel city id) ->
+   ft_search_stays -> ft_stay (details, per-date prices, blocked days).
+4. Trains: ft_find_station -> ft_train_calendar (~16 days of sales) -> ft_search_trains -> ft_train_stops.
+5. Buses: ft_find_bus_city (4-digit ids) -> ft_bus_calendar -> ft_search_buses. No seat maps.
+6. Extras: ft_cip (airport CIP lounge, IKA and MHD), ft_esim_plans, ft_visa, ft_activities then ft_activity.
 
 Conventions: prices are Toman in fields named *_toman (the API sends Rial and the tools divide by 10; stay
 prices are Toman already). Flight price_toman is per adult and total_toman the whole party; hotel price_toman
@@ -81,7 +77,18 @@ def untitle(schema):
 for fn, title in TOOLS:
     mcp.add_tool(compact(fn), title=title, annotations=READ_ONLY, structured_output=False)
 for t in mcp._tool_manager.list_tools():
+    t.description = inspect.cleandoc(t.description or "")  # docstring indentation costs tokens per request
     untitle(t.parameters)
+    for prop in t.parameters.get("properties", {}).values():
+        # `X | None` comes out as anyOf [X, null]; the same schema as {"type": [X's type, "null"]} is shorter
+        branches = prop.get("anyOf") or []
+        if len(branches) == 2 and {"type": "null"} in branches:
+            other = next(b for b in branches if b != {"type": "null"})
+            if isinstance(other.get("type"), str):
+                del prop["anyOf"]
+                prop.update(other, type=[other["type"], "null"])
+                if "enum" in prop:
+                    prop["enum"] = [*prop["enum"], None]
 
 
 def main() -> None:

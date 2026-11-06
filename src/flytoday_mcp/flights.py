@@ -16,11 +16,11 @@ Airport = Annotated[
     str,
     Field(
         pattern=r"^[A-Za-z]{3}$",
-        description="IATA city code from ft_find_airport, e.g. 'THR' (covers IKA and THR), 'MHD', 'IST', 'DXB'.",
+        description="IATA city code from ft_find_airport, e.g. 'THR', 'MHD', 'IST'.",
     ),
 ]
-Date = Annotated[dt.date, Field(description="Gregorian date YYYY-MM-DD, e.g. '2026-10-23'.")]
-HHMM = Annotated[str | None, Field(pattern=r"^([01]\d|2[0-3]):[0-5]\d$", description="Local time HH:MM, e.g. '18:00'.")]
+Date = Annotated[dt.date, Field(description="Gregorian YYYY-MM-DD.")]
+HHMM = Annotated[str | None, Field(pattern=r"^([01]\d|2[0-3]):[0-5]\d$", description="Local HH:MM.")]
 
 SORTS = {"cheapest": "Cheapest", "fastest": "Fastest", "earliest": "EarliestDepartureOutbound"}
 CABINS = {"economy": "Y", "business": "C"}
@@ -55,7 +55,7 @@ async def ft_find_airport(
         str | None,
         Field(
             max_length=60,
-            description="City or airport name, Persian or English ('mashhad', 'استانبول'); omit for popular places.",
+            description="City or airport name, Persian or English; omit for popular places.",
         ),
     ] = None,
     domestic_only: Annotated[bool, Field(description="Only Iranian places.")] = False,
@@ -63,9 +63,7 @@ async def ft_find_airport(
 ) -> dict[str, Any]:
     """Find the IATA codes the flight tools need, for domestic and international places.
 
-    Each hit has `code`, `type` (City or Airport) and, for a city, its `airports`. Use the city code
-    (THR, IST) in ft_search_flights and ft_flight_calendar: a city code covers all of its airports.
-    Without a query it lists the popular Iranian and international cities.
+    Use a city code (THR, IST) in the flight tools: it covers all its airports. No query lists popular cities.
     """
     if query:
         data = await api(
@@ -163,7 +161,7 @@ async def ft_search_flights(
     date: Date,
     return_date: Annotated[
         dt.date | None,
-        Field(description="Return date YYYY-MM-DD for a round trip, e.g. '2026-10-26'; omit for one-way."),
+        Field(description="Return date YYYY-MM-DD for a round trip; omit for one-way."),
     ] = None,
     adults: Annotated[int, Field(ge=1, le=9, description="Adults (12+).")] = 1,
     children: Annotated[int, Field(ge=0, le=8, description="Children (2-11).")] = 0,
@@ -171,42 +169,38 @@ async def ft_search_flights(
     cabin: Annotated[Literal["economy", "business"], Field(description="Cabin class.")] = "economy",
     sort: Annotated[
         Literal["cheapest", "fastest", "earliest"],
-        Field(description="Order: lowest price, shortest trip, earliest departure."),
+        Field(description="Order."),
     ] = "cheapest",
     airlines: Annotated[
         list[Annotated[str, Field(pattern=r"^[A-Za-z0-9]{2,3}$")]] | None,
-        Field(max_length=10, description="Only these airline codes, e.g. ['W5', 'EP'] (codes appear in results)."),
+        Field(max_length=10, description="Only these airline codes, e.g. ['W5']."),
     ] = None,
-    direct_only: Annotated[bool, Field(description="Only flights without a stop or connection.")] = False,
+    direct_only: Annotated[bool, Field(description="No stops.")] = False,
     ticket_type: Annotated[
-        Literal["charter", "system"] | None, Field(description="Only charter or only system (scheduled) tickets.")
+        Literal["charter", "system"] | None, Field(description="Only charter or only system tickets.")
     ] = None,
     depart_after: HHMM = None,
     depart_before: HHMM = None,
     max_price_toman: Annotated[int | None, Field(ge=1, description="Highest fare in Toman (whole party).")] = None,
     limit: Annotated[int, Field(ge=1, le=25, description="Flights per page.")] = 10,
-    page: Annotated[int, Field(ge=1, le=20, description="Result page, 1-based. Pages above 1 need search_id.")] = 1,
+    page: Annotated[int, Field(ge=1, le=20, description="1-based; above 1 needs search_id.")] = 1,
     search_id: Annotated[
         int | None,
-        Field(
-            description="searchId from an earlier result (valid about 15 minutes): pages and re-sorts without a new search."
-        ),
+        Field(description="search_id from an earlier result (about 15 min): pages and re-sorts without a new search."),
     ] = None,
     outbound_key: Annotated[
         str | None,
         Field(
             pattern=r"^[0-9a-f]{64}$",
-            description="Round trip: `key` of the chosen outbound flight, to list the return flights for it (needs search_id).",
+            description="Round trip: `key` of an outbound flight, lists its returns (needs search_id).",
         ),
     ] = None,
 ) -> dict[str, Any]:
-    """Search flights for a date: every flight with times, airline (airline_fa: Persian name), seats left, price and fare_source_code.
+    """Search flights for a date: times, airline, seats left, price and fare_source_code per flight.
 
-    price_toman is one adult's fare (taxes included), total_toman the whole party. Round trip (return_date):
-    `flights` are outbound options (total_toman = cheapest round trip with that outbound), `return_flights`
-    the returns for the cheapest outbound (`return_for` is its key; pass another key as outbound_key +
-    search_id for its returns). Filters apply to the outbound leg. Rate limited: page with search_id, never
-    search again. Next: ft_flight_details(fare_source_code); ft_flight_calendar finds the cheapest day first.
+    price_toman is per adult, total_toman the whole party. Round trip: `flights` are outbound options,
+    `return_flights` the returns for the cheapest outbound (`return_for` = its key). Filters apply to the outbound
+    leg. Rate limited: page with search_id, never search again. Next: ft_flight_details(fare_source_code).
     """
     not_past(date)
     if return_date and return_date < date:
@@ -284,16 +278,15 @@ async def ft_search_flights(
 async def ft_flight_calendar(
     origin: Airport,
     destination: Airport,
-    date: Annotated[Date, Field(description="Centre of the window, Gregorian YYYY-MM-DD, e.g. '2026-10-23'.")],
+    date: Annotated[Date, Field(description="Centre of the window, YYYY-MM-DD.")],
     window: Annotated[
-        Literal["week", "month"], Field(description="week = the date +-3 days, month = the date +-15 days.")
+        Literal["week", "month"], Field(description="week = date +-3 days, month = +-15 days.")
     ] = "month",
 ) -> dict[str, Any]:
     """Cheapest one-adult fare per departure day around a date, in one cheap call (no search needed).
 
-    Use it to pick the cheapest day, then ft_search_flights for that day. Values are cached minimums
-    (price_toman, airline code) and can differ a little from a live search; days without a cached fare
-    are left out and past days are dropped. `cheapest` is the lowest day.
+    Pick the cheapest day, then ft_search_flights. Cached minimums that can differ a little from a live search;
+    days without a fare are left out.
     """
     not_past(date)
     data = await api(
@@ -327,20 +320,17 @@ async def ft_flight_calendar(
 
 @tool("Flight fare details")
 async def ft_flight_details(
-    fare_source_code: Annotated[
-        str, Field(min_length=10, max_length=300, description="fare_source_code of a flight from ft_search_flights.")
-    ],
+    fare_source_code: Annotated[str, Field(min_length=10, max_length=300, description="From ft_search_flights.")],
     search_id: Annotated[
         int | None,
-        Field(description="search_id of that search; adds the entry and transit notes of an international fare."),
+        Field(description="search_id of that search; adds entry and transit notes (international)."),
     ] = None,
     full_text: FullText = False,
 ) -> dict[str, Any]:
     """Refund and change rules, confirmed baggage per segment and (international) entry notes of one fare.
 
-    The fare_source_code is valid only while its search lives (about 15 minutes); after that run
-    ft_search_flights again. Charter fares list cancellation penalties as text, system fares as
-    tiers (`penalties`, % of the fare by time before the flight).
+    The fare_source_code lives about 15 minutes; then search again. Charter penalties are text, system fares
+    tiers (`penalties`, % of fare).
     """
     jobs = [
         api("/V1/flight/farerules", {"fareSourceCode": fare_source_code}),

@@ -29,16 +29,16 @@ STAY_TYPES = {
     "suite": "Suite",
 }
 
-Date = Annotated[dt.date, Field(description="Gregorian date YYYY-MM-DD, e.g. '2026-10-21'.")]
+Date = Annotated[dt.date, Field(description="Gregorian YYYY-MM-DD.")]
 Adults = Annotated[int, Field(ge=1, le=8, description="Adults in the (single) room.")]
 ChildAges = Annotated[
     list[int] | None,
-    Field(max_length=4, description="Ages (0-11) of the children, one entry each, e.g. [5, 8]. Omit for none."),
+    Field(max_length=4, description="Ages (0-11), one per child, e.g. [5, 8]."),
 ]
-Intl = Annotated[bool, Field(description="true for a hotel outside Iran (id from ft_find_hotel_place international).")]
+Intl = Annotated[bool, Field(description="true for a hotel outside Iran.")]
 Country = Annotated[
     str | None,
-    Field(pattern=r"^[A-Za-z]{2}$", description="ISO country code of the DESTINATION for international, e.g. 'TR'."),
+    Field(pattern=r"^[A-Za-z]{2}$", description="ISO code of the destination country (international), e.g. 'TR'."),
 ]
 
 # The site builds every hotel / stay cover photo as <cdn>/<id>/main.jpg (Portfolio imageLinks is null);
@@ -169,22 +169,16 @@ def _hotel_place(loc: dict[str, Any]) -> dict[str, Any] | None:
 async def ft_find_hotel_place(
     query: Annotated[
         str | None,
-        Field(
-            max_length=60, description="City, region or hotel name, Persian or English ('مشهد', 'Istanbul', 'رامسر')."
-        ),
+        Field(max_length=60, description="City, region or hotel name, Persian or English."),
     ] = None,
-    international: Annotated[
-        bool, Field(description="Look for places outside Iran (hotels only; stays are Iran only).")
-    ] = False,
+    international: Annotated[bool, Field(description="Places outside Iran (hotels only).")] = False,
     limit: Annotated[int, Field(ge=1, le=15, description="Max rows per list.")] = 8,
 ) -> dict[str, Any]:
     """Find the place ids the hotel and stay tools need. Which id goes where:
 
-    `hotels` rows: kind 'city' (Iran) -> `city_id` for ft_search_hotels; kind 'region' (abroad, with international=true)
-    -> `region_code` plus `country_code` for ft_search_hotels(international=true); kind 'hotel' -> `hotel_id` for
-    ft_hotel and ft_hotel_reviews. `stay_regions` rows (Iran only, villas and apartments) -> `region_code` for
-    ft_search_stays; they are NOT the same ids as the hotel city ids. Without a query it lists the popular hotel
-    places (and popular stay areas, which have no region_code: search them by name).
+    `hotels` rows: kind 'city' (Iran) -> `city_id` for ft_search_hotels; 'region' (abroad, international=true) ->
+    `region_code` + `country_code`; 'hotel' -> `hotel_id` for ft_hotel and ft_hotel_reviews. `stay_regions` rows
+    (Iran, villas) -> `region_code` for ft_search_stays; NOT the hotel city ids. No query lists popular places.
     """
     domestic = not international
     if query and query.strip():
@@ -254,37 +248,27 @@ async def ft_find_hotel_place(
 async def ft_search_hotels(
     check_in: Date,
     check_out: Date,
-    city_id: Annotated[
-        int | None, Field(ge=1, description="Iranian city id from ft_find_hotel_place, e.g. 10 (Mashhad).")
-    ] = None,
+    city_id: Annotated[int | None, Field(ge=1, description="Iranian city id from ft_find_hotel_place.")] = None,
     region_code: Annotated[
         str | None,
-        Field(
-            pattern=r"^\d{1,10}$", description="Foreign region code from ft_find_hotel_place, e.g. '178267' (Istanbul)."
-        ),
+        Field(pattern=r"^\d{1,10}$", description="Foreign region code from ft_find_hotel_place."),
     ] = None,
     adults: Adults = 2,
     children_ages: ChildAges = None,
     international: Intl = False,
     country_code: Country = None,
-    sort: Annotated[
-        Literal["price", "score"], Field(description="price = cheapest first, score = best guest score first.")
-    ] = "price",
+    sort: Annotated[Literal["price", "score"], Field(description="Cheapest first or best score first.")] = "price",
     stars: Annotated[list[int] | None, Field(max_length=5, description="Only these star ratings, e.g. [4, 5].")] = None,
     refundable_only: Annotated[bool, Field(description="Only offers with free cancellation.")] = False,
-    max_price_toman: Annotated[
-        int | None, Field(ge=1, description="Max price of the WHOLE stay in Toman, e.g. 30000000.")
-    ] = None,
+    max_price_toman: Annotated[int | None, Field(ge=1, description="Max price of the WHOLE stay, Toman.")] = None,
     limit: Annotated[int, Field(ge=1, le=25, description="Hotels per page.")] = 10,
     page: Annotated[int, Field(ge=1, le=20, description="Page number, 1-based.")] = 1,
 ) -> dict[str, Any]:
     """Priced hotels of a city (Iran) or region (abroad) for dates, one row per hotel with its cheapest room offer.
 
     Give city_id for Iran, or region_code + country_code with international=true. price_toman is the whole stay
-    for one room (per_night_toman = price / nights); image is the cover photo. Next: ft_hotel(hotel_id) or
-    ft_hotel_reviews. Rows with is_stay=true are apartments or villas: open them with ft_stay(property_id).
-    rooms_left is given only when the site counts rooms. Captcha-limited hard per IP: search once, then
-    filter and page; never loop.
+    for one room. Next: ft_hotel(hotel_id) or ft_hotel_reviews; is_stay=true rows are villas: ft_stay(property_id).
+    Captcha-limited hard per IP: search once, then filter and page; never loop.
     """
     nights = _nights(check_in, check_out)
     if international:
@@ -362,9 +346,7 @@ def _cancellation(offer: dict[str, Any]) -> str:
 
 @tool("Hotel rooms and prices")
 async def ft_hotel(
-    hotel_id: Annotated[
-        int, Field(ge=1, description="Hotel id from ft_search_hotels or ft_find_hotel_place, e.g. 24.")
-    ],
+    hotel_id: Annotated[int, Field(ge=1, description="Hotel id from ft_search_hotels or ft_find_hotel_place.")],
     check_in: Date,
     check_out: Date,
     adults: Adults = 2,
@@ -375,9 +357,8 @@ async def ft_hotel(
     """One hotel for dates: every room and meal-plan offer with whole-stay price, rooms left and cancellation terms,
     the room details (size, beds, features) and the hotel basics (address, stars, score, facilities, check-in time).
 
-    price_toman is the whole stay for one room; per_night_toman = price / nights. Offers are cheapest first,
-    sold-out ones (rooms_left 0) last. Use after ft_search_hotels; the user books on flytoday.ir. Rate limited like
-    ft_search_hotels: one availability call per use.
+    price_toman is the whole stay for one room. Offers are cheapest first, sold-out (rooms_left 0) last.
+    Use after ft_search_hotels. Rate limited like it.
     """
     nights = _nights(check_in, check_out)
     body = _avail_body(check_in, check_out, adults, children_ages, international, country_code)
@@ -459,7 +440,7 @@ async def ft_hotel(
 
 @tool("Hotel reviews")
 async def ft_hotel_reviews(
-    hotel_id: Annotated[int, Field(ge=1, description="Hotel id, e.g. 24.")],
+    hotel_id: Annotated[int, Field(ge=1, description="Hotel id.")],
     international: Intl = False,
     page: Annotated[int, Field(ge=1, le=100, description="Page number, 1-based.")] = 1,
     order: Annotated[Literal["newest", "oldest"], Field(description="Review order.")] = "newest",
@@ -468,7 +449,7 @@ async def ft_hotel_reviews(
 ) -> dict[str, Any]:
     """Guest reviews of a hotel: score (1-10), text, pros, cons, trip type and nights. Mostly Persian text.
 
-    Use after ft_search_hotels / ft_hotel to judge a hotel; total_reviews tells how many pages exist.
+    total_reviews tells how many pages exist.
     """
     data = (
         await api(
@@ -552,28 +533,25 @@ async def ft_search_stays(
         str | None,
         Field(
             pattern=r"^\d{1,6}$",
-            description="Stay region code from ft_find_hotel_place `stay_regions`, e.g. '149' (Ramsar). Omit for all Iran.",
+            description="Region code from ft_find_hotel_place `stay_regions`; omit for all Iran.",
         ),
     ] = None,
     guests: Annotated[int, Field(ge=1, le=30, description="Number of guests.")] = 2,
     type: Annotated[
         Literal["villa", "apartment", "ecotourism", "cottage", "suite"] | None,
-        Field(description="Property type; omit for all types."),
+        Field(description="Property type; omit for all."),
     ] = None,
     sort: Annotated[
-        Literal["cheapest", "discount"], Field(description="cheapest = lowest nightly price first.")
+        Literal["cheapest", "discount"], Field(description="Cheapest = lowest nightly price first.")
     ] = "cheapest",
-    max_price_toman: Annotated[
-        int | None, Field(ge=1, description="Max price PER NIGHT in Toman, e.g. 5000000.")
-    ] = None,
+    max_price_toman: Annotated[int | None, Field(ge=1, description="Max price PER NIGHT, Toman.")] = None,
     limit: Annotated[int, Field(ge=1, le=25, description="Properties per page.")] = 10,
     page: Annotated[int, Field(ge=1, le=50, description="Page number, 1-based.")] = 1,
 ) -> dict[str, Any]:
     """Villas, apartments and other private stays in Iran for dates, cheapest first.
 
-    Give both dates (strongly advised: only properties free on the dates are listed and total_toman is filled)
-    or none (base prices). price_per_night_toman and total_toman are Toman (the stay API is not in Rial like
-    hotels). property_id feeds ft_stay (calendar, details, reviews). Prices change a lot by date.
+    Give both dates (advised: only properties free then are listed and total_toman is filled) or none (base
+    prices). property_id feeds ft_stay.
     """
     if (check_in is None) != (check_out is None):
         raise ToolError("Give both check_in and check_out, or neither.")
@@ -615,19 +593,17 @@ async def ft_search_stays(
 
 @tool("Stay details and calendar")
 async def ft_stay(
-    property_id: Annotated[int, Field(ge=1, description="Property id from ft_search_stays, e.g. 3804.")],
-    from_date: Annotated[dt.date | None, Field(description="First calendar day YYYY-MM-DD; default today.")] = None,
-    to_date: Annotated[
-        dt.date | None, Field(description="Last calendar day; default 14 days after from_date, at most 45.")
-    ] = None,
+    property_id: Annotated[int, Field(ge=1, description="Property id from ft_search_stays.")],
+    from_date: Annotated[dt.date | None, Field(description="First day YYYY-MM-DD; default today.")] = None,
+    to_date: Annotated[dt.date | None, Field(description="Last day; default from_date + 14, max 45.")] = None,
     guests: Annotated[int, Field(ge=1, le=30, description="Number of guests (changes the price).")] = 2,
     full_text: http.FullText = False,
 ) -> dict[str, Any]:
     """One villa / apartment: details (capacity, rooms, facilities, rules, host), the per-night price calendar with
     blocked days, and the review summary with the latest reviews.
 
-    Calendar prices are Toman per night for that date (the base price in the details is only a reference).
-    A day is available=false when the host blocked it or it is already reserved. The user books on flytoday.ir.
+    Calendar prices are Toman per night (the base price in the details is only a reference); available=false
+    means blocked or reserved.
     """
     start = from_date or http.today()
     end = to_date or start + dt.timedelta(days=14)

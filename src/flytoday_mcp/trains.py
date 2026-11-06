@@ -13,7 +13,7 @@ from .registry import tool
 
 Station = Annotated[
     int,
-    Field(ge=1, le=9_999, description="Train station code from ft_find_station, e.g. 1 (Tehran) or 191 (Mashhad)."),
+    Field(ge=1, le=9_999, description="Station code from ft_find_station, e.g. 1 (Tehran)."),
 ]
 RETRIES = 3  # the rail-company link answers HTTP 599 on about 1 in 4 first calls and works a moment later
 RETRY_DELAY = 3.0
@@ -28,13 +28,13 @@ def _hm(value: Any) -> str | None:
 async def ft_find_station(
     query: Annotated[
         str | None,
-        Field(max_length=60, description="City or station name, Persian or latin, e.g. 'مشهد' or 'isfahan'."),
+        Field(max_length=60, description="City or station name, Persian or latin."),
     ] = None,
     limit: Annotated[int, Field(ge=1, le=30, description="Max stations.")] = 10,
 ) -> dict[str, Any]:
     """Train station codes (`station_code`) for a city name, or the 8 most popular stations when query is empty.
 
-    Use before ft_search_trains and ft_train_calendar, which need the codes (Tehran 1, Mashhad 191).
+    Use before ft_search_trains and ft_train_calendar (Tehran 1, Mashhad 191).
     """
     if query and query.strip():
         body = {"searchTerm": query.strip(), "pageSize": limit, "pageNumber": 0}
@@ -69,21 +69,18 @@ async def _search(body: dict[str, Any]) -> Any:
 async def ft_search_trains(
     origin: Station,
     destination: Station,
-    date: Annotated[
-        dt.date, Field(description="Travel date YYYY-MM-DD, e.g. '2026-10-14'. Sales open ~16 days ahead.")
-    ],
+    date: Annotated[dt.date, Field(description="Travel date YYYY-MM-DD; sales open ~16 days ahead.")],
     adults: Annotated[int, Field(ge=1, le=9, description="Adult passengers.")] = 1,
     children: Annotated[int, Field(ge=0, le=9, description="Children (2-12).")] = 0,
     infants: Annotated[int, Field(ge=0, le=9, description="Infants (under 2).")] = 0,
-    sort: Annotated[Literal["cheapest", "earliest"], Field(description="Order of the results.")] = "earliest",
+    sort: Annotated[Literal["cheapest", "earliest"], Field(description="Order.")] = "earliest",
     available_only: Annotated[bool, Field(description="Hide classes with no free seats for this party.")] = True,
     limit: Annotated[int, Field(ge=1, le=50, description="Max train classes.")] = 15,
 ) -> dict[str, Any]:
     """Trains between two stations on a date: one row per train class (wagon) with price per adult and seats left.
 
-    price_toman is per adult. Sales cover only about the next 16 days (no_result means outside it). Rows carry
-    `fare_source_code` and `wagon_id`: pass them to ft_train_stops for stops and amenities. Other days: ft_train_calendar.
-    Searches are rate limited by the site: do not repeat them in a loop.
+    Sales cover about 16 days (no_result means outside). Pass a row's `fare_source_code` and `wagon_id` to
+    ft_train_stops. Other days: ft_train_calendar. Rate limited: never loop.
     """
     not_past(date)
     body = {
@@ -144,8 +141,7 @@ async def ft_search_trains(
 async def ft_train_calendar(origin: Station, destination: Station) -> dict[str, Any]:
     """Cheapest train price per day for the next ~16 days, with sold-out days flagged.
 
-    Use to pick a day; then ft_search_trains for that date. A route the site has not cached lately lists only the
-    next 3 days (from real searches).
+    Pick a day, then ft_search_trains. An uncached route lists only the next 3 days.
     """
     data = await api(
         "/V1/DomesticRails/FareLookUp",
@@ -215,15 +211,13 @@ async def _searched_days(origin: int, destination: int, span: int = 3) -> list[d
 async def ft_train_stops(
     fare_source_code: Annotated[
         str,
-        Field(pattern=r"^[0-9A-Fa-f]{16,400}$", description="fare_source_code from a fresh ft_search_trains row."),
+        Field(pattern=r"^[0-9A-Fa-f]{16,400}$", description="From a fresh ft_search_trains row."),
     ],
-    wagon_id: Annotated[
-        int | None, Field(ge=1, description="wagon_id from the same row; adds the class amenities and meals.")
-    ] = None,
+    wagon_id: Annotated[int | None, Field(ge=1, description="From the same row; adds amenities and meals.")] = None,
 ) -> dict[str, Any]:
     """Stops of one train with arrival and departure times, plus (with wagon_id) the class amenities and extra meals.
 
-    Needs ids from a recent ft_search_trains result; they expire with the search.
+    Ids expire with their search.
     """
     data = await api(f"/V1/DomesticRails/StopStations/{fare_source_code}", origin=API) or {}
     raw = data.get("stations") or []
