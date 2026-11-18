@@ -242,25 +242,6 @@ ids (Tehran `0001`, Isfahan `0002`).
 
 All 22 tools are annotated `readOnlyHint: true` and return compact structured JSON, so they don't flood the agent's context.
 
-## How it works
-
-```text
-  AI agent  (Claude, Cursor, Copilot, ...)
-      │
-      │  MCP over stdio
-      ▼
-  flytoday-mcp  (runs on your machine)
-      │
-      │  HTTPS (optional proxy)
-      ▼
-  www.flytoday.ir/api/gateway  ──▶  api.flytoday.ir, placesearch.flytoday.ir
-```
-
-`flytoday-mcp` runs locally and calls the same public gateway the flytoday.ir website uses. There's no hosted
-server in between, no API key, and nothing about you is sent anywhere else. Requests go out through a
-Chrome-impersonating HTTP client, at most two at a time with a short random pause, and failed calls (timeouts, 5xx,
-429) are retried up to twice. Static lookup lists (CIP airports, eSIM countries, visa countries) are cached for 6 hours.
-
 ## Good to know
 
 - **Prices are in Toman** in every tool, in fields named `*_toman` (the API sends Rial; values are divided by 10).
